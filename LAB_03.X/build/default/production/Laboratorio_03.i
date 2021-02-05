@@ -1,4 +1,4 @@
-# 1 "Lab2_Erick.c"
+# 1 "Laboratorio_03.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,29 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "Lab2_Erick.c" 2
-# 17 "Lab2_Erick.c"
-#pragma config FOSC = INTRC_NOCLKOUT
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
-
-
-
-
-
-
-
+# 1 "Laboratorio_03.c" 2
+# 11 "Laboratorio_03.c"
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2509,161 +2488,53 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 37 "Lab2_Erick.c" 2
+# 11 "Laboratorio_03.c" 2
 
 
 
 
 
-void main(void);
-void ADC(void);
-void contadorbinario(void);
+
+
+#pragma config FOSC = XT
+#pragma config WDTE = OFF
+#pragma config PWRTE = OFF
+#pragma config MCLRE = OFF
+#pragma config CP = OFF
+#pragma config CPD = OFF
+#pragma config BOREN = OFF
+#pragma config IESO = OFF
+#pragma config FCMEN = OFF
+#pragma config LVP = OFF
+
+
+#pragma config BOR4V = BOR40V
+#pragma config WRT = OFF
+# 42 "Laboratorio_03.c"
 void setup(void);
 
 
 
-int cont0 = 0;
-char ciclo = 1;
-char todo = 1;
-int adc;
-float volt;
-const unsigned char display[] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x67, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71};
-int H;
-int L;
 
 
 
 void main(void) {
 
-
     setup();
-    contadorbinario();
-    return;
-}
-
-
-
-
-void setup(void){
-
-
-    OSCCONbits.IRCF = 0b111;
-    OSCCONbits.SCS = 0b00;
-
-
-    TRISA = 0b00000000;
-    TRISB = 0b01111111;
-    TRISC = 0b00000000;
-    TRISD = 0b00000000;
-    TRISE = 1;
-
-    PORTA = 0b00000000;
-    PORTB = 0b00000000;
-    PORTC = 0b00000000;
-    PORTD = 0b00000000;
-    PORTE = 0b00010;
-    ANSELH = 0;
-
-
-
-    ANSELbits.ANS6 = 0;
-
-
-    ADCON0bits.ADCS0 = 1;
-    ADCON0bits.ADCS1 = 0;
-
-
-    ADCON0bits.CHS0 = 0;
-    ADCON0bits.CHS1 = 1;
-    ADCON0bits.CHS2 = 1;
-    ADCON0bits.CHS3 = 0;
-
-
-    ADCON1bits.VCFG0 = 0;
-    ADCON1bits.VCFG1 = 0;
-
-    ADCON1bits.ADFM = 0;
 
 
 
 
 
-    ADCON0bits.GO_DONE = 1;
+    while (1) {
 
-
-    ADCON0bits.ADON = 1;
-
-
-
-    INTCONbits.GIE = 1;
-    PIE1bits.ADIE = 0;
-    PIE1bits.ADIE = 1;
-
-
-
-
-
-
-
-    INTCONbits.GIE = 1;
-    INTCONbits.RBIF = 0;
-    INTCONbits.RBIF = 1;
-    IOCB = 1;
-    IOCBbits.IOCB0 = 1;
-    IOCBbits.IOCB3 = 1;
-
+    }
 }
 
 
 
 
 
-void contadorbinario(void) {
-    _delay((unsigned long)((3000)*(4000000/4000.0)));
-    do {
-        if (IOCBbits.IOCB0 = 1 && PORTBbits.RB0 == 1) {
-            PORTBbits.RB7 = 1;
-            cont0++;
-            _delay((unsigned long)((500)*(4000000/4000.0)));
-            IOCBbits.IOCB0 = 0;
-            do {
+void setup(void) {
 
-            } while (PORTBbits.RB0 == 1);
-            PORTA = cont0;
-        }
-        if (IOCBbits.IOCB3 = 1 && PORTBbits.RB3 == 1) {
-            cont0--;
-            _delay((unsigned long)((500)*(4000000/4000.0)));
-            do {
-
-            } while (PORTBbits.RB3 == 1);
-            PORTA = cont0;
-            IOCBbits.IOCB3 = 0;
-        }
-        if (cont0 > 255) {
-            cont0 = 0;
-        }
-
-        if (ADCON0bits.GO_DONE == 0) {
-
-            H = ADRESH;
-            L = ADRESH;
-            H = ((H/16)%16);
-            L = (L%16);
-            PORTD = display[H];
-            PORTCbits.RC0 = 1;
-            PORTCbits.RC0 = 0;
-            PORTCbits.RC1 = 0;
-            PORTD = display[L];
-            PORTCbits.RC0 = 0;
-            PORTCbits.RC1 = 1;
-            PORTCbits.RC1 = 0;
-            ADCON0bits.GO_DONE =1;
-
-
-
-
-
-        }
-    } while (ciclo == 1);
 }
