@@ -35,8 +35,8 @@
 //******************************************************************************
 //VARIABLES
 //******************************************************************************
-unsigned char display[] = {0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x67,0x77,0x7C,0x39,0x5E,0x79,0x71};
-unsigned int contador =0;
+unsigned char display[] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x67, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71};
+unsigned int contador = 0;
 int estado = 0;
 unsigned int x = 0; //variable a la cual asignare valores del adresh
 unsigned int y = 0;
@@ -62,6 +62,17 @@ void main(void) {
     //**************************************************************************
 
     while (1) {
+        //antirrebote
+        if(PORTBbits.RB3 == 0){
+            estado = 1;
+        }
+        if(PORTBbits.RB3 == 1 && estado ==1){
+            contador = contador+1;
+            estado =0;
+        }
+        contador_leds();
+        
+        
 
     }
 }
@@ -76,45 +87,147 @@ void setup(void) {
     TRISC = 0; //PUERTO C COMO SALIDA DE LEDS
     TRISD = 0; //PUERTO D COMO SALIDA DE DISPLAYS
     TRISE = 1; //PUERTO E COMO ENTRADA
-    
+
     PORTA = 0; //INICIAN LIMPIOS
     PORTB = 0; //INICIAN LIMPIOS
     PORTC = 0; //INICIAN LIMPIOS
     PORTD = 0; //INICIAN LIMPIOS
     PORTE = 0; //INICIAN LIMPIOS
-    
+
     ANSEL = 0;
     ANSELH = 0; //ENTRADAS DIGITALES
     //**************************************************************************
     //ADC CONFIG
     //**************************************************************************
-    ANSELbits.ANS6 = 0; // ANS6 RE1 COMO ENTRADA
+    //ANSELbits.ANS6 = 0; // ANS6 RE1 COMO ENTRADA
     //FOSC/8 SELECCION - CONVERSION CLOCK SELECT BITS
-    ADCON0bits.ADCS0 =1;
-    ADCON0bits.ADCS1 =0; // SETEAMOS 01 QUE ES FOSC/8
+    ADCON0bits.ADCS0 = 1;
+    ADCON0bits.ADCS1 = 0; // SETEAMOS 01 QUE ES FOSC/8
     //SELECCIONAMOS EL CANAL
-    ADCON0bits.CHS0 =0;
-    ADCON0bits.CHS1 =1;
-    ADCON0bits.CHS2 =1;
-    ADCON0bits.CHS3 =0; //AN6
-    
+    ADCON0bits.CHS0 = 1;
+    ADCON0bits.CHS1 = 0;
+    ADCON0bits.CHS2 = 1;
+    ADCON0bits.CHS3 = 1; //AN11 RB4
+
     //PINES DE REFERENCIA
-    ADCON1bits.VCFG0 =0; //VDD
-    ADCON1bits.VCFG1 =0; //VSS
+    ADCON1bits.VCFG0 = 0; //VDD
+    ADCON1bits.VCFG1 = 0; //VSS
     //A/D CONVERSION RESULT FORMAT - JUSTIFICACION A LA IZQUIERDA
-    ADCON1bits.ADFM =0;//JUSTIFICACION A LA IZQUIERDA
+    ADCON1bits.ADFM = 0; //JUSTIFICACION A LA IZQUIERDA
     //CONVERSION DEL ADC
-    ADCON0bits.GO_DONE =1; //CONVERSIN STATUS IN PROGRESS
+    ADCON0bits.GO_DONE = 1; //CONVERSION STATUS IN PROGRESS
     ADCON0bits.ADON = 1; //ADC IS ENABLED
-    
+
     //ENCENDER BANDERA DEL ADC
-    INTCONbits.GIE =1; //GLOBAL INTERRUPT ENABLED
-    
-    //PIE1bits.ADIE =0; //APAGO LAS INTERRPCIONES DEL ADC
-    //PIE1bits.ADIE= 1;// ENCIENDO LAS INTERRUPCIONES DEL ADC
+    INTCONbits.GIE = 1; //GLOBAL INTERRUPT ENABLED
+    INTCONbits.PEIE = 1; //INTERRUPCIONES PERIFERICAS ACTIVADAS PARA EL ADC
+    INTCONbits.INTE = 1; //INTERRUPCIONES EXTERNAS ACIVADAS
+    PIE1bits.ADIE = 1; //ENCIENDO LAS INTERRPCIONES DEL ADC
+    PIR1bits.ADIF = 0; // A/D CONVERSION COMPLETE
+
+    //OPTION_REGbits.T0CS = 0; //INTERNAL CYCLE CLOCK FOSC/4 timer
 
 }
 
 //******************************************************************************
 //FUNCIONES
 //******************************************************************************
+
+void contador_leds(void) {
+    switch(contador){
+        case 1:
+            PORTCbits.RC0 = 1;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 0;
+        case 2:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 1;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 0;
+        case 3:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 1;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 0;
+        case 4:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 1;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 0;
+        case 5:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 1;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 0;
+        case 6:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 1;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 0;
+        case 7:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 1;
+            PORTCbits.RC7 = 0;
+        case 8:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 1;
+    }
+
+}
+
+
+
+
+
+//******************************************************************************
+//INTERRUPCIONES
+//******************************************************************************
+
+void __interrupt() ISR(void) {
+    if (INTCONbits.INTF == 1) {//boton RB0 push bottom interpciones externas
+        INTCONbits.INTF = 0; //APAGAMOS MANUALMENTE
+        contador++;
+    }
+    if (PIR1bits.ADIF == 1) {//Si la conversion termino se activa la interrp
+        PIR1bits.ADIF = 0; //APAGAMOS MANUALEMNTE
+        x = ADRESH; //ASIGNO EL VALOR QUE HAY EN ADRESH A X
+        y = ADRESH; //ASIGNO EL VALOR DE ADRESH EN Y
+    }
+    return;
+}

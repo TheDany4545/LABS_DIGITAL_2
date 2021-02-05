@@ -2516,8 +2516,8 @@ extern __bank0 __bit __timeout;
 
 
 
-unsigned char display[] = {0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x67,0x77,0x7C,0x39,0x5E,0x79,0x71};
-unsigned int contador =0;
+unsigned char display[] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x67, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71};
+unsigned int contador = 0;
 int estado = 0;
 unsigned int x = 0;
 unsigned int y = 0;
@@ -2544,6 +2544,17 @@ void main(void) {
 
     while (1) {
 
+        if(PORTBbits.RB3 == 0){
+            estado = 1;
+        }
+        if(PORTBbits.RB3 == 1 && estado ==1){
+            contador = contador+1;
+            estado =0;
+        }
+        contador_leds();
+
+
+
     }
 }
 
@@ -2569,29 +2580,127 @@ void setup(void) {
 
 
 
-    ANSELbits.ANS6 = 0;
-
-    ADCON0bits.ADCS0 =1;
-    ADCON0bits.ADCS1 =0;
-
-    ADCON0bits.CHS0 =0;
-    ADCON0bits.CHS1 =1;
-    ADCON0bits.CHS2 =1;
-    ADCON0bits.CHS3 =0;
 
 
-    ADCON1bits.VCFG0 =0;
-    ADCON1bits.VCFG1 =0;
+    ADCON0bits.ADCS0 = 1;
+    ADCON0bits.ADCS1 = 0;
 
-    ADCON1bits.ADFM =0;
+    ADCON0bits.CHS0 = 1;
+    ADCON0bits.CHS1 = 0;
+    ADCON0bits.CHS2 = 1;
+    ADCON0bits.CHS3 = 1;
 
-    ADCON0bits.GO_DONE =1;
+
+    ADCON1bits.VCFG0 = 0;
+    ADCON1bits.VCFG1 = 0;
+
+    ADCON1bits.ADFM = 0;
+
+    ADCON0bits.GO_DONE = 1;
     ADCON0bits.ADON = 1;
 
 
-    INTCONbits.GIE =1;
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
+    INTCONbits.INTE = 1;
+    PIE1bits.ADIE = 1;
+    PIR1bits.ADIF = 0;
+
+
+
+}
 
 
 
 
+
+void contador_leds(void) {
+    switch(contador){
+        case 1:
+            PORTCbits.RC0 = 1;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 0;
+        case 2:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 1;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 0;
+        case 3:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 1;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 0;
+        case 4:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 1;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 0;
+        case 5:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 1;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 0;
+        case 6:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 1;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 0;
+        case 7:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 1;
+            PORTCbits.RC7 = 0;
+        case 8:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 1;
+    }
+
+}
+# 222 "Lab2_Erick.c"
+void __attribute__((picinterrupt(("")))) ISR(void) {
+    if (INTCONbits.INTF == 1) {
+        INTCONbits.INTF = 0;
+        contador++;
+    }
+    if (PIR1bits.ADIF == 1) {
+        PIR1bits.ADIF = 0;
+        x = ADRESH;
+        y = ADRESH;
+    }
+    return;
 }
