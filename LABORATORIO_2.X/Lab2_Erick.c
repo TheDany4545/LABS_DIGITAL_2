@@ -52,9 +52,9 @@ char todo = 1;
 int adc;
 float volt;
 const unsigned char display[16] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x67, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71};
-int H;
+int H;//Multiplexado
 int L;
-int suma;
+int suma; //comparacion entre el contador y los displays
 //******************************************************************************
 //CICLO PRINCIPAL
 //******************************************************************************
@@ -94,17 +94,17 @@ void setup(void){
 
     ///CONFIGURACION DEL ADC 
     //CONFIGURO EL AN6 RE1 COMO ENTRADA ANALOGICA
-    ANSELbits.ANS6 = 0; // Pin con funcion especial
+    ANSELbits.ANS6 = 0; // Pin con funcion especial ENTRADA DEL POT
 
     //SELECCION DEL FOSC/8
     ADCON0bits.ADCS0 = 1;
-    ADCON0bits.ADCS1 = 0;
+    ADCON0bits.ADCS1 = 0; // CONVERSION CLOCK SELECT BITS FOSC 8
 
     //SELECIONAMOS EL CANAL 
     ADCON0bits.CHS0 = 0;
     ADCON0bits.CHS1 = 1;
     ADCON0bits.CHS2 = 1;
-    ADCON0bits.CHS3 = 0; //AN6 Analog select bits
+    ADCON0bits.CHS3 = 0; //AN6 Analog select bits RE1
 
     //PINES DE REFERENCIA 
     ADCON1bits.VCFG0 = 0; //VDD
@@ -116,13 +116,13 @@ void setup(void){
     //ADCON1bits.ADFM = 0;
 
     //PARA CONVERSION DEL ADC
-    ADCON0bits.GO_DONE = 1;
+    ADCON0bits.GO_DONE = 1;//conversion del adc en progreso enabled
 
     //PARA HABILITAR ADC 
     ADCON0bits.ADON = 1;
 
 
-    //ENCENDER BANDERA DEL ADC
+    //HABIITAR INTERRUPCIONES DEL ADC Y GLOBALES
     INTCONbits.GIE = 1;//INTERRUPCIONES GLOBALES
     PIE1bits.ADIE = 0;
     PIE1bits.ADIE = 1;// interrupciones del ADC
@@ -134,7 +134,7 @@ void setup(void){
 
 
 
-    //#########HABILITOS LAS INTERRUPCIONES#########
+    //#########HABILITOS LAS INTERRUPCIONES DEL PUERTO B#########
     INTCONbits.GIE = 1; //interrupcion global  
     INTCONbits.RBIF = 0; //SE LIMPIA
     INTCONbits.RBIF = 1; //SE PONE HABILITADO LA BANDERA DEL INTERRUPT ON CHANGE HACE QUE PUEDA USAR LAS INTERRUPCIONES EN EL PUERTO B
