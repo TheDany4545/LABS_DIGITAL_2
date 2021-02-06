@@ -2527,9 +2527,10 @@ char ciclo = 1;
 char todo = 1;
 int adc;
 float volt;
-const unsigned char display[] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x67, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71};
+const unsigned char display[16] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x67, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71};
 int H;
 int L;
+int suma;
 
 
 
@@ -2537,6 +2538,9 @@ void main(void) {
 
 
     setup();
+
+
+
     contadorbinario();
     return;
 }
@@ -2598,13 +2602,7 @@ void setup(void){
     INTCONbits.GIE = 1;
     PIE1bits.ADIE = 0;
     PIE1bits.ADIE = 1;
-
-
-
-
-
-
-
+# 138 "Lab2_Erick.c"
     INTCONbits.GIE = 1;
     INTCONbits.RBIF = 0;
     INTCONbits.RBIF = 1;
@@ -2619,12 +2617,12 @@ void setup(void){
 
 
 void contadorbinario(void) {
-    _delay((unsigned long)((3000)*(4000000/4000.0)));
+    _delay((unsigned long)((300)*(8000000/4000.0)));
     do {
         if (IOCBbits.IOCB0 = 1 && PORTBbits.RB0 == 1) {
-            PORTBbits.RB7 = 1;
+
             cont0++;
-            _delay((unsigned long)((500)*(4000000/4000.0)));
+            _delay((unsigned long)((500)*(8000000/4000.0)));
             IOCBbits.IOCB0 = 0;
             do {
 
@@ -2633,7 +2631,7 @@ void contadorbinario(void) {
         }
         if (IOCBbits.IOCB3 = 1 && PORTBbits.RB3 == 1) {
             cont0--;
-            _delay((unsigned long)((500)*(4000000/4000.0)));
+            _delay((unsigned long)((500)*(8000000/4000.0)));
             do {
 
             } while (PORTBbits.RB3 == 1);
@@ -2648,14 +2646,16 @@ void contadorbinario(void) {
 
             H = ADRESH;
             L = ADRESH;
+
             H = ((H/16)%16);
             L = (L%16);
+            suma = ADRESH;
             PORTD = display[H];
             PORTCbits.RC0 = 1;
             PORTCbits.RC0 = 0;
-            PORTCbits.RC1 = 0;
+
             PORTD = display[L];
-            PORTCbits.RC0 = 0;
+
             PORTCbits.RC1 = 1;
             PORTCbits.RC1 = 0;
             ADCON0bits.GO_DONE =1;
@@ -2664,6 +2664,12 @@ void contadorbinario(void) {
 
 
 
+        }
+        if (cont0<suma){
+            PORTBbits.RB7 = 1;
+        }
+        else{
+            PORTBbits.RB7 = 0;
         }
     } while (ciclo == 1);
 }

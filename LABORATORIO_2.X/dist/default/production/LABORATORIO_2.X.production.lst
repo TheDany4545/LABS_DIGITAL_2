@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Fri Feb 05 17:10:38 2021
+                                                                                               Fri Feb 05 19:43:17 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	16F887
@@ -220,13 +220,13 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    206  018D                     	;# 
    207                           
    208                           	psect	idataBANK0
-   209  0659                     __pidataBANK0:
+   209  063E                     __pidataBANK0:
    210                           
    211                           ;initializer for _todo
-   212  0659  3401               	retlw	1
+   212  063E  3401               	retlw	1
    213                           
    214                           ;initializer for _ciclo
-   215  065A  3401               	retlw	1
+   215  063F  3401               	retlw	1
    216                           
    217                           	psect	strings
    218  0003                     __pstrings:
@@ -286,962 +286,1001 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    272  0189                     _ANSELH	set	393
    273                           
    274                           	psect	cinit
-   275  07E4                     start_initialization:	
+   275  07E2                     start_initialization:	
    276                           ; #config settings
    277                           
-   278  07E4                     __initialization:
+   278  07E2                     __initialization:
    279                           
    280                           ; Initialize objects allocated to BANK0
-   281  07E4  120A  118A  2659  120A  118A  	fcall	__pidataBANK0	;fetch initializer
-   282  07E9  00AC               	movwf	__pdataBANK0& (0+127)
-   283  07EA  120A  118A  265A  120A  118A  	fcall	__pidataBANK0+1	;fetch initializer
-   284  07EF  00AD               	movwf	(__pdataBANK0+1)& (0+127)
+   281  07E2  120A  118A  263E  120A  118A  	fcall	__pidataBANK0	;fetch initializer
+   282  07E7  00AE               	movwf	__pdataBANK0& (0+127)
+   283  07E8  120A  118A  263F  120A  118A  	fcall	__pidataBANK0+1	;fetch initializer
+   284  07ED  00AF               	movwf	(__pdataBANK0+1)& (0+127)
    285                           
    286                           ; Clear objects allocated to BANK0
-   287  07F0  01A0               	clrf	__pbssBANK0& (0+127)
-   288  07F1  01A1               	clrf	(__pbssBANK0+1)& (0+127)
-   289  07F2  01A2               	clrf	(__pbssBANK0+2)& (0+127)
-   290  07F3  01A3               	clrf	(__pbssBANK0+3)& (0+127)
-   291  07F4  01A4               	clrf	(__pbssBANK0+4)& (0+127)
-   292  07F5  01A5               	clrf	(__pbssBANK0+5)& (0+127)
-   293  07F6  01A6               	clrf	(__pbssBANK0+6)& (0+127)
-   294  07F7  01A7               	clrf	(__pbssBANK0+7)& (0+127)
-   295  07F8  01A8               	clrf	(__pbssBANK0+8)& (0+127)
-   296  07F9  01A9               	clrf	(__pbssBANK0+9)& (0+127)
-   297  07FA  01AA               	clrf	(__pbssBANK0+10)& (0+127)
-   298  07FB  01AB               	clrf	(__pbssBANK0+11)& (0+127)
-   299  07FC                     end_of_initialization:	
-   300                           ;End of C runtime variable initialization code
-   301                           
-   302  07FC                     __end_of__initialization:
-   303  07FC  0183               	clrf	3
-   304  07FD  120A  118A  2E5B   	ljmp	_main	;jump to C main() function
-   305                           
-   306                           	psect	bssBANK0
-   307  0020                     __pbssBANK0:
-   308  0020                     _volt:
-   309  0020                     	ds	4
-   310  0024                     _L:
-   311  0024                     	ds	2
-   312  0026                     _H:
-   313  0026                     	ds	2
-   314  0028                     _adc:
-   315  0028                     	ds	2
-   316  002A                     _cont0:
-   317  002A                     	ds	2
-   318                           
-   319                           	psect	dataBANK0
-   320  002C                     __pdataBANK0:
-   321  002C                     _todo:
-   322  002C                     	ds	1
-   323  002D                     _ciclo:
-   324  002D                     	ds	1
-   325                           
-   326                           	psect	cstackCOMMON
-   327  0070                     __pcstackCOMMON:
-   328  0070                     ?_setup:
-   329  0070                     ??_setup:	
-   330                           ; 1 bytes @ 0x0
-   331                           
-   332  0070                     ?_contadorbinario:	
-   333                           ; 1 bytes @ 0x0
-   334                           
-   335  0070                     ?_main:	
-   336                           ; 1 bytes @ 0x0
-   337                           
-   338  0070                     ?___awdiv:	
-   339                           ; 1 bytes @ 0x0
-   340                           
-   341  0070                     ___awdiv@divisor:	
-   342                           ; 2 bytes @ 0x0
-   343                           
+   287  07EE  01A0               	clrf	__pbssBANK0& (0+127)
+   288  07EF  01A1               	clrf	(__pbssBANK0+1)& (0+127)
+   289  07F0  01A2               	clrf	(__pbssBANK0+2)& (0+127)
+   290  07F1  01A3               	clrf	(__pbssBANK0+3)& (0+127)
+   291  07F2  01A4               	clrf	(__pbssBANK0+4)& (0+127)
+   292  07F3  01A5               	clrf	(__pbssBANK0+5)& (0+127)
+   293  07F4  01A6               	clrf	(__pbssBANK0+6)& (0+127)
+   294  07F5  01A7               	clrf	(__pbssBANK0+7)& (0+127)
+   295  07F6  01A8               	clrf	(__pbssBANK0+8)& (0+127)
+   296  07F7  01A9               	clrf	(__pbssBANK0+9)& (0+127)
+   297  07F8  01AA               	clrf	(__pbssBANK0+10)& (0+127)
+   298  07F9  01AB               	clrf	(__pbssBANK0+11)& (0+127)
+   299  07FA  01AC               	clrf	(__pbssBANK0+12)& (0+127)
+   300  07FB  01AD               	clrf	(__pbssBANK0+13)& (0+127)
+   301  07FC                     end_of_initialization:	
+   302                           ;End of C runtime variable initialization code
+   303                           
+   304  07FC                     __end_of__initialization:
+   305  07FC  0183               	clrf	3
+   306  07FD  120A  118A  2E40   	ljmp	_main	;jump to C main() function
+   307                           
+   308                           	psect	bssBANK0
+   309  0020                     __pbssBANK0:
+   310  0020                     _volt:
+   311  0020                     	ds	4
+   312  0024                     _suma:
+   313  0024                     	ds	2
+   314  0026                     _L:
+   315  0026                     	ds	2
+   316  0028                     _H:
+   317  0028                     	ds	2
+   318  002A                     _adc:
+   319  002A                     	ds	2
+   320  002C                     _cont0:
+   321  002C                     	ds	2
+   322                           
+   323                           	psect	dataBANK0
+   324  002E                     __pdataBANK0:
+   325  002E                     _todo:
+   326  002E                     	ds	1
+   327  002F                     _ciclo:
+   328  002F                     	ds	1
+   329                           
+   330                           	psect	cstackCOMMON
+   331  0070                     __pcstackCOMMON:
+   332  0070                     ?_setup:
+   333  0070                     ??_setup:	
+   334                           ; 1 bytes @ 0x0
+   335                           
+   336  0070                     ?_contadorbinario:	
+   337                           ; 1 bytes @ 0x0
+   338                           
+   339  0070                     ?_main:	
+   340                           ; 1 bytes @ 0x0
+   341                           
+   342  0070                     ?___awdiv:	
+   343                           ; 1 bytes @ 0x0
    344                           
-   345                           ; 2 bytes @ 0x0
-   346  0070                     	ds	2
-   347  0072                     ___awdiv@dividend:
+   345  0070                     ___awdiv@divisor:	
+   346                           ; 2 bytes @ 0x0
+   347                           
    348                           
-   349                           ; 2 bytes @ 0x2
-   350  0072                     	ds	2
-   351  0074                     ??___awdiv:
+   349                           ; 2 bytes @ 0x0
+   350  0070                     	ds	2
+   351  0072                     ___awdiv@dividend:
    352                           
-   353                           ; 1 bytes @ 0x4
-   354  0074                     	ds	1
-   355  0075                     ___awdiv@counter:
+   353                           ; 2 bytes @ 0x2
+   354  0072                     	ds	2
+   355  0074                     ??___awdiv:
    356                           
-   357                           ; 1 bytes @ 0x5
-   358  0075                     	ds	1
-   359  0076                     ___awdiv@sign:
+   357                           ; 1 bytes @ 0x4
+   358  0074                     	ds	1
+   359  0075                     ___awdiv@counter:
    360                           
-   361                           ; 1 bytes @ 0x6
-   362  0076                     	ds	1
-   363  0077                     ___awdiv@quotient:
+   361                           ; 1 bytes @ 0x5
+   362  0075                     	ds	1
+   363  0076                     ___awdiv@sign:
    364                           
-   365                           ; 2 bytes @ 0x7
-   366  0077                     	ds	2
-   367  0079                     ??_contadorbinario:
+   365                           ; 1 bytes @ 0x6
+   366  0076                     	ds	1
+   367  0077                     ___awdiv@quotient:
    368                           
-   369                           ; 1 bytes @ 0x9
-   370  0079                     	ds	3
-   371  007C                     _contadorbinario$354:
+   369                           ; 2 bytes @ 0x7
+   370  0077                     	ds	2
+   371  0079                     ??_contadorbinario:
    372                           
-   373                           ; 1 bytes @ 0xC
-   374  007C                     	ds	1
-   375  007D                     _contadorbinario$355:
+   373                           ; 1 bytes @ 0x9
+   374  0079                     	ds	3
+   375  007C                     _contadorbinario$355:
    376                           
-   377                           ; 1 bytes @ 0xD
-   378  007D                     	ds	1
-   379  007E                     ??_main:
+   377                           ; 1 bytes @ 0xC
+   378  007C                     	ds	1
+   379  007D                     _contadorbinario$356:
    380                           
-   381                           	psect	maintext
-   382  065B                     __pmaintext:	
-   383                           ; 1 bytes @ 0xE
-   384 ;;
-   385 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
-   386 ;;
-   387 ;; *************** function _main *****************
-   388 ;; Defined at:
-   389 ;;		line 60 in file "Lab2_Erick.c"
-   390 ;; Parameters:    Size  Location     Type
-   391 ;;		None
-   392 ;; Auto vars:     Size  Location     Type
-   393 ;;		None
-   394 ;; Return value:  Size  Location     Type
-   395 ;;                  1    wreg      void 
-   396 ;; Registers used:
-   397 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
-   398 ;; Tracked objects:
-   399 ;;		On entry : B00/0
-   400 ;;		On exit  : 0/0
-   401 ;;		Unchanged: 0/0
-   402 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   403 ;;      Params:         0       0       0       0       0
-   404 ;;      Locals:         0       0       0       0       0
-   405 ;;      Temps:          0       0       0       0       0
-   406 ;;      Totals:         0       0       0       0       0
-   407 ;;Total ram usage:        0 bytes
-   408 ;; Hardware stack levels required when called:    2
-   409 ;; This function calls:
-   410 ;;		_contadorbinario
-   411 ;;		_setup
-   412 ;; This function is called by:
-   413 ;;		Startup code after reset
-   414 ;; This function uses a non-reentrant model
-   415 ;;
-   416                           
-   417                           
-   418                           ;psect for function _main
-   419  065B                     _main:
-   420  065B                     l977:	
-   421                           ;incstack = 0
-   422                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
-   423                           
-   424                           
-   425                           ;Lab2_Erick.c: 63:     setup();
-   426  065B  120A  118A  2668  120A  118A  	fcall	_setup
-   427  0660                     l979:
+   381                           ; 1 bytes @ 0xD
+   382  007D                     	ds	1
+   383  007E                     ??_main:
+   384                           
+   385                           	psect	maintext
+   386  0640                     __pmaintext:	
+   387                           ; 1 bytes @ 0xE
+   388 ;;
+   389 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   390 ;;
+   391 ;; *************** function _main *****************
+   392 ;; Defined at:
+   393 ;;		line 61 in file "Lab2_Erick.c"
+   394 ;; Parameters:    Size  Location     Type
+   395 ;;		None
+   396 ;; Auto vars:     Size  Location     Type
+   397 ;;		None
+   398 ;; Return value:  Size  Location     Type
+   399 ;;                  1    wreg      void 
+   400 ;; Registers used:
+   401 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   402 ;; Tracked objects:
+   403 ;;		On entry : B00/0
+   404 ;;		On exit  : 0/0
+   405 ;;		Unchanged: 0/0
+   406 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   407 ;;      Params:         0       0       0       0       0
+   408 ;;      Locals:         0       0       0       0       0
+   409 ;;      Temps:          0       0       0       0       0
+   410 ;;      Totals:         0       0       0       0       0
+   411 ;;Total ram usage:        0 bytes
+   412 ;; Hardware stack levels required when called:    2
+   413 ;; This function calls:
+   414 ;;		_contadorbinario
+   415 ;;		_setup
+   416 ;; This function is called by:
+   417 ;;		Startup code after reset
+   418 ;; This function uses a non-reentrant model
+   419 ;;
+   420                           
+   421                           
+   422                           ;psect for function _main
+   423  0640                     _main:
+   424  0640                     l981:	
+   425                           ;incstack = 0
+   426                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+   427                           
    428                           
-   429                           ;Lab2_Erick.c: 64:     contadorbinario();
-   430  0660  120A  118A  2705  120A  118A  	fcall	_contadorbinario
-   431  0665                     l71:
-   432  0665  120A  118A  2800   	ljmp	start
-   433  0668                     __end_of_main:
-   434                           
-   435                           	psect	text1
-   436  0668                     __ptext1:	
-   437 ;; *************** function _setup *****************
-   438 ;; Defined at:
-   439 ;;		line 71 in file "Lab2_Erick.c"
-   440 ;; Parameters:    Size  Location     Type
-   441 ;;		None
-   442 ;; Auto vars:     Size  Location     Type
-   443 ;;		None
-   444 ;; Return value:  Size  Location     Type
-   445 ;;                  1    wreg      void 
-   446 ;; Registers used:
-   447 ;;		wreg, status,2, status,0
-   448 ;; Tracked objects:
-   449 ;;		On entry : 0/0
-   450 ;;		On exit  : 0/0
-   451 ;;		Unchanged: 0/0
-   452 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   453 ;;      Params:         0       0       0       0       0
-   454 ;;      Locals:         0       0       0       0       0
-   455 ;;      Temps:          0       0       0       0       0
-   456 ;;      Totals:         0       0       0       0       0
-   457 ;;Total ram usage:        0 bytes
-   458 ;; Hardware stack levels used:    1
-   459 ;; This function calls:
-   460 ;;		Nothing
-   461 ;; This function is called by:
-   462 ;;		_main
-   463 ;; This function uses a non-reentrant model
-   464 ;;
-   465                           
-   466                           
-   467                           ;psect for function _setup
-   468  0668                     _setup:
-   469  0668                     l727:	
-   470                           ;incstack = 0
-   471                           ; Regs used in _setup: [wreg+status,2+status,0]
-   472                           
-   473                           
-   474                           ;Lab2_Erick.c: 74:     OSCCONbits.IRCF = 0b111;
-   475  0668  3070               	movlw	112
-   476  0669  1683               	bsf	3,5	;RP0=1, select bank1
-   477  066A  1303               	bcf	3,6	;RP1=0, select bank1
-   478  066B  048F               	iorwf	15,f	;volatile
-   479  066C                     l729:
-   480                           
-   481                           ;Lab2_Erick.c: 75:     OSCCONbits.SCS = 0b00;
-   482  066C  100F               	bcf	15,0	;volatile
-   483  066D                     l731:
+   429                           ;Lab2_Erick.c: 64:     setup();
+   430  0640  120A  118A  264D  120A  118A  	fcall	_setup
+   431  0645                     l983:
+   432                           
+   433                           ;Lab2_Erick.c: 68:     contadorbinario();
+   434  0645  120A  118A  26EA  120A  118A  	fcall	_contadorbinario
+   435  064A                     l73:
+   436  064A  120A  118A  2800   	ljmp	start
+   437  064D                     __end_of_main:
+   438                           
+   439                           	psect	text1
+   440  064D                     __ptext1:	
+   441 ;; *************** function _setup *****************
+   442 ;; Defined at:
+   443 ;;		line 75 in file "Lab2_Erick.c"
+   444 ;; Parameters:    Size  Location     Type
+   445 ;;		None
+   446 ;; Auto vars:     Size  Location     Type
+   447 ;;		None
+   448 ;; Return value:  Size  Location     Type
+   449 ;;                  1    wreg      void 
+   450 ;; Registers used:
+   451 ;;		wreg, status,2, status,0
+   452 ;; Tracked objects:
+   453 ;;		On entry : 0/0
+   454 ;;		On exit  : 0/0
+   455 ;;		Unchanged: 0/0
+   456 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   457 ;;      Params:         0       0       0       0       0
+   458 ;;      Locals:         0       0       0       0       0
+   459 ;;      Temps:          0       0       0       0       0
+   460 ;;      Totals:         0       0       0       0       0
+   461 ;;Total ram usage:        0 bytes
+   462 ;; Hardware stack levels used:    1
+   463 ;; This function calls:
+   464 ;;		Nothing
+   465 ;; This function is called by:
+   466 ;;		_main
+   467 ;; This function uses a non-reentrant model
+   468 ;;
+   469                           
+   470                           
+   471                           ;psect for function _setup
+   472  064D                     _setup:
+   473  064D                     l731:	
+   474                           ;incstack = 0
+   475                           ; Regs used in _setup: [wreg+status,2+status,0]
+   476                           
+   477                           
+   478                           ;Lab2_Erick.c: 78:     OSCCONbits.IRCF = 0b111;
+   479  064D  3070               	movlw	112
+   480  064E  1683               	bsf	3,5	;RP0=1, select bank1
+   481  064F  1303               	bcf	3,6	;RP1=0, select bank1
+   482  0650  048F               	iorwf	15,f	;volatile
+   483  0651                     l733:
    484                           
-   485                           ;Lab2_Erick.c: 78:     TRISA = 0b00000000;
-   486  066D  0185               	clrf	5	;volatile
-   487  066E                     l733:
+   485                           ;Lab2_Erick.c: 79:     OSCCONbits.SCS = 0b00;
+   486  0651  100F               	bcf	15,0	;volatile
+   487  0652                     l735:
    488                           
-   489                           ;Lab2_Erick.c: 79:     TRISB = 0b01111111;
-   490  066E  307F               	movlw	127
-   491  066F  0086               	movwf	6	;volatile
-   492  0670                     l735:
-   493                           
-   494                           ;Lab2_Erick.c: 80:     TRISC = 0b00000000;
-   495  0670  0187               	clrf	7	;volatile
-   496  0671                     l737:
+   489                           ;Lab2_Erick.c: 82:     TRISA = 0b00000000;
+   490  0652  0185               	clrf	5	;volatile
+   491  0653                     l737:
+   492                           
+   493                           ;Lab2_Erick.c: 83:     TRISB = 0b01111111;
+   494  0653  307F               	movlw	127
+   495  0654  0086               	movwf	6	;volatile
+   496  0655                     l739:
    497                           
-   498                           ;Lab2_Erick.c: 81:     TRISD = 0b00000000;
-   499  0671  0188               	clrf	8	;volatile
-   500  0672                     l739:
+   498                           ;Lab2_Erick.c: 84:     TRISC = 0b00000000;
+   499  0655  0187               	clrf	7	;volatile
+   500  0656                     l741:
    501                           
-   502                           ;Lab2_Erick.c: 82:     TRISE = 1;
-   503  0672  3001               	movlw	1
-   504  0673  0089               	movwf	9	;volatile
-   505  0674                     l741:
-   506                           
-   507                           ;Lab2_Erick.c: 84:     PORTA = 0b00000000;
-   508  0674  1283               	bcf	3,5	;RP0=0, select bank0
-   509  0675  1303               	bcf	3,6	;RP1=0, select bank0
-   510  0676  0185               	clrf	5	;volatile
-   511  0677                     l743:
-   512                           
-   513                           ;Lab2_Erick.c: 85:     PORTB = 0b00000000;
-   514  0677  0186               	clrf	6	;volatile
-   515  0678                     l745:
+   502                           ;Lab2_Erick.c: 85:     TRISD = 0b00000000;
+   503  0656  0188               	clrf	8	;volatile
+   504  0657                     l743:
+   505                           
+   506                           ;Lab2_Erick.c: 86:     TRISE = 1;
+   507  0657  3001               	movlw	1
+   508  0658  0089               	movwf	9	;volatile
+   509  0659                     l745:
+   510                           
+   511                           ;Lab2_Erick.c: 88:     PORTA = 0b00000000;
+   512  0659  1283               	bcf	3,5	;RP0=0, select bank0
+   513  065A  1303               	bcf	3,6	;RP1=0, select bank0
+   514  065B  0185               	clrf	5	;volatile
+   515  065C                     l747:
    516                           
-   517                           ;Lab2_Erick.c: 86:     PORTC = 0b00000000;
-   518  0678  0187               	clrf	7	;volatile
-   519  0679                     l747:
+   517                           ;Lab2_Erick.c: 89:     PORTB = 0b00000000;
+   518  065C  0186               	clrf	6	;volatile
+   519  065D                     l749:
    520                           
-   521                           ;Lab2_Erick.c: 87:     PORTD = 0b00000000;
-   522  0679  0188               	clrf	8	;volatile
-   523  067A                     l749:
+   521                           ;Lab2_Erick.c: 90:     PORTC = 0b00000000;
+   522  065D  0187               	clrf	7	;volatile
+   523  065E                     l751:
    524                           
-   525                           ;Lab2_Erick.c: 88:     PORTE = 0b00010;
-   526  067A  3002               	movlw	2
-   527  067B  0089               	movwf	9	;volatile
-   528  067C                     l751:
-   529                           
-   530                           ;Lab2_Erick.c: 89:     ANSELH = 0;
-   531  067C  1683               	bsf	3,5	;RP0=1, select bank3
-   532  067D  1703               	bsf	3,6	;RP1=1, select bank3
-   533  067E  0189               	clrf	9	;volatile
-   534  067F                     l753:
-   535                           
-   536                           ;Lab2_Erick.c: 93:     ANSELbits.ANS6 = 0;
-   537  067F  1308               	bcf	8,6	;volatile
-   538  0680                     l755:
+   525                           ;Lab2_Erick.c: 91:     PORTD = 0b00000000;
+   526  065E  0188               	clrf	8	;volatile
+   527  065F                     l753:
+   528                           
+   529                           ;Lab2_Erick.c: 92:     PORTE = 0b00010;
+   530  065F  3002               	movlw	2
+   531  0660  0089               	movwf	9	;volatile
+   532  0661                     l755:
+   533                           
+   534                           ;Lab2_Erick.c: 93:     ANSELH = 0;
+   535  0661  1683               	bsf	3,5	;RP0=1, select bank3
+   536  0662  1703               	bsf	3,6	;RP1=1, select bank3
+   537  0663  0189               	clrf	9	;volatile
+   538  0664                     l757:
    539                           
-   540                           ;Lab2_Erick.c: 96:     ADCON0bits.ADCS0 = 1;
-   541  0680  1283               	bcf	3,5	;RP0=0, select bank0
-   542  0681  1303               	bcf	3,6	;RP1=0, select bank0
-   543  0682  171F               	bsf	31,6	;volatile
-   544  0683                     l757:
-   545                           
-   546                           ;Lab2_Erick.c: 97:     ADCON0bits.ADCS1 = 0;
-   547  0683  139F               	bcf	31,7	;volatile
-   548  0684                     l759:
+   540                           ;Lab2_Erick.c: 97:     ANSELbits.ANS6 = 0;
+   541  0664  1308               	bcf	8,6	;volatile
+   542  0665                     l759:
+   543                           
+   544                           ;Lab2_Erick.c: 100:     ADCON0bits.ADCS0 = 1;
+   545  0665  1283               	bcf	3,5	;RP0=0, select bank0
+   546  0666  1303               	bcf	3,6	;RP1=0, select bank0
+   547  0667  171F               	bsf	31,6	;volatile
+   548  0668                     l761:
    549                           
-   550                           ;Lab2_Erick.c: 100:     ADCON0bits.CHS0 = 0;
-   551  0684  111F               	bcf	31,2	;volatile
-   552  0685                     l761:
+   550                           ;Lab2_Erick.c: 101:     ADCON0bits.ADCS1 = 0;
+   551  0668  139F               	bcf	31,7	;volatile
+   552  0669                     l763:
    553                           
-   554                           ;Lab2_Erick.c: 101:     ADCON0bits.CHS1 = 1;
-   555  0685  159F               	bsf	31,3	;volatile
-   556  0686                     l763:
+   554                           ;Lab2_Erick.c: 104:     ADCON0bits.CHS0 = 0;
+   555  0669  111F               	bcf	31,2	;volatile
+   556  066A                     l765:
    557                           
-   558                           ;Lab2_Erick.c: 102:     ADCON0bits.CHS2 = 1;
-   559  0686  161F               	bsf	31,4	;volatile
-   560  0687                     l765:
+   558                           ;Lab2_Erick.c: 105:     ADCON0bits.CHS1 = 1;
+   559  066A  159F               	bsf	31,3	;volatile
+   560  066B                     l767:
    561                           
-   562                           ;Lab2_Erick.c: 103:     ADCON0bits.CHS3 = 0;
-   563  0687  129F               	bcf	31,5	;volatile
-   564  0688                     l767:
+   562                           ;Lab2_Erick.c: 106:     ADCON0bits.CHS2 = 1;
+   563  066B  161F               	bsf	31,4	;volatile
+   564  066C                     l769:
    565                           
-   566                           ;Lab2_Erick.c: 106:     ADCON1bits.VCFG0 = 0;
-   567  0688  1683               	bsf	3,5	;RP0=1, select bank1
-   568  0689  1303               	bcf	3,6	;RP1=0, select bank1
-   569  068A  121F               	bcf	31,4	;volatile
-   570  068B                     l769:
-   571                           
-   572                           ;Lab2_Erick.c: 107:     ADCON1bits.VCFG1 = 0;
-   573  068B  129F               	bcf	31,5	;volatile
-   574  068C                     l771:
+   566                           ;Lab2_Erick.c: 107:     ADCON0bits.CHS3 = 0;
+   567  066C  129F               	bcf	31,5	;volatile
+   568  066D                     l771:
+   569                           
+   570                           ;Lab2_Erick.c: 110:     ADCON1bits.VCFG0 = 0;
+   571  066D  1683               	bsf	3,5	;RP0=1, select bank1
+   572  066E  1303               	bcf	3,6	;RP1=0, select bank1
+   573  066F  121F               	bcf	31,4	;volatile
+   574  0670                     l773:
    575                           
-   576                           ;Lab2_Erick.c: 109:     ADCON1bits.ADFM = 0;
-   577  068C  139F               	bcf	31,7	;volatile
-   578  068D                     l773:
+   576                           ;Lab2_Erick.c: 111:     ADCON1bits.VCFG1 = 0;
+   577  0670  129F               	bcf	31,5	;volatile
+   578  0671                     l775:
    579                           
-   580                           ;Lab2_Erick.c: 115:     ADCON0bits.GO_DONE = 1;
-   581  068D  1283               	bcf	3,5	;RP0=0, select bank0
-   582  068E  1303               	bcf	3,6	;RP1=0, select bank0
-   583  068F  149F               	bsf	31,1	;volatile
-   584  0690                     l775:
-   585                           
-   586                           ;Lab2_Erick.c: 118:     ADCON0bits.ADON = 1;
-   587  0690  141F               	bsf	31,0	;volatile
-   588  0691                     l777:
+   580                           ;Lab2_Erick.c: 113:     ADCON1bits.ADFM = 0;
+   581  0671  139F               	bcf	31,7	;volatile
+   582  0672                     l777:
+   583                           
+   584                           ;Lab2_Erick.c: 119:     ADCON0bits.GO_DONE = 1;
+   585  0672  1283               	bcf	3,5	;RP0=0, select bank0
+   586  0673  1303               	bcf	3,6	;RP1=0, select bank0
+   587  0674  149F               	bsf	31,1	;volatile
+   588  0675                     l779:
    589                           
-   590                           ;Lab2_Erick.c: 122:     INTCONbits.GIE = 1;
-   591  0691  178B               	bsf	11,7	;volatile
-   592  0692                     l779:
+   590                           ;Lab2_Erick.c: 122:     ADCON0bits.ADON = 1;
+   591  0675  141F               	bsf	31,0	;volatile
+   592  0676                     l781:
    593                           
-   594                           ;Lab2_Erick.c: 123:     PIE1bits.ADIE = 0;
-   595  0692  1683               	bsf	3,5	;RP0=1, select bank1
-   596  0693  1303               	bcf	3,6	;RP1=0, select bank1
-   597  0694  130C               	bcf	12,6	;volatile
-   598  0695                     l781:
-   599                           
-   600                           ;Lab2_Erick.c: 124:     PIE1bits.ADIE = 1;
-   601  0695  170C               	bsf	12,6	;volatile
-   602  0696                     l783:
+   594                           ;Lab2_Erick.c: 126:     INTCONbits.GIE = 1;
+   595  0676  178B               	bsf	11,7	;volatile
+   596  0677                     l783:
+   597                           
+   598                           ;Lab2_Erick.c: 127:     PIE1bits.ADIE = 0;
+   599  0677  1683               	bsf	3,5	;RP0=1, select bank1
+   600  0678  1303               	bcf	3,6	;RP1=0, select bank1
+   601  0679  130C               	bcf	12,6	;volatile
+   602  067A                     l785:
    603                           
-   604                           ;Lab2_Erick.c: 132:     INTCONbits.GIE = 1;
-   605  0696  178B               	bsf	11,7	;volatile
-   606  0697                     l785:
+   604                           ;Lab2_Erick.c: 128:     PIE1bits.ADIE = 1;
+   605  067A  170C               	bsf	12,6	;volatile
+   606  067B                     l787:
    607                           
-   608                           ;Lab2_Erick.c: 133:     INTCONbits.RBIF = 0;
-   609  0697  100B               	bcf	11,0	;volatile
-   610  0698                     l787:
+   608                           ;Lab2_Erick.c: 138:     INTCONbits.GIE = 1;
+   609  067B  178B               	bsf	11,7	;volatile
+   610  067C                     l789:
    611                           
-   612                           ;Lab2_Erick.c: 134:     INTCONbits.RBIF = 1;
-   613  0698  140B               	bsf	11,0	;volatile
-   614  0699                     l789:
+   612                           ;Lab2_Erick.c: 139:     INTCONbits.RBIF = 0;
+   613  067C  100B               	bcf	11,0	;volatile
+   614  067D                     l791:
    615                           
-   616                           ;Lab2_Erick.c: 135:     IOCB = 1;
-   617  0699  3001               	movlw	1
-   618  069A  0096               	movwf	22	;volatile
-   619  069B                     l791:
-   620                           
-   621                           ;Lab2_Erick.c: 136:     IOCBbits.IOCB0 = 1;
-   622  069B  1416               	bsf	22,0	;volatile
-   623  069C                     l793:
+   616                           ;Lab2_Erick.c: 140:     INTCONbits.RBIF = 1;
+   617  067D  140B               	bsf	11,0	;volatile
+   618  067E                     l793:
+   619                           
+   620                           ;Lab2_Erick.c: 141:     IOCB = 1;
+   621  067E  3001               	movlw	1
+   622  067F  0096               	movwf	22	;volatile
+   623  0680                     l795:
    624                           
-   625                           ;Lab2_Erick.c: 137:     IOCBbits.IOCB3 = 1;
-   626  069C  1596               	bsf	22,3	;volatile
-   627  069D                     l74:
-   628  069D  0008               	return
-   629  069E                     __end_of_setup:
-   630                           
-   631                           	psect	text2
-   632  0705                     __ptext2:	
-   633 ;; *************** function _contadorbinario *****************
-   634 ;; Defined at:
-   635 ;;		line 145 in file "Lab2_Erick.c"
-   636 ;; Parameters:    Size  Location     Type
-   637 ;;		None
-   638 ;; Auto vars:     Size  Location     Type
-   639 ;;		None
-   640 ;; Return value:  Size  Location     Type
-   641 ;;                  1    wreg      void 
-   642 ;; Registers used:
-   643 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
-   644 ;; Tracked objects:
-   645 ;;		On entry : 0/0
-   646 ;;		On exit  : 0/0
-   647 ;;		Unchanged: 0/0
-   648 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   649 ;;      Params:         0       0       0       0       0
-   650 ;;      Locals:         2       0       0       0       0
-   651 ;;      Temps:          3       0       0       0       0
-   652 ;;      Totals:         5       0       0       0       0
-   653 ;;Total ram usage:        5 bytes
-   654 ;; Hardware stack levels used:    1
-   655 ;; Hardware stack levels required when called:    1
-   656 ;; This function calls:
-   657 ;;		___awdiv
-   658 ;; This function is called by:
-   659 ;;		_main
-   660 ;; This function uses a non-reentrant model
-   661 ;;
-   662                           
-   663                           
-   664                           ;psect for function _contadorbinario
-   665  0705                     _contadorbinario:
-   666  0705                     l911:	
-   667                           ;incstack = 0
-   668                           ; Regs used in _contadorbinario: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
-   669                           
-   670                           
-   671                           ;Lab2_Erick.c: 146:     _delay((unsigned long)((3000)*(4000000/4000.0)));
-   672  0705  3010               	movlw	16
-   673  0706  00FB               	movwf	??_contadorbinario+2
-   674  0707  3039               	movlw	57
-   675  0708  00FA               	movwf	??_contadorbinario+1
-   676  0709  300D               	movlw	13
-   677  070A  00F9               	movwf	??_contadorbinario
-   678  070B                     u377:
-   679  070B  0BF9               	decfsz	??_contadorbinario,f
-   680  070C  2F0B               	goto	u377
-   681  070D  0BFA               	decfsz	??_contadorbinario+1,f
-   682  070E  2F0B               	goto	u377
-   683  070F  0BFB               	decfsz	??_contadorbinario+2,f
-   684  0710  2F0B               	goto	u377
-   685  0711  2F12               	nop2
-   686  0712                     l913:
-   687                           
-   688                           ;Lab2_Erick.c: 148:         if (IOCBbits.IOCB0 = 1 && PORTBbits.RB0 == 1) {
-   689  0712  01FC               	clrf	_contadorbinario$354
-   690  0713                     l915:
-   691  0713  1283               	bcf	3,5	;RP0=0, select bank0
-   692  0714  1303               	bcf	3,6	;RP1=0, select bank0
-   693  0715  1C06               	btfss	6,0	;volatile
-   694  0716  2F18               	goto	u291
-   695  0717  2F19               	goto	u290
-   696  0718                     u291:
-   697  0718  2F1B               	goto	l919
-   698  0719                     u290:
-   699  0719                     l917:
-   700  0719  01FC               	clrf	_contadorbinario$354
-   701  071A  0AFC               	incf	_contadorbinario$354,f
-   702  071B                     l919:
-   703  071B  1683               	bsf	3,5	;RP0=1, select bank1
-   704  071C  1303               	bcf	3,6	;RP1=0, select bank1
-   705  071D  0816               	movf	22,w	;volatile
-   706  071E  067C               	xorwf	_contadorbinario$354,w
-   707  071F  39FE               	andlw	-2
-   708  0720  067C               	xorwf	_contadorbinario$354,w
-   709  0721  0096               	movwf	22	;volatile
-   710  0722  0816               	movf	22,w	;volatile
-   711  0723  3901               	andlw	1
-   712  0724  3A00               	xorlw	0
-   713  0725  1903               	skipnz
-   714  0726  2F28               	goto	u301
-   715  0727  2F29               	goto	u300
-   716  0728                     u301:
-   717  0728  2F49               	goto	l931
-   718  0729                     u300:
-   719  0729                     l921:
-   720                           
-   721                           ;Lab2_Erick.c: 149:             PORTBbits.RB7 = 1;
-   722  0729  1283               	bcf	3,5	;RP0=0, select bank0
-   723  072A  1303               	bcf	3,6	;RP1=0, select bank0
-   724  072B  1786               	bsf	6,7	;volatile
-   725  072C                     l923:
-   726                           
-   727                           ;Lab2_Erick.c: 150:             cont0++;
-   728  072C  3001               	movlw	1
-   729  072D  07AA               	addwf	_cont0,f
-   730  072E  1803               	skipnc
-   731  072F  0AAB               	incf	_cont0+1,f
-   732  0730  3000               	movlw	0
-   733  0731  07AB               	addwf	_cont0+1,f
+   625                           ;Lab2_Erick.c: 142:     IOCBbits.IOCB0 = 1;
+   626  0680  1416               	bsf	22,0	;volatile
+   627  0681                     l797:
+   628                           
+   629                           ;Lab2_Erick.c: 143:     IOCBbits.IOCB3 = 1;
+   630  0681  1596               	bsf	22,3	;volatile
+   631  0682                     l76:
+   632  0682  0008               	return
+   633  0683                     __end_of_setup:
+   634                           
+   635                           	psect	text2
+   636  06EA                     __ptext2:	
+   637 ;; *************** function _contadorbinario *****************
+   638 ;; Defined at:
+   639 ;;		line 151 in file "Lab2_Erick.c"
+   640 ;; Parameters:    Size  Location     Type
+   641 ;;		None
+   642 ;; Auto vars:     Size  Location     Type
+   643 ;;		None
+   644 ;; Return value:  Size  Location     Type
+   645 ;;                  1    wreg      void 
+   646 ;; Registers used:
+   647 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   648 ;; Tracked objects:
+   649 ;;		On entry : 0/0
+   650 ;;		On exit  : 0/0
+   651 ;;		Unchanged: 0/0
+   652 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   653 ;;      Params:         0       0       0       0       0
+   654 ;;      Locals:         2       0       0       0       0
+   655 ;;      Temps:          3       0       0       0       0
+   656 ;;      Totals:         5       0       0       0       0
+   657 ;;Total ram usage:        5 bytes
+   658 ;; Hardware stack levels used:    1
+   659 ;; Hardware stack levels required when called:    1
+   660 ;; This function calls:
+   661 ;;		___awdiv
+   662 ;; This function is called by:
+   663 ;;		_main
+   664 ;; This function uses a non-reentrant model
+   665 ;;
+   666                           
+   667                           
+   668                           ;psect for function _contadorbinario
+   669  06EA                     _contadorbinario:
+   670  06EA                     l915:	
+   671                           ;incstack = 0
+   672                           ; Regs used in _contadorbinario: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+   673                           
+   674                           
+   675                           ;Lab2_Erick.c: 152:     _delay((unsigned long)((300)*(8000000/4000.0)));
+   676  06EA  3004               	movlw	4
+   677  06EB  00FB               	movwf	??_contadorbinario+2
+   678  06EC  300C               	movlw	12
+   679  06ED  00FA               	movwf	??_contadorbinario+1
+   680  06EE  3033               	movlw	51
+   681  06EF  00F9               	movwf	??_contadorbinario
+   682  06F0                     u397:
+   683  06F0  0BF9               	decfsz	??_contadorbinario,f
+   684  06F1  2EF0               	goto	u397
+   685  06F2  0BFA               	decfsz	??_contadorbinario+1,f
+   686  06F3  2EF0               	goto	u397
+   687  06F4  0BFB               	decfsz	??_contadorbinario+2,f
+   688  06F5  2EF0               	goto	u397
+   689  06F6  2EF7               	nop2
+   690  06F7                     l917:
+   691                           
+   692                           ;Lab2_Erick.c: 154:         if (IOCBbits.IOCB0 = 1 && PORTBbits.RB0 == 1) {
+   693  06F7  01FC               	clrf	_contadorbinario$355
+   694  06F8                     l919:
+   695  06F8  1283               	bcf	3,5	;RP0=0, select bank0
+   696  06F9  1303               	bcf	3,6	;RP1=0, select bank0
+   697  06FA  1C06               	btfss	6,0	;volatile
+   698  06FB  2EFD               	goto	u301
+   699  06FC  2EFE               	goto	u300
+   700  06FD                     u301:
+   701  06FD  2F00               	goto	l923
+   702  06FE                     u300:
+   703  06FE                     l921:
+   704  06FE  01FC               	clrf	_contadorbinario$355
+   705  06FF  0AFC               	incf	_contadorbinario$355,f
+   706  0700                     l923:
+   707  0700  1683               	bsf	3,5	;RP0=1, select bank1
+   708  0701  1303               	bcf	3,6	;RP1=0, select bank1
+   709  0702  0816               	movf	22,w	;volatile
+   710  0703  067C               	xorwf	_contadorbinario$355,w
+   711  0704  39FE               	andlw	-2
+   712  0705  067C               	xorwf	_contadorbinario$355,w
+   713  0706  0096               	movwf	22	;volatile
+   714  0707  0816               	movf	22,w	;volatile
+   715  0708  3901               	andlw	1
+   716  0709  3A00               	xorlw	0
+   717  070A  1903               	skipnz
+   718  070B  2F0D               	goto	u311
+   719  070C  2F0E               	goto	u310
+   720  070D                     u311:
+   721  070D  2F2D               	goto	l933
+   722  070E                     u310:
+   723  070E                     l925:
+   724                           
+   725                           ;Lab2_Erick.c: 156:             cont0++;
+   726  070E  3001               	movlw	1
+   727  070F  1283               	bcf	3,5	;RP0=0, select bank0
+   728  0710  1303               	bcf	3,6	;RP1=0, select bank0
+   729  0711  07AC               	addwf	_cont0,f
+   730  0712  1803               	skipnc
+   731  0713  0AAD               	incf	_cont0+1,f
+   732  0714  3000               	movlw	0
+   733  0715  07AD               	addwf	_cont0+1,f
    734                           
-   735                           ;Lab2_Erick.c: 151:             _delay((unsigned long)((500)*(4000000/4000.0)));
-   736  0732  3003               	movlw	3
-   737  0733  00FB               	movwf	??_contadorbinario+2
-   738  0734  308A               	movlw	138
-   739  0735  00FA               	movwf	??_contadorbinario+1
-   740  0736  3055               	movlw	85
-   741  0737  00F9               	movwf	??_contadorbinario
-   742  0738                     u387:
-   743  0738  0BF9               	decfsz	??_contadorbinario,f
-   744  0739  2F38               	goto	u387
-   745  073A  0BFA               	decfsz	??_contadorbinario+1,f
-   746  073B  2F38               	goto	u387
-   747  073C  0BFB               	decfsz	??_contadorbinario+2,f
-   748  073D  2F38               	goto	u387
-   749  073E  2F3F               	nop2
-   750  073F                     l925:
+   735                           ;Lab2_Erick.c: 157:             _delay((unsigned long)((500)*(8000000/4000.0)));
+   736  0716  3006               	movlw	6
+   737  0717  00FB               	movwf	??_contadorbinario+2
+   738  0718  3013               	movlw	19
+   739  0719  00FA               	movwf	??_contadorbinario+1
+   740  071A  30AD               	movlw	173
+   741  071B  00F9               	movwf	??_contadorbinario
+   742  071C                     u407:
+   743  071C  0BF9               	decfsz	??_contadorbinario,f
+   744  071D  2F1C               	goto	u407
+   745  071E  0BFA               	decfsz	??_contadorbinario+1,f
+   746  071F  2F1C               	goto	u407
+   747  0720  0BFB               	decfsz	??_contadorbinario+2,f
+   748  0721  2F1C               	goto	u407
+   749  0722  2F23               	nop2
+   750  0723                     l927:
    751                           
-   752                           ;Lab2_Erick.c: 152:             IOCBbits.IOCB0 = 0;
-   753  073F  1683               	bsf	3,5	;RP0=1, select bank1
-   754  0740  1303               	bcf	3,6	;RP1=0, select bank1
-   755  0741  1016               	bcf	22,0	;volatile
-   756  0742                     l927:
+   752                           ;Lab2_Erick.c: 158:             IOCBbits.IOCB0 = 0;
+   753  0723  1683               	bsf	3,5	;RP0=1, select bank1
+   754  0724  1303               	bcf	3,6	;RP1=0, select bank1
+   755  0725  1016               	bcf	22,0	;volatile
+   756  0726                     l929:
    757                           
-   758                           ;Lab2_Erick.c: 155:             } while (PORTBbits.RB0 == 1);
-   759  0742  1283               	bcf	3,5	;RP0=0, select bank0
-   760  0743  1806               	btfsc	6,0	;volatile
-   761  0744  2F46               	goto	u311
-   762  0745  2F47               	goto	u310
-   763  0746                     u311:
-   764  0746  2F42               	goto	l927
-   765  0747                     u310:
-   766  0747                     l929:
+   758                           ;Lab2_Erick.c: 161:             } while (PORTBbits.RB0 == 1);
+   759  0726  1283               	bcf	3,5	;RP0=0, select bank0
+   760  0727  1806               	btfsc	6,0	;volatile
+   761  0728  2F2A               	goto	u321
+   762  0729  2F2B               	goto	u320
+   763  072A                     u321:
+   764  072A  2F26               	goto	l929
+   765  072B                     u320:
+   766  072B                     l931:
    767                           
-   768                           ;Lab2_Erick.c: 156:             PORTA = cont0;
-   769  0747  082A               	movf	_cont0,w
-   770  0748  0085               	movwf	5	;volatile
-   771  0749                     l931:
+   768                           ;Lab2_Erick.c: 162:             PORTA = cont0;
+   769  072B  082C               	movf	_cont0,w
+   770  072C  0085               	movwf	5	;volatile
+   771  072D                     l933:
    772                           
-   773                           ;Lab2_Erick.c: 158:         if (IOCBbits.IOCB3 = 1 && PORTBbits.RB3 == 1) {
-   774  0749  01FD               	clrf	_contadorbinario$355
-   775  074A                     l933:
-   776  074A  1283               	bcf	3,5	;RP0=0, select bank0
-   777  074B  1D86               	btfss	6,3	;volatile
-   778  074C  2F4E               	goto	u321
-   779  074D  2F4F               	goto	u320
-   780  074E                     u321:
-   781  074E  2F51               	goto	l937
-   782  074F                     u320:
-   783  074F                     l935:
-   784  074F  01FD               	clrf	_contadorbinario$355
-   785  0750  0AFD               	incf	_contadorbinario$355,f
-   786  0751                     l937:
-   787  0751  087D               	movf	_contadorbinario$355,w
-   788  0752  00F9               	movwf	??_contadorbinario
-   789  0753  0DF9               	rlf	??_contadorbinario,f
-   790  0754  0DF9               	rlf	??_contadorbinario,f
-   791  0755  0DF9               	rlf	??_contadorbinario,f
-   792  0756  1683               	bsf	3,5	;RP0=1, select bank1
-   793  0757  1303               	bcf	3,6	;RP1=0, select bank1
-   794  0758  0816               	movf	22,w	;volatile
-   795  0759  0679               	xorwf	??_contadorbinario,w
-   796  075A  39F7               	andlw	-9
-   797  075B  0679               	xorwf	??_contadorbinario,w
-   798  075C  0096               	movwf	22	;volatile
-   799  075D  0C16               	rrf	22,w	;volatile
-   800  075E  00FA               	movwf	??_contadorbinario+1
-   801  075F  0CFA               	rrf	??_contadorbinario+1,f
-   802  0760  0C7A               	rrf	??_contadorbinario+1,w
-   803  0761  3901               	andlw	1
-   804  0762  3A00               	xorlw	0
-   805  0763  1903               	skipnz
-   806  0764  2F66               	goto	u331
-   807  0765  2F67               	goto	u330
-   808  0766                     u331:
-   809  0766  2F87               	goto	l947
-   810  0767                     u330:
-   811  0767                     l939:
+   773                           ;Lab2_Erick.c: 164:         if (IOCBbits.IOCB3 = 1 && PORTBbits.RB3 == 1) {
+   774  072D  01FD               	clrf	_contadorbinario$356
+   775  072E                     l935:
+   776  072E  1283               	bcf	3,5	;RP0=0, select bank0
+   777  072F  1D86               	btfss	6,3	;volatile
+   778  0730  2F32               	goto	u331
+   779  0731  2F33               	goto	u330
+   780  0732                     u331:
+   781  0732  2F35               	goto	l939
+   782  0733                     u330:
+   783  0733                     l937:
+   784  0733  01FD               	clrf	_contadorbinario$356
+   785  0734  0AFD               	incf	_contadorbinario$356,f
+   786  0735                     l939:
+   787  0735  087D               	movf	_contadorbinario$356,w
+   788  0736  00F9               	movwf	??_contadorbinario
+   789  0737  0DF9               	rlf	??_contadorbinario,f
+   790  0738  0DF9               	rlf	??_contadorbinario,f
+   791  0739  0DF9               	rlf	??_contadorbinario,f
+   792  073A  1683               	bsf	3,5	;RP0=1, select bank1
+   793  073B  1303               	bcf	3,6	;RP1=0, select bank1
+   794  073C  0816               	movf	22,w	;volatile
+   795  073D  0679               	xorwf	??_contadorbinario,w
+   796  073E  39F7               	andlw	-9
+   797  073F  0679               	xorwf	??_contadorbinario,w
+   798  0740  0096               	movwf	22	;volatile
+   799  0741  0C16               	rrf	22,w	;volatile
+   800  0742  00FA               	movwf	??_contadorbinario+1
+   801  0743  0CFA               	rrf	??_contadorbinario+1,f
+   802  0744  0C7A               	rrf	??_contadorbinario+1,w
+   803  0745  3901               	andlw	1
+   804  0746  3A00               	xorlw	0
+   805  0747  1903               	skipnz
+   806  0748  2F4A               	goto	u341
+   807  0749  2F4B               	goto	u340
+   808  074A                     u341:
+   809  074A  2F6B               	goto	l949
+   810  074B                     u340:
+   811  074B                     l941:
    812                           
-   813                           ;Lab2_Erick.c: 159:             cont0--;
-   814  0767  30FF               	movlw	255
-   815  0768  1283               	bcf	3,5	;RP0=0, select bank0
-   816  0769  1303               	bcf	3,6	;RP1=0, select bank0
-   817  076A  07AA               	addwf	_cont0,f
-   818  076B  1803               	skipnc
-   819  076C  0AAB               	incf	_cont0+1,f
-   820  076D  30FF               	movlw	255
-   821  076E  07AB               	addwf	_cont0+1,f
+   813                           ;Lab2_Erick.c: 165:             cont0--;
+   814  074B  30FF               	movlw	255
+   815  074C  1283               	bcf	3,5	;RP0=0, select bank0
+   816  074D  1303               	bcf	3,6	;RP1=0, select bank0
+   817  074E  07AC               	addwf	_cont0,f
+   818  074F  1803               	skipnc
+   819  0750  0AAD               	incf	_cont0+1,f
+   820  0751  30FF               	movlw	255
+   821  0752  07AD               	addwf	_cont0+1,f
    822                           
-   823                           ;Lab2_Erick.c: 160:             _delay((unsigned long)((500)*(4000000/4000.0)));
-   824  076F  3003               	movlw	3
-   825  0770  00FB               	movwf	??_contadorbinario+2
-   826  0771  308A               	movlw	138
-   827  0772  00FA               	movwf	??_contadorbinario+1
-   828  0773  3055               	movlw	85
-   829  0774  00F9               	movwf	??_contadorbinario
-   830  0775                     u397:
-   831  0775  0BF9               	decfsz	??_contadorbinario,f
-   832  0776  2F75               	goto	u397
-   833  0777  0BFA               	decfsz	??_contadorbinario+1,f
-   834  0778  2F75               	goto	u397
-   835  0779  0BFB               	decfsz	??_contadorbinario+2,f
-   836  077A  2F75               	goto	u397
-   837  077B  2F7C               	nop2
-   838  077C                     l941:
+   823                           ;Lab2_Erick.c: 166:             _delay((unsigned long)((500)*(8000000/4000.0)));
+   824  0753  3006               	movlw	6
+   825  0754  00FB               	movwf	??_contadorbinario+2
+   826  0755  3013               	movlw	19
+   827  0756  00FA               	movwf	??_contadorbinario+1
+   828  0757  30AD               	movlw	173
+   829  0758  00F9               	movwf	??_contadorbinario
+   830  0759                     u417:
+   831  0759  0BF9               	decfsz	??_contadorbinario,f
+   832  075A  2F59               	goto	u417
+   833  075B  0BFA               	decfsz	??_contadorbinario+1,f
+   834  075C  2F59               	goto	u417
+   835  075D  0BFB               	decfsz	??_contadorbinario+2,f
+   836  075E  2F59               	goto	u417
+   837  075F  2F60               	nop2
+   838  0760                     l943:
    839                           
-   840                           ;Lab2_Erick.c: 163:             } while (PORTBbits.RB3 == 1);
-   841  077C  1283               	bcf	3,5	;RP0=0, select bank0
-   842  077D  1303               	bcf	3,6	;RP1=0, select bank0
-   843  077E  1986               	btfsc	6,3	;volatile
-   844  077F  2F81               	goto	u341
-   845  0780  2F82               	goto	u340
-   846  0781                     u341:
-   847  0781  2F7C               	goto	l941
-   848  0782                     u340:
-   849  0782                     l943:
+   840                           ;Lab2_Erick.c: 169:             } while (PORTBbits.RB3 == 1);
+   841  0760  1283               	bcf	3,5	;RP0=0, select bank0
+   842  0761  1303               	bcf	3,6	;RP1=0, select bank0
+   843  0762  1986               	btfsc	6,3	;volatile
+   844  0763  2F65               	goto	u351
+   845  0764  2F66               	goto	u350
+   846  0765                     u351:
+   847  0765  2F60               	goto	l943
+   848  0766                     u350:
+   849  0766                     l945:
    850                           
-   851                           ;Lab2_Erick.c: 164:             PORTA = cont0;
-   852  0782  082A               	movf	_cont0,w
-   853  0783  0085               	movwf	5	;volatile
-   854  0784                     l945:
+   851                           ;Lab2_Erick.c: 170:             PORTA = cont0;
+   852  0766  082C               	movf	_cont0,w
+   853  0767  0085               	movwf	5	;volatile
+   854  0768                     l947:
    855                           
-   856                           ;Lab2_Erick.c: 165:             IOCBbits.IOCB3 = 0;
-   857  0784  1683               	bsf	3,5	;RP0=1, select bank1
-   858  0785  1303               	bcf	3,6	;RP1=0, select bank1
-   859  0786  1196               	bcf	22,3	;volatile
-   860  0787                     l947:
+   856                           ;Lab2_Erick.c: 171:             IOCBbits.IOCB3 = 0;
+   857  0768  1683               	bsf	3,5	;RP0=1, select bank1
+   858  0769  1303               	bcf	3,6	;RP1=0, select bank1
+   859  076A  1196               	bcf	22,3	;volatile
+   860  076B                     l949:
    861                           
-   862                           ;Lab2_Erick.c: 167:         if (cont0 > 255) {
-   863  0787  1283               	bcf	3,5	;RP0=0, select bank0
-   864  0788  1303               	bcf	3,6	;RP1=0, select bank0
-   865  0789  082B               	movf	_cont0+1,w
-   866  078A  3A80               	xorlw	128
-   867  078B  00FF               	movwf	btemp+1
-   868  078C  3081               	movlw	129
-   869  078D  027F               	subwf	btemp+1,w
-   870  078E  1D03               	skipz
-   871  078F  2F92               	goto	u355
-   872  0790  3000               	movlw	0
-   873  0791  022A               	subwf	_cont0,w
-   874  0792                     u355:
-   875  0792  1C03               	skipc
-   876  0793  2F95               	goto	u351
-   877  0794  2F96               	goto	u350
-   878  0795                     u351:
-   879  0795  2F9A               	goto	l951
-   880  0796                     u350:
-   881  0796                     l949:
+   862                           ;Lab2_Erick.c: 173:         if (cont0 > 255) {
+   863  076B  1283               	bcf	3,5	;RP0=0, select bank0
+   864  076C  1303               	bcf	3,6	;RP1=0, select bank0
+   865  076D  082D               	movf	_cont0+1,w
+   866  076E  3A80               	xorlw	128
+   867  076F  00FF               	movwf	btemp+1
+   868  0770  3081               	movlw	129
+   869  0771  027F               	subwf	btemp+1,w
+   870  0772  1D03               	skipz
+   871  0773  2F76               	goto	u365
+   872  0774  3000               	movlw	0
+   873  0775  022C               	subwf	_cont0,w
+   874  0776                     u365:
+   875  0776  1C03               	skipc
+   876  0777  2F79               	goto	u361
+   877  0778  2F7A               	goto	u360
+   878  0779                     u361:
+   879  0779  2F7E               	goto	l953
+   880  077A                     u360:
+   881  077A                     l951:
    882                           
-   883                           ;Lab2_Erick.c: 168:             cont0 = 0;
-   884  0796  1283               	bcf	3,5	;RP0=0, select bank0
-   885  0797  1303               	bcf	3,6	;RP1=0, select bank0
-   886  0798  01AA               	clrf	_cont0
-   887  0799  01AB               	clrf	_cont0+1
-   888  079A                     l951:
+   883                           ;Lab2_Erick.c: 174:             cont0 = 0;
+   884  077A  1283               	bcf	3,5	;RP0=0, select bank0
+   885  077B  1303               	bcf	3,6	;RP1=0, select bank0
+   886  077C  01AC               	clrf	_cont0
+   887  077D  01AD               	clrf	_cont0+1
+   888  077E                     l953:
    889                           
-   890                           ;Lab2_Erick.c: 171:         if (ADCON0bits.GO_DONE == 0) {
-   891  079A  1283               	bcf	3,5	;RP0=0, select bank0
-   892  079B  1303               	bcf	3,6	;RP1=0, select bank0
-   893  079C  189F               	btfsc	31,1	;volatile
-   894  079D  2F9F               	goto	u361
-   895  079E  2FA0               	goto	u360
-   896  079F                     u361:
-   897  079F  2F12               	goto	l913
-   898  07A0                     u360:
-   899  07A0                     l953:
+   890                           ;Lab2_Erick.c: 177:         if (ADCON0bits.GO_DONE == 0) {
+   891  077E  1283               	bcf	3,5	;RP0=0, select bank0
+   892  077F  1303               	bcf	3,6	;RP1=0, select bank0
+   893  0780  189F               	btfsc	31,1	;volatile
+   894  0781  2F83               	goto	u371
+   895  0782  2F84               	goto	u370
+   896  0783                     u371:
+   897  0783  2FCB               	goto	l977
+   898  0784                     u370:
+   899  0784                     l955:
    900                           
-   901                           ;Lab2_Erick.c: 173:             H = ADRESH;
-   902  07A0  081E               	movf	30,w	;volatile
-   903  07A1  00F9               	movwf	??_contadorbinario
-   904  07A2  01FA               	clrf	??_contadorbinario+1
-   905  07A3  0879               	movf	??_contadorbinario,w
-   906  07A4  00A6               	movwf	_H
-   907  07A5  087A               	movf	??_contadorbinario+1,w
-   908  07A6  00A7               	movwf	_H+1
+   901                           ;Lab2_Erick.c: 179:             H = ADRESH;
+   902  0784  081E               	movf	30,w	;volatile
+   903  0785  00F9               	movwf	??_contadorbinario
+   904  0786  01FA               	clrf	??_contadorbinario+1
+   905  0787  0879               	movf	??_contadorbinario,w
+   906  0788  00A8               	movwf	_H
+   907  0789  087A               	movf	??_contadorbinario+1,w
+   908  078A  00A9               	movwf	_H+1
    909                           
-   910                           ;Lab2_Erick.c: 174:             L = ADRESH;
-   911  07A7  081E               	movf	30,w	;volatile
-   912  07A8  00F9               	movwf	??_contadorbinario
-   913  07A9  01FA               	clrf	??_contadorbinario+1
-   914  07AA  0879               	movf	??_contadorbinario,w
-   915  07AB  00A4               	movwf	_L
-   916  07AC  087A               	movf	??_contadorbinario+1,w
-   917  07AD  00A5               	movwf	_L+1
-   918  07AE                     l955:
+   910                           ;Lab2_Erick.c: 180:             L = ADRESH;
+   911  078B  081E               	movf	30,w	;volatile
+   912  078C  00F9               	movwf	??_contadorbinario
+   913  078D  01FA               	clrf	??_contadorbinario+1
+   914  078E  0879               	movf	??_contadorbinario,w
+   915  078F  00A6               	movwf	_L
+   916  0790  087A               	movf	??_contadorbinario+1,w
+   917  0791  00A7               	movwf	_L+1
+   918  0792                     l957:
    919                           
-   920                           ;Lab2_Erick.c: 175:             H = ((H/16)%16);
-   921  07AE  3010               	movlw	16
-   922  07AF  00F0               	movwf	___awdiv@divisor
-   923  07B0  3000               	movlw	0
-   924  07B1  00F1               	movwf	___awdiv@divisor+1
-   925  07B2  0827               	movf	_H+1,w
-   926  07B3  00F3               	movwf	___awdiv@dividend+1
-   927  07B4  0826               	movf	_H,w
-   928  07B5  00F2               	movwf	___awdiv@dividend
-   929  07B6  120A  118A  269E  120A  118A  	fcall	___awdiv
-   930  07BB  300F               	movlw	15
-   931  07BC  0570               	andwf	?___awdiv,w
-   932  07BD  1283               	bcf	3,5	;RP0=0, select bank0
-   933  07BE  1303               	bcf	3,6	;RP1=0, select bank0
-   934  07BF  00A6               	movwf	_H
-   935  07C0  3000               	movlw	0
-   936  07C1  0571               	andwf	?___awdiv+1,w
-   937  07C2  00A7               	movwf	_H+1
-   938  07C3                     l957:
+   920                           ;Lab2_Erick.c: 182:             H = ((H/16)%16);
+   921  0792  3010               	movlw	16
+   922  0793  00F0               	movwf	___awdiv@divisor
+   923  0794  3000               	movlw	0
+   924  0795  00F1               	movwf	___awdiv@divisor+1
+   925  0796  0829               	movf	_H+1,w
+   926  0797  00F3               	movwf	___awdiv@dividend+1
+   927  0798  0828               	movf	_H,w
+   928  0799  00F2               	movwf	___awdiv@dividend
+   929  079A  120A  118A  2683  120A  118A  	fcall	___awdiv
+   930  079F  300F               	movlw	15
+   931  07A0  0570               	andwf	?___awdiv,w
+   932  07A1  1283               	bcf	3,5	;RP0=0, select bank0
+   933  07A2  1303               	bcf	3,6	;RP1=0, select bank0
+   934  07A3  00A8               	movwf	_H
+   935  07A4  3000               	movlw	0
+   936  07A5  0571               	andwf	?___awdiv+1,w
+   937  07A6  00A9               	movwf	_H+1
+   938  07A7                     l959:
    939                           
-   940                           ;Lab2_Erick.c: 176:             L = (L%16);
-   941  07C3  300F               	movlw	15
-   942  07C4  0524               	andwf	_L,w
-   943  07C5  00A4               	movwf	_L
-   944  07C6  3000               	movlw	0
-   945  07C7  0525               	andwf	_L+1,w
-   946  07C8  00A5               	movwf	_L+1
-   947  07C9                     l959:
+   940                           ;Lab2_Erick.c: 183:             L = (L%16);
+   941  07A7  300F               	movlw	15
+   942  07A8  0526               	andwf	_L,w
+   943  07A9  00A6               	movwf	_L
+   944  07AA  3000               	movlw	0
+   945  07AB  0527               	andwf	_L+1,w
+   946  07AC  00A7               	movwf	_L+1
+   947  07AD                     l961:
    948                           
-   949                           ;Lab2_Erick.c: 177:             PORTD = display[H];
-   950  07C9  0826               	movf	_H,w
-   951  07CA  3E01               	addlw	low ((_display-__stringbase)| (0+32768))
-   952  07CB  0084               	movwf	4
-   953  07CC  120A  118A  2003  120A  118A  	fcall	stringdir
-   954  07D1  0088               	movwf	8	;volatile
-   955  07D2                     l961:
-   956                           
-   957                           ;Lab2_Erick.c: 178:             PORTCbits.RC0 = 1;
-   958  07D2  1407               	bsf	7,0	;volatile
-   959  07D3                     l963:
-   960                           
-   961                           ;Lab2_Erick.c: 179:             PORTCbits.RC0 = 0;
-   962  07D3  1007               	bcf	7,0	;volatile
-   963  07D4                     l965:
-   964                           
-   965                           ;Lab2_Erick.c: 180:             PORTCbits.RC1 = 0;
-   966  07D4  1087               	bcf	7,1	;volatile
-   967  07D5                     l967:
-   968                           
-   969                           ;Lab2_Erick.c: 181:             PORTD = display[L];
-   970  07D5  0824               	movf	_L,w
-   971  07D6  3E01               	addlw	low ((_display-__stringbase)| (0+32768))
-   972  07D7  0084               	movwf	4
-   973  07D8  120A  118A  2003  120A  118A  	fcall	stringdir
-   974  07DD  0088               	movwf	8	;volatile
-   975  07DE                     l969:
-   976                           
-   977                           ;Lab2_Erick.c: 182:             PORTCbits.RC0 = 0;
-   978  07DE  1007               	bcf	7,0	;volatile
-   979  07DF                     l971:
-   980                           
-   981                           ;Lab2_Erick.c: 183:             PORTCbits.RC1 = 1;
-   982  07DF  1487               	bsf	7,1	;volatile
-   983  07E0                     l973:
-   984                           
-   985                           ;Lab2_Erick.c: 184:             PORTCbits.RC1 = 0;
-   986  07E0  1087               	bcf	7,1	;volatile
-   987  07E1                     l975:
-   988                           
-   989                           ;Lab2_Erick.c: 185:             ADCON0bits.GO_DONE =1;
-   990  07E1  149F               	bsf	31,1	;volatile
-   991  07E2  2F12               	goto	l913
-   992  07E3  0008               	return
-   993  07E4                     __end_of_contadorbinario:
+   949                           ;Lab2_Erick.c: 184:             suma = ADRESH;
+   950  07AD  081E               	movf	30,w	;volatile
+   951  07AE  00F9               	movwf	??_contadorbinario
+   952  07AF  01FA               	clrf	??_contadorbinario+1
+   953  07B0  0879               	movf	??_contadorbinario,w
+   954  07B1  00A4               	movwf	_suma
+   955  07B2  087A               	movf	??_contadorbinario+1,w
+   956  07B3  00A5               	movwf	_suma+1
+   957  07B4                     l963:
+   958                           
+   959                           ;Lab2_Erick.c: 185:             PORTD = display[H];
+   960  07B4  0828               	movf	_H,w
+   961  07B5  3E01               	addlw	low ((_display-__stringbase)| (0+32768))
+   962  07B6  0084               	movwf	4
+   963  07B7  120A  118A  2003  120A  118A  	fcall	stringdir
+   964  07BC  0088               	movwf	8	;volatile
+   965  07BD                     l965:
+   966                           
+   967                           ;Lab2_Erick.c: 186:             PORTCbits.RC0 = 1;
+   968  07BD  1407               	bsf	7,0	;volatile
+   969  07BE                     l967:
+   970                           
+   971                           ;Lab2_Erick.c: 187:             PORTCbits.RC0 = 0;
+   972  07BE  1007               	bcf	7,0	;volatile
+   973  07BF                     l969:
+   974                           
+   975                           ;Lab2_Erick.c: 189:             PORTD = display[L];
+   976  07BF  0826               	movf	_L,w
+   977  07C0  3E01               	addlw	low ((_display-__stringbase)| (0+32768))
+   978  07C1  0084               	movwf	4
+   979  07C2  120A  118A  2003  120A  118A  	fcall	stringdir
+   980  07C7  0088               	movwf	8	;volatile
+   981  07C8                     l971:
+   982                           
+   983                           ;Lab2_Erick.c: 191:             PORTCbits.RC1 = 1;
+   984  07C8  1487               	bsf	7,1	;volatile
+   985  07C9                     l973:
+   986                           
+   987                           ;Lab2_Erick.c: 192:             PORTCbits.RC1 = 0;
+   988  07C9  1087               	bcf	7,1	;volatile
+   989  07CA                     l975:
+   990                           
+   991                           ;Lab2_Erick.c: 193:             ADCON0bits.GO_DONE =1;
+   992  07CA  149F               	bsf	31,1	;volatile
+   993  07CB                     l977:
    994                           
-   995                           	psect	text3
-   996  069E                     __ptext3:	
-   997 ;; *************** function ___awdiv *****************
-   998 ;; Defined at:
-   999 ;;		line 5 in file "C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c"
-  1000 ;; Parameters:    Size  Location     Type
-  1001 ;;  divisor         2    0[COMMON] int 
-  1002 ;;  dividend        2    2[COMMON] int 
-  1003 ;; Auto vars:     Size  Location     Type
-  1004 ;;  quotient        2    7[COMMON] int 
-  1005 ;;  sign            1    6[COMMON] unsigned char 
-  1006 ;;  counter         1    5[COMMON] unsigned char 
-  1007 ;; Return value:  Size  Location     Type
-  1008 ;;                  2    0[COMMON] int 
-  1009 ;; Registers used:
-  1010 ;;		wreg, status,2, status,0
-  1011 ;; Tracked objects:
-  1012 ;;		On entry : 0/0
-  1013 ;;		On exit  : 0/0
-  1014 ;;		Unchanged: 0/0
-  1015 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-  1016 ;;      Params:         4       0       0       0       0
-  1017 ;;      Locals:         4       0       0       0       0
-  1018 ;;      Temps:          1       0       0       0       0
-  1019 ;;      Totals:         9       0       0       0       0
-  1020 ;;Total ram usage:        9 bytes
-  1021 ;; Hardware stack levels used:    1
-  1022 ;; This function calls:
-  1023 ;;		Nothing
-  1024 ;; This function is called by:
-  1025 ;;		_contadorbinario
-  1026 ;; This function uses a non-reentrant model
-  1027 ;;
-  1028                           
-  1029                           
-  1030                           ;psect for function ___awdiv
-  1031  069E                     ___awdiv:
-  1032  069E                     l867:	
-  1033                           ;incstack = 0
-  1034                           ; Regs used in ___awdiv: [wreg+status,2+status,0]
-  1035                           
-  1036  069E  01F6               	clrf	___awdiv@sign
-  1037  069F                     l869:
-  1038  069F  1FF1               	btfss	___awdiv@divisor+1,7
-  1039  06A0  2EA2               	goto	u191
-  1040  06A1  2EA3               	goto	u190
-  1041  06A2                     u191:
-  1042  06A2  2EAA               	goto	l875
-  1043  06A3                     u190:
-  1044  06A3                     l871:
-  1045  06A3  09F0               	comf	___awdiv@divisor,f
-  1046  06A4  09F1               	comf	___awdiv@divisor+1,f
-  1047  06A5  0AF0               	incf	___awdiv@divisor,f
-  1048  06A6  1903               	skipnz
-  1049  06A7  0AF1               	incf	___awdiv@divisor+1,f
-  1050  06A8                     l873:
-  1051  06A8  01F6               	clrf	___awdiv@sign
-  1052  06A9  0AF6               	incf	___awdiv@sign,f
-  1053  06AA                     l875:
-  1054  06AA  1FF3               	btfss	___awdiv@dividend+1,7
-  1055  06AB  2EAD               	goto	u201
-  1056  06AC  2EAE               	goto	u200
-  1057  06AD                     u201:
-  1058  06AD  2EB7               	goto	l881
-  1059  06AE                     u200:
-  1060  06AE                     l877:
-  1061  06AE  09F2               	comf	___awdiv@dividend,f
-  1062  06AF  09F3               	comf	___awdiv@dividend+1,f
-  1063  06B0  0AF2               	incf	___awdiv@dividend,f
-  1064  06B1  1903               	skipnz
-  1065  06B2  0AF3               	incf	___awdiv@dividend+1,f
-  1066  06B3                     l879:
-  1067  06B3  3001               	movlw	1
-  1068  06B4  00F4               	movwf	??___awdiv
-  1069  06B5  0874               	movf	??___awdiv,w
-  1070  06B6  06F6               	xorwf	___awdiv@sign,f
-  1071  06B7                     l881:
-  1072  06B7  01F7               	clrf	___awdiv@quotient
-  1073  06B8  01F8               	clrf	___awdiv@quotient+1
-  1074  06B9                     l883:
-  1075  06B9  0870               	movf	___awdiv@divisor,w
-  1076  06BA  0471               	iorwf	___awdiv@divisor+1,w
-  1077  06BB  1903               	btfsc	3,2
-  1078  06BC  2EBE               	goto	u211
-  1079  06BD  2EBF               	goto	u210
-  1080  06BE                     u211:
-  1081  06BE  2EF6               	goto	l903
-  1082  06BF                     u210:
-  1083  06BF                     l885:
-  1084  06BF  01F5               	clrf	___awdiv@counter
-  1085  06C0  0AF5               	incf	___awdiv@counter,f
-  1086  06C1  2ECD               	goto	l891
-  1087  06C2                     l887:
-  1088  06C2  3001               	movlw	1
-  1089  06C3                     u225:
-  1090  06C3  1003               	clrc
-  1091  06C4  0DF0               	rlf	___awdiv@divisor,f
-  1092  06C5  0DF1               	rlf	___awdiv@divisor+1,f
-  1093  06C6  3EFF               	addlw	-1
-  1094  06C7  1D03               	skipz
-  1095  06C8  2EC3               	goto	u225
-  1096  06C9                     l889:
-  1097  06C9  3001               	movlw	1
-  1098  06CA  00F4               	movwf	??___awdiv
-  1099  06CB  0874               	movf	??___awdiv,w
-  1100  06CC  07F5               	addwf	___awdiv@counter,f
-  1101  06CD                     l891:
-  1102  06CD  1FF1               	btfss	___awdiv@divisor+1,7
-  1103  06CE  2ED0               	goto	u231
-  1104  06CF  2ED1               	goto	u230
-  1105  06D0                     u231:
-  1106  06D0  2EC2               	goto	l887
-  1107  06D1                     u230:
-  1108  06D1                     l893:
-  1109  06D1  3001               	movlw	1
-  1110  06D2                     u245:
-  1111  06D2  1003               	clrc
-  1112  06D3  0DF7               	rlf	___awdiv@quotient,f
-  1113  06D4  0DF8               	rlf	___awdiv@quotient+1,f
-  1114  06D5  3EFF               	addlw	-1
-  1115  06D6  1D03               	skipz
-  1116  06D7  2ED2               	goto	u245
-  1117  06D8  0871               	movf	___awdiv@divisor+1,w
-  1118  06D9  0273               	subwf	___awdiv@dividend+1,w
-  1119  06DA  1D03               	skipz
-  1120  06DB  2EDE               	goto	u255
-  1121  06DC  0870               	movf	___awdiv@divisor,w
-  1122  06DD  0272               	subwf	___awdiv@dividend,w
-  1123  06DE                     u255:
-  1124  06DE  1C03               	skipc
-  1125  06DF  2EE1               	goto	u251
-  1126  06E0  2EE2               	goto	u250
-  1127  06E1                     u251:
-  1128  06E1  2EE9               	goto	l899
-  1129  06E2                     u250:
-  1130  06E2                     l895:
-  1131  06E2  0870               	movf	___awdiv@divisor,w
-  1132  06E3  02F2               	subwf	___awdiv@dividend,f
-  1133  06E4  0871               	movf	___awdiv@divisor+1,w
-  1134  06E5  1C03               	skipc
-  1135  06E6  03F3               	decf	___awdiv@dividend+1,f
-  1136  06E7  02F3               	subwf	___awdiv@dividend+1,f
-  1137  06E8                     l897:
-  1138  06E8  1477               	bsf	___awdiv@quotient,0
-  1139  06E9                     l899:
-  1140  06E9  3001               	movlw	1
-  1141  06EA                     u265:
-  1142  06EA  1003               	clrc
-  1143  06EB  0CF1               	rrf	___awdiv@divisor+1,f
-  1144  06EC  0CF0               	rrf	___awdiv@divisor,f
-  1145  06ED  3EFF               	addlw	-1
-  1146  06EE  1D03               	skipz
-  1147  06EF  2EEA               	goto	u265
-  1148  06F0                     l901:
-  1149  06F0  3001               	movlw	1
-  1150  06F1  02F5               	subwf	___awdiv@counter,f
-  1151  06F2  1D03               	btfss	3,2
-  1152  06F3  2EF5               	goto	u271
-  1153  06F4  2EF6               	goto	u270
-  1154  06F5                     u271:
-  1155  06F5  2ED1               	goto	l893
-  1156  06F6                     u270:
-  1157  06F6                     l903:
-  1158  06F6  0876               	movf	___awdiv@sign,w
-  1159  06F7  1903               	btfsc	3,2
-  1160  06F8  2EFA               	goto	u281
-  1161  06F9  2EFB               	goto	u280
-  1162  06FA                     u281:
-  1163  06FA  2F00               	goto	l907
-  1164  06FB                     u280:
-  1165  06FB                     l905:
-  1166  06FB  09F7               	comf	___awdiv@quotient,f
-  1167  06FC  09F8               	comf	___awdiv@quotient+1,f
-  1168  06FD  0AF7               	incf	___awdiv@quotient,f
-  1169  06FE  1903               	skipnz
-  1170  06FF  0AF8               	incf	___awdiv@quotient+1,f
-  1171  0700                     l907:
-  1172  0700  0878               	movf	___awdiv@quotient+1,w
-  1173  0701  00F1               	movwf	?___awdiv+1
-  1174  0702  0877               	movf	___awdiv@quotient,w
-  1175  0703  00F0               	movwf	?___awdiv
-  1176  0704                     l330:
-  1177  0704  0008               	return
-  1178  0705                     __end_of___awdiv:
-  1179  007E                     btemp	set	126	;btemp
-  1180  007E                     wtemp0	set	126
-  1181                           
-  1182                           	psect	config
-  1183                           
-  1184                           ;Config register CONFIG1 @ 0x2007
-  1185                           ;	Oscillator Selection bits
-  1186                           ;	FOSC = INTRC_NOCLKOUT, INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O f
+   995                           ;Lab2_Erick.c: 200:         if (cont0<suma){
+   996  07CB  082D               	movf	_cont0+1,w
+   997  07CC  3A80               	xorlw	128
+   998  07CD  00F9               	movwf	??_contadorbinario
+   999  07CE  0825               	movf	_suma+1,w
+  1000  07CF  3A80               	xorlw	128
+  1001  07D0  0279               	subwf	??_contadorbinario,w
+  1002  07D1  1D03               	skipz
+  1003  07D2  2FD5               	goto	u385
+  1004  07D3  0824               	movf	_suma,w
+  1005  07D4  022C               	subwf	_cont0,w
+  1006  07D5                     u385:
+  1007  07D5  1803               	skipnc
+  1008  07D6  2FD8               	goto	u381
+  1009  07D7  2FD9               	goto	u380
+  1010  07D8                     u381:
+  1011  07D8  2FDD               	goto	l92
+  1012  07D9                     u380:
+  1013  07D9                     l979:
+  1014                           
+  1015                           ;Lab2_Erick.c: 201:             PORTBbits.RB7 = 1;
+  1016  07D9  1283               	bcf	3,5	;RP0=0, select bank0
+  1017  07DA  1303               	bcf	3,6	;RP1=0, select bank0
+  1018  07DB  1786               	bsf	6,7	;volatile
+  1019                           
+  1020                           ;Lab2_Erick.c: 202:         }
+  1021  07DC  2EF7               	goto	l917
+  1022  07DD                     l92:	
+  1023                           ;Lab2_Erick.c: 203:         else{
+  1024                           
+  1025                           
+  1026                           ;Lab2_Erick.c: 204:             PORTBbits.RB7 = 0;
+  1027  07DD  1283               	bcf	3,5	;RP0=0, select bank0
+  1028  07DE  1303               	bcf	3,6	;RP1=0, select bank0
+  1029  07DF  1386               	bcf	6,7	;volatile
+  1030  07E0  2EF7               	goto	l917
+  1031  07E1  0008               	return
+  1032  07E2                     __end_of_contadorbinario:
+  1033                           
+  1034                           	psect	text3
+  1035  0683                     __ptext3:	
+  1036 ;; *************** function ___awdiv *****************
+  1037 ;; Defined at:
+  1038 ;;		line 5 in file "C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c"
+  1039 ;; Parameters:    Size  Location     Type
+  1040 ;;  divisor         2    0[COMMON] int 
+  1041 ;;  dividend        2    2[COMMON] int 
+  1042 ;; Auto vars:     Size  Location     Type
+  1043 ;;  quotient        2    7[COMMON] int 
+  1044 ;;  sign            1    6[COMMON] unsigned char 
+  1045 ;;  counter         1    5[COMMON] unsigned char 
+  1046 ;; Return value:  Size  Location     Type
+  1047 ;;                  2    0[COMMON] int 
+  1048 ;; Registers used:
+  1049 ;;		wreg, status,2, status,0
+  1050 ;; Tracked objects:
+  1051 ;;		On entry : 0/0
+  1052 ;;		On exit  : 0/0
+  1053 ;;		Unchanged: 0/0
+  1054 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1055 ;;      Params:         4       0       0       0       0
+  1056 ;;      Locals:         4       0       0       0       0
+  1057 ;;      Temps:          1       0       0       0       0
+  1058 ;;      Totals:         9       0       0       0       0
+  1059 ;;Total ram usage:        9 bytes
+  1060 ;; Hardware stack levels used:    1
+  1061 ;; This function calls:
+  1062 ;;		Nothing
+  1063 ;; This function is called by:
+  1064 ;;		_contadorbinario
+  1065 ;; This function uses a non-reentrant model
+  1066 ;;
+  1067                           
+  1068                           
+  1069                           ;psect for function ___awdiv
+  1070  0683                     ___awdiv:
+  1071  0683                     l871:	
+  1072                           ;incstack = 0
+  1073                           ; Regs used in ___awdiv: [wreg+status,2+status,0]
+  1074                           
+  1075  0683  01F6               	clrf	___awdiv@sign
+  1076  0684                     l873:
+  1077  0684  1FF1               	btfss	___awdiv@divisor+1,7
+  1078  0685  2E87               	goto	u201
+  1079  0686  2E88               	goto	u200
+  1080  0687                     u201:
+  1081  0687  2E8F               	goto	l879
+  1082  0688                     u200:
+  1083  0688                     l875:
+  1084  0688  09F0               	comf	___awdiv@divisor,f
+  1085  0689  09F1               	comf	___awdiv@divisor+1,f
+  1086  068A  0AF0               	incf	___awdiv@divisor,f
+  1087  068B  1903               	skipnz
+  1088  068C  0AF1               	incf	___awdiv@divisor+1,f
+  1089  068D                     l877:
+  1090  068D  01F6               	clrf	___awdiv@sign
+  1091  068E  0AF6               	incf	___awdiv@sign,f
+  1092  068F                     l879:
+  1093  068F  1FF3               	btfss	___awdiv@dividend+1,7
+  1094  0690  2E92               	goto	u211
+  1095  0691  2E93               	goto	u210
+  1096  0692                     u211:
+  1097  0692  2E9C               	goto	l885
+  1098  0693                     u210:
+  1099  0693                     l881:
+  1100  0693  09F2               	comf	___awdiv@dividend,f
+  1101  0694  09F3               	comf	___awdiv@dividend+1,f
+  1102  0695  0AF2               	incf	___awdiv@dividend,f
+  1103  0696  1903               	skipnz
+  1104  0697  0AF3               	incf	___awdiv@dividend+1,f
+  1105  0698                     l883:
+  1106  0698  3001               	movlw	1
+  1107  0699  00F4               	movwf	??___awdiv
+  1108  069A  0874               	movf	??___awdiv,w
+  1109  069B  06F6               	xorwf	___awdiv@sign,f
+  1110  069C                     l885:
+  1111  069C  01F7               	clrf	___awdiv@quotient
+  1112  069D  01F8               	clrf	___awdiv@quotient+1
+  1113  069E                     l887:
+  1114  069E  0870               	movf	___awdiv@divisor,w
+  1115  069F  0471               	iorwf	___awdiv@divisor+1,w
+  1116  06A0  1903               	btfsc	3,2
+  1117  06A1  2EA3               	goto	u221
+  1118  06A2  2EA4               	goto	u220
+  1119  06A3                     u221:
+  1120  06A3  2EDB               	goto	l907
+  1121  06A4                     u220:
+  1122  06A4                     l889:
+  1123  06A4  01F5               	clrf	___awdiv@counter
+  1124  06A5  0AF5               	incf	___awdiv@counter,f
+  1125  06A6  2EB2               	goto	l895
+  1126  06A7                     l891:
+  1127  06A7  3001               	movlw	1
+  1128  06A8                     u235:
+  1129  06A8  1003               	clrc
+  1130  06A9  0DF0               	rlf	___awdiv@divisor,f
+  1131  06AA  0DF1               	rlf	___awdiv@divisor+1,f
+  1132  06AB  3EFF               	addlw	-1
+  1133  06AC  1D03               	skipz
+  1134  06AD  2EA8               	goto	u235
+  1135  06AE                     l893:
+  1136  06AE  3001               	movlw	1
+  1137  06AF  00F4               	movwf	??___awdiv
+  1138  06B0  0874               	movf	??___awdiv,w
+  1139  06B1  07F5               	addwf	___awdiv@counter,f
+  1140  06B2                     l895:
+  1141  06B2  1FF1               	btfss	___awdiv@divisor+1,7
+  1142  06B3  2EB5               	goto	u241
+  1143  06B4  2EB6               	goto	u240
+  1144  06B5                     u241:
+  1145  06B5  2EA7               	goto	l891
+  1146  06B6                     u240:
+  1147  06B6                     l897:
+  1148  06B6  3001               	movlw	1
+  1149  06B7                     u255:
+  1150  06B7  1003               	clrc
+  1151  06B8  0DF7               	rlf	___awdiv@quotient,f
+  1152  06B9  0DF8               	rlf	___awdiv@quotient+1,f
+  1153  06BA  3EFF               	addlw	-1
+  1154  06BB  1D03               	skipz
+  1155  06BC  2EB7               	goto	u255
+  1156  06BD  0871               	movf	___awdiv@divisor+1,w
+  1157  06BE  0273               	subwf	___awdiv@dividend+1,w
+  1158  06BF  1D03               	skipz
+  1159  06C0  2EC3               	goto	u265
+  1160  06C1  0870               	movf	___awdiv@divisor,w
+  1161  06C2  0272               	subwf	___awdiv@dividend,w
+  1162  06C3                     u265:
+  1163  06C3  1C03               	skipc
+  1164  06C4  2EC6               	goto	u261
+  1165  06C5  2EC7               	goto	u260
+  1166  06C6                     u261:
+  1167  06C6  2ECE               	goto	l903
+  1168  06C7                     u260:
+  1169  06C7                     l899:
+  1170  06C7  0870               	movf	___awdiv@divisor,w
+  1171  06C8  02F2               	subwf	___awdiv@dividend,f
+  1172  06C9  0871               	movf	___awdiv@divisor+1,w
+  1173  06CA  1C03               	skipc
+  1174  06CB  03F3               	decf	___awdiv@dividend+1,f
+  1175  06CC  02F3               	subwf	___awdiv@dividend+1,f
+  1176  06CD                     l901:
+  1177  06CD  1477               	bsf	___awdiv@quotient,0
+  1178  06CE                     l903:
+  1179  06CE  3001               	movlw	1
+  1180  06CF                     u275:
+  1181  06CF  1003               	clrc
+  1182  06D0  0CF1               	rrf	___awdiv@divisor+1,f
+  1183  06D1  0CF0               	rrf	___awdiv@divisor,f
+  1184  06D2  3EFF               	addlw	-1
+  1185  06D3  1D03               	skipz
+  1186  06D4  2ECF               	goto	u275
+  1187  06D5                     l905:
+  1188  06D5  3001               	movlw	1
+  1189  06D6  02F5               	subwf	___awdiv@counter,f
+  1190  06D7  1D03               	btfss	3,2
+  1191  06D8  2EDA               	goto	u281
+  1192  06D9  2EDB               	goto	u280
+  1193  06DA                     u281:
+  1194  06DA  2EB6               	goto	l897
+  1195  06DB                     u280:
+  1196  06DB                     l907:
+  1197  06DB  0876               	movf	___awdiv@sign,w
+  1198  06DC  1903               	btfsc	3,2
+  1199  06DD  2EDF               	goto	u291
+  1200  06DE  2EE0               	goto	u290
+  1201  06DF                     u291:
+  1202  06DF  2EE5               	goto	l911
+  1203  06E0                     u290:
+  1204  06E0                     l909:
+  1205  06E0  09F7               	comf	___awdiv@quotient,f
+  1206  06E1  09F8               	comf	___awdiv@quotient+1,f
+  1207  06E2  0AF7               	incf	___awdiv@quotient,f
+  1208  06E3  1903               	skipnz
+  1209  06E4  0AF8               	incf	___awdiv@quotient+1,f
+  1210  06E5                     l911:
+  1211  06E5  0878               	movf	___awdiv@quotient+1,w
+  1212  06E6  00F1               	movwf	?___awdiv+1
+  1213  06E7  0877               	movf	___awdiv@quotient,w
+  1214  06E8  00F0               	movwf	?___awdiv
+  1215  06E9                     l334:
+  1216  06E9  0008               	return
+  1217  06EA                     __end_of___awdiv:
+  1218  007E                     btemp	set	126	;btemp
+  1219  007E                     wtemp0	set	126
+  1220                           
+  1221                           	psect	config
+  1222                           
+  1223                           ;Config register CONFIG1 @ 0x2007
+  1224                           ;	Oscillator Selection bits
+  1225                           ;	FOSC = INTRC_NOCLKOUT, INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O f
       +                          unction on RA7/OSC1/CLKIN
-  1187                           ;	Watchdog Timer Enable bit
-  1188                           ;	WDTE = OFF, WDT disabled and can be enabled by SWDTEN bit of the WDTCON register
-  1189                           ;	Power-up Timer Enable bit
-  1190                           ;	PWRTE = OFF, PWRT disabled
-  1191                           ;	RE3/MCLR pin function select bit
-  1192                           ;	MCLRE = OFF, RE3/MCLR pin function is digital input, MCLR internally tied to VDD
-  1193                           ;	Code Protection bit
-  1194                           ;	CP = OFF, Program memory code protection is disabled
-  1195                           ;	Data Code Protection bit
-  1196                           ;	CPD = OFF, Data memory code protection is disabled
-  1197                           ;	Brown Out Reset Selection bits
-  1198                           ;	BOREN = OFF, BOR disabled
-  1199                           ;	Internal External Switchover bit
-  1200                           ;	IESO = OFF, Internal/External Switchover mode is disabled
-  1201                           ;	Fail-Safe Clock Monitor Enabled bit
-  1202                           ;	FCMEN = OFF, Fail-Safe Clock Monitor is disabled
-  1203                           ;	Low Voltage Programming Enable bit
-  1204                           ;	LVP = OFF, RB3 pin has digital I/O, HV on MCLR must be used for programming
-  1205                           ;	In-Circuit Debugger Mode bit
-  1206                           ;	DEBUG = 0x1, unprogrammed default
-  1207  2007                     	org	8199
-  1208  2007  20D4               	dw	8404
-  1209                           
-  1210                           ;Config register CONFIG2 @ 0x2008
-  1211                           ;	Brown-out Reset Selection bit
-  1212                           ;	BOR4V = BOR40V, Brown-out Reset set to 4.0V
-  1213                           ;	Flash Program Memory Self Write Enable bits
-  1214                           ;	WRT = OFF, Write protection off
-  1215  2008                     	org	8200
-  1216  2008  3FFF               	dw	16383
+  1226                           ;	Watchdog Timer Enable bit
+  1227                           ;	WDTE = OFF, WDT disabled and can be enabled by SWDTEN bit of the WDTCON register
+  1228                           ;	Power-up Timer Enable bit
+  1229                           ;	PWRTE = OFF, PWRT disabled
+  1230                           ;	RE3/MCLR pin function select bit
+  1231                           ;	MCLRE = OFF, RE3/MCLR pin function is digital input, MCLR internally tied to VDD
+  1232                           ;	Code Protection bit
+  1233                           ;	CP = OFF, Program memory code protection is disabled
+  1234                           ;	Data Code Protection bit
+  1235                           ;	CPD = OFF, Data memory code protection is disabled
+  1236                           ;	Brown Out Reset Selection bits
+  1237                           ;	BOREN = OFF, BOR disabled
+  1238                           ;	Internal External Switchover bit
+  1239                           ;	IESO = OFF, Internal/External Switchover mode is disabled
+  1240                           ;	Fail-Safe Clock Monitor Enabled bit
+  1241                           ;	FCMEN = OFF, Fail-Safe Clock Monitor is disabled
+  1242                           ;	Low Voltage Programming Enable bit
+  1243                           ;	LVP = OFF, RB3 pin has digital I/O, HV on MCLR must be used for programming
+  1244                           ;	In-Circuit Debugger Mode bit
+  1245                           ;	DEBUG = 0x1, unprogrammed default
+  1246  2007                     	org	8199
+  1247  2007  20D4               	dw	8404
+  1248                           
+  1249                           ;Config register CONFIG2 @ 0x2008
+  1250                           ;	Brown-out Reset Selection bit
+  1251                           ;	BOR4V = BOR40V, Brown-out Reset set to 4.0V
+  1252                           ;	Flash Program Memory Self Write Enable bits
+  1253                           ;	WRT = OFF, Write protection off
+  1254  2008                     	org	8200
+  1255  2008  3FFF               	dw	16383
 
 Data Sizes:
     Strings     0
     Constant    16
     Data        2
-    BSS         12
+    BSS         14
     Persistent  0
     Stack       0
 
 Auto Spaces:
     Space          Size  Autos    Used
     COMMON           14     14      14
-    BANK0            80      0      14
+    BANK0            80      0      16
     BANK1            80      0       0
     BANK3            96      0       0
     BANK2            96      0       0
@@ -1313,93 +1352,94 @@ BANK1               50      0       0       7        0.0%
 BITBANK1            50      0       0       6        0.0%
 SFR1                 0      0       0       2        0.0%
 BITSFR1              0      0       0       2        0.0%
-BANK0               50      0       E       5       17.5%
+BANK0               50      0      10       5       20.0%
 BITBANK0            50      0       0       4        0.0%
 SFR0                 0      0       0       1        0.0%
 BITSFR0              0      0       0       1        0.0%
 COMMON               E      E       E       1      100.0%
 BITCOMMON            E      0       0       0        0.0%
 CODE                 0      0       0       0        0.0%
-DATA                 0      0      1C      12        0.0%
-ABS                  0      0      1C       3        0.0%
+DATA                 0      0      1E      12        0.0%
+ABS                  0      0      1E       3        0.0%
 NULL                 0      0       0       0        0.0%
 STACK                0      0       0       2        0.0%
 EEDATA             100      0       0       0        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Fri Feb 05 17:10:38 2021
+Symbol Table                                                                                   Fri Feb 05 19:43:17 2021
 
-                       _H 0026                         _L 0024                         pc 0002  
-                      l71 0665                        l74 069D              ___awdiv@sign 0076  
-                      fsr 0004                       l330 0704                       l731 066D  
-                     l901 06F0                       l741 0674                       l733 066E  
-                     l903 06F6                       l911 0705                       l751 067C  
-                     l743 0677                       l735 0670                       l727 0668  
-                     l905 06FB                       l921 0729                       l913 0712  
-                     l761 0685                       l753 067F                       l745 0678  
-                     l737 0671                       l729 066C                       l907 0700  
-                     l923 072C                       l931 0749                       l915 0713  
-                     l771 068C                       l763 0686                       l755 0680  
-                     l747 0679                       l739 0672                       l941 077C  
-                     l933 074A                       l925 073F                       l917 0719  
-                     l781 0695                       l773 068D                       l765 0687  
-                     l757 0683                       l749 067A                       l871 06A3  
-                     l951 079A                       l943 0782                       l935 074F  
-                     l927 0742                       l919 071B                       l791 069B  
-                     l783 0696                       l775 0690                       l767 0688  
-                     l759 0684                       l881 06B7                       l873 06A8  
-                     l961 07D2                       l953 07A0                       l945 0784  
-                     l937 0751                       l929 0747                       l793 069C  
-                     l785 0697                       l777 0691                       l769 068B  
-                     l891 06CD                       l883 06B9                       l875 06AA  
-                     l867 069E                       l971 07DF                       l963 07D3  
-                     l955 07AE                       l939 0767                       l947 0787  
-                     l787 0698                       l779 0692                       l893 06D1  
-                     l885 06BF                       l877 06AE                       l869 069F  
-                     l973 07E0                       l965 07D4                       l957 07C3  
-                     l949 0796                       l789 0699                       l895 06E2  
-                     l887 06C2                       l879 06B3                       l975 07E1  
-                     l967 07D5                       l959 07C9                       l897 06E8  
-                     l889 06C9                       l969 07DE                       l977 065B  
-                     l899 06E9                       l979 0660                       u200 06AE  
-                     u201 06AD                       u210 06BF                       u211 06BE  
-                     u300 0729                       u301 0728                       u230 06D1  
-                     u310 0747                       u231 06D0                       u311 0746  
-                     u320 074F                       u225 06C3                       u321 074E  
-                     u250 06E2                       u330 0767                       u251 06E1  
-                     u331 0766                       u340 0782                       u245 06D2  
-                     u341 0781                       u270 06F6                       u190 06A3  
-                     u350 0796                       u271 06F5                       u255 06DE  
-                     u191 06A2                       u351 0795                       u280 06FB  
-                     u360 07A0                       u281 06FA                       u265 06EA  
-                     u361 079F                       u290 0719                       u355 0792  
-                     u291 0718                       u377 070B                       u387 0738  
-                     u397 0775                       _adc 0028                       fsr0 0004  
-                    _IOCB 0096                      _main 065B                      _todo 002C  
-                    btemp 007E                      _volt 0020                      start 0000  
-                   ?_main 0070           __end_of___awdiv 0705           ___awdiv@divisor 0070  
-         ___awdiv@counter 0075                     _PORTA 0005                     _PORTB 0006  
-                   _PORTC 0007                     _PORTD 0008                     _PORTE 0009  
-                   _TRISA 0085                     _TRISB 0086                     _TRISC 0087  
-                   _TRISD 0088                     _TRISE 0089           _contadorbinario 0705  
-         __end_of_display 0019                     _ciclo 002D                     _cont0 002A  
-                   _setup 0668                     pclath 000A                     status 0003  
-                   wtemp0 007E           __initialization 07E4              __end_of_main 0668  
-                  ??_main 007E                    _ADRESH 001E          ___awdiv@dividend 0072  
-                  ?_setup 0070                    _ANSELH 0189                 ??___awdiv 0074  
- __end_of_contadorbinario 07E4          ___awdiv@quotient 0077   __end_of__initialization 07FC  
-          __pcstackCOMMON 0070              __pidataBANK0 0659             __end_of_setup 069E  
-                 ??_setup 0070                __pbssBANK0 0020                __pmaintext 065B  
-        ?_contadorbinario 0070                __stringtab 0003                   ___awdiv 069E  
-               _ANSELbits 0188                   __ptext1 0668                   __ptext2 0705  
-                 __ptext3 069E                   _display 0009      end_of_initialization 07FC  
-               _PORTBbits 0006                 _PORTCbits 0007       _contadorbinario$354 007C  
-     _contadorbinario$355 007D       start_initialization 07E4               __pdataBANK0 002C  
-               ___latbits 0002                  ?___awdiv 0070                 __pstrings 0003  
-__size_of_contadorbinario 00DF            __size_of_setup 0036                  _IOCBbits 0096  
-                _PIE1bits 008C                _ADCON0bits 001F               __stringbase 0008  
-              _ADCON1bits 009F          __size_of___awdiv 0067        __end_of__stringtab 0009  
-       ??_contadorbinario 0079             __size_of_main 000D                _INTCONbits 000B  
-               stringcode 0003                _OSCCONbits 008F                  stringdir 0003  
-                stringtab 0003  
+                       _H 0028                         _L 0026                         pc 0002  
+                      l73 064A                        l92 07DD                        l76 0682  
+            ___awdiv@sign 0076                        fsr 0004                       l334 06E9  
+                     l731 064D                       l901 06CD                       l741 0656  
+                     l733 0651                       l911 06E5                       l903 06CE  
+                     l751 065E                       l743 0657                       l735 0652  
+                     l905 06D5                       l921 06FE                       l761 0668  
+                     l753 065F                       l745 0659                       l737 0653  
+                     l907 06DB                       l931 072B                       l923 0700  
+                     l915 06EA                       l771 066D                       l763 0669  
+                     l755 0661                       l747 065C                       l739 0655  
+                     l909 06E0                       l941 074B                       l925 070E  
+                     l933 072D                       l917 06F7                       l781 0676  
+                     l773 0670                       l765 066A                       l757 0664  
+                     l749 065D                       l871 0683                       l951 077A  
+                     l943 0760                       l935 072E                       l927 0723  
+                     l919 06F8                       l791 067D                       l783 0677  
+                     l775 0671                       l767 066B                       l759 0665  
+                     l881 0693                       l873 0684                       l961 07AD  
+                     l953 077E                       l945 0766                       l937 0733  
+                     l929 0726                       l793 067E                       l785 067A  
+                     l777 0672                       l769 066C                       l891 06A7  
+                     l883 0698                       l875 0688                       l971 07C8  
+                     l963 07B4                       l955 0784                       l947 0768  
+                     l939 0735                       l795 0680                       l787 067B  
+                     l779 0675                       l893 06AE                       l885 069C  
+                     l877 068D                       l973 07C9                       l965 07BD  
+                     l957 0792                       l949 076B                       l797 0681  
+                     l789 067C                       l981 0640                       l895 06B2  
+                     l887 069E                       l879 068F                       l975 07CA  
+                     l967 07BE                       l959 07A7                       l983 0645  
+                     l897 06B6                       l889 06A4                       l969 07BF  
+                     l977 07CB                       l899 06C7                       l979 07D9  
+                     u200 0688                       u201 0687                       u210 0693  
+                     u211 0692                       u220 06A4                       u300 06FE  
+                     u221 06A3                       u301 06FD                       u310 070E  
+                     u311 070D                       u240 06B6                       u320 072B  
+                     u241 06B5                       u321 072A                       u330 0733  
+                     u235 06A8                       u331 0732                       u260 06C7  
+                     u340 074B                       u261 06C6                       u341 074A  
+                     u350 0766                       u255 06B7                       u351 0765  
+                     u407 071C                       u280 06DB                       u360 077A  
+                     u281 06DA                       u265 06C3                       u361 0779  
+                     u417 0759                       u290 06E0                       u370 0784  
+                     u291 06DF                       u275 06CF                       u371 0783  
+                     u380 07D9                       u381 07D8                       u365 0776  
+                     u385 07D5                       u397 06F0                       _adc 002A  
+                     fsr0 0004                      _IOCB 0096                      _main 0640  
+                    _todo 002E                      _suma 0024                      btemp 007E  
+                    _volt 0020                      start 0000                     ?_main 0070  
+         __end_of___awdiv 06EA           ___awdiv@divisor 0070           ___awdiv@counter 0075  
+                   _PORTA 0005                     _PORTB 0006                     _PORTC 0007  
+                   _PORTD 0008                     _PORTE 0009                     _TRISA 0085  
+                   _TRISB 0086                     _TRISC 0087                     _TRISD 0088  
+                   _TRISE 0089           _contadorbinario 06EA           __end_of_display 0019  
+                   _ciclo 002F                     _cont0 002C                     _setup 064D  
+                   pclath 000A                     status 0003                     wtemp0 007E  
+         __initialization 07E2              __end_of_main 064D                    ??_main 007E  
+                  _ADRESH 001E          ___awdiv@dividend 0072                    ?_setup 0070  
+                  _ANSELH 0189                 ??___awdiv 0074   __end_of_contadorbinario 07E2  
+        ___awdiv@quotient 0077   __end_of__initialization 07FC            __pcstackCOMMON 0070  
+            __pidataBANK0 063E             __end_of_setup 0683                   ??_setup 0070  
+              __pbssBANK0 0020                __pmaintext 0640          ?_contadorbinario 0070  
+              __stringtab 0003                   ___awdiv 0683                 _ANSELbits 0188  
+                 __ptext1 064D                   __ptext2 06EA                   __ptext3 0683  
+                 _display 0009      end_of_initialization 07FC                 _PORTBbits 0006  
+               _PORTCbits 0007       _contadorbinario$355 007C       _contadorbinario$356 007D  
+     start_initialization 07E2               __pdataBANK0 002E                 ___latbits 0002  
+                ?___awdiv 0070                 __pstrings 0003  __size_of_contadorbinario 00F8  
+          __size_of_setup 0036                  _IOCBbits 0096                  _PIE1bits 008C  
+              _ADCON0bits 001F               __stringbase 0008                _ADCON1bits 009F  
+        __size_of___awdiv 0067        __end_of__stringtab 0009         ??_contadorbinario 0079  
+           __size_of_main 000D                _INTCONbits 000B                 stringcode 0003  
+              _OSCCONbits 008F                  stringdir 0003                  stringtab 0003  

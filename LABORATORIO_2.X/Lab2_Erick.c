@@ -30,7 +30,7 @@
 #pragma config WRT = OFF        // Flash Program Memory Self Write Enable bits (Write protection off)
 
 //Frecuencia del oscilador
-#define _XTAL_FREQ 4000000
+#define _XTAL_FREQ 8000000
 
 //############## DECLARACION DE VARIABLES #######################
 
@@ -51,9 +51,10 @@ char ciclo = 1;
 char todo = 1;
 int adc;
 float volt;
-const unsigned char display[] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x67, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71};
+const unsigned char display[16] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x67, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71};
 int H;
 int L;
+int suma;
 //******************************************************************************
 //CICLO PRINCIPAL
 //******************************************************************************
@@ -61,6 +62,9 @@ void main(void) {
 
     //while(1); 
     setup();
+    /*while(1){
+        contadorbinario();        
+    }*/
     contadorbinario();
     return;
 }
@@ -122,6 +126,8 @@ void setup(void){
     INTCONbits.GIE = 1;//INTERRUPCIONES GLOBALES
     PIE1bits.ADIE = 0;
     PIE1bits.ADIE = 1;// interrupciones del ADC
+    
+    //PIR1bits.ADIF
 
 
 
@@ -143,10 +149,10 @@ void setup(void){
 //FUNCIONES
 //******************************************************************************
 void contadorbinario(void) {
-    __delay_ms(3000);
+    __delay_ms(300);
     do {
         if (IOCBbits.IOCB0 = 1 && PORTBbits.RB0 == 1) {
-            PORTBbits.RB7 = 1;
+            //PORTBbits.RB7 = 1;
             cont0++;
             __delay_ms(500);
             IOCBbits.IOCB0 = 0;
@@ -169,17 +175,19 @@ void contadorbinario(void) {
         }
 
         if (ADCON0bits.GO_DONE == 0) {
-            //ADCON0bits.GO_DONE = 1;
+            //ADCON0bits.GO_DONE = 1;            
             H = ADRESH;
             L = ADRESH;
-            H = ((H/16)%16);//DIVISION DE H/16
-            L = (L%16);//RESIDUO DE LA DIVISION
+            //__delay_ms(5);
+            H = ((H/16)%16);//DIVISION DE H/16 display izquierdo
+            L = (L%16);//RESIDUO DE LA DIVISION display derecho
+            suma = ADRESH;
             PORTD = display[H];
             PORTCbits.RC0 = 1;
             PORTCbits.RC0 = 0;
-            PORTCbits.RC1 = 0;
+            //PORTCbits.RC1 = 0;
             PORTD = display[L];
-            PORTCbits.RC0 = 0;
+            //PORTCbits.RC0 = 0;
             PORTCbits.RC1 = 1;
             PORTCbits.RC1 = 0;
             ADCON0bits.GO_DONE =1;
@@ -188,6 +196,12 @@ void contadorbinario(void) {
             //adc = adc << 8;
             //adc = adc + ADRESH;
             //PORTD = adc;
+        }
+        if (cont0<suma){
+            PORTBbits.RB7 = 1;           
+        }
+        else{
+            PORTBbits.RB7 = 0;
         }
     } while (ciclo == 1);
 }

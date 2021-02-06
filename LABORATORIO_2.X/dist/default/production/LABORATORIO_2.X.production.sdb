@@ -13,11 +13,11 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"60 C:\Users\erick\Desktop\LABS_DIGITAL_2\LABORATORIO_2.X\Lab2_Erick.c
+"61 C:\Users\erick\Desktop\LABS_DIGITAL_2\LABORATORIO_2.X\Lab2_Erick.c
 [v _main main `(v  1 e 1 0 ]
-"71
+"75
 [v _setup setup `(v  1 e 1 0 ]
-"145
+"151
 [v _contadorbinario contadorbinario `(v  1 e 1 0 ]
 "166 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
@@ -177,20 +177,22 @@
 [v _H H `i  1 e 2 0 ]
 "56
 [v _L L `i  1 e 2 0 ]
-"60
+"57
+[v _suma suma `i  1 e 2 0 ]
+"61
 [v _main main `(v  1 e 1 0 ]
 {
-"66
+"70
 } 0
-"71
+"75
 [v _setup setup `(v  1 e 1 0 ]
 {
-"139
-} 0
 "145
+} 0
+"151
 [v _contadorbinario contadorbinario `(v  1 e 1 0 ]
 {
-"193
+"207
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
