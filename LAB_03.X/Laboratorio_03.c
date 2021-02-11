@@ -155,7 +155,7 @@ void adcInit (void){
     ADCON0bits.ADON = 1;
     return;
 }
-
+//Leer los valores analogicos pasarlos de float a char
 void floattochar (float valor){
     
     valanapot1 = valor;
@@ -191,7 +191,7 @@ void enable (void){
     __delay_ms(15);
     EN = 1;
 }
-//Función encargada de procesar los datos del comando mandado en la función
+//Función encargada de procesar los datos del comando mandando en la función
 //lcd_ini().
 void lcd_com(uint8_t dato){
     LCD = 0xFF;
@@ -227,6 +227,7 @@ void lcd_ready(void) {
     }    
 }
 
+//Funciones que definen fila y puntero del cursor y procesa el string realizado
 void lcd_dwr(unsigned char x){
     lcd_ready();
     LCD = x;
