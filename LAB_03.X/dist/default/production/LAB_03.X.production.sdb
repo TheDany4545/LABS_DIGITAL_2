@@ -11,17 +11,17 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"49 C:\Users\erick\Desktop\LABS_DIGITAL_2\LAB_03.X\Laboratorio_03.c
+"51 C:\Users\erick\Desktop\LABS_DIGITAL_2\LAB_03.X\Laboratorio_03.c
 [v _main main `(v  1 e 1 0 ]
-"66
-[v _setup setup `(v  1 e 1 0 ]
-"49
-[v _main main `(v  1 e 1 0 ]
-{
-"60
-} 0
-"66
-[v _setup setup `(v  1 e 1 0 ]
-{
 "68
+[v _setup setup `(v  1 e 1 0 ]
+"51
+[v _main main `(v  1 e 1 0 ]
+{
+"62
+} 0
+"68
+[v _setup setup `(v  1 e 1 0 ]
+{
+"70
 } 0

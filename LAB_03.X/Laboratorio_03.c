@@ -3,6 +3,8 @@
  * Author: Erick Daniel Aquino Paz
  * Carnet 17319
  * Plantilla/titulo del proyecto
+ * Se utilizo una libreria para la función de inicializar la conección USART
+ * Enlace: https://exploreembedded.com/wiki/UART
  */
 
 //******************************************************************************

@@ -101,16 +101,16 @@ maintext FE6 FF7 CODE FE6 0
 text1 FE4 FE5 CODE FE4 0
 %locals
 dist/default/production\LAB_03.X.production.o
-C:\Users\erick\AppData\Local\Temp\seus.s
+C:\Users\erick\AppData\Local\Temp\sbhk.s
 424 7FC 0 CODE 0
 427 7FC 0 CODE 0
 433 7FC 0 CODE 0
 435 7FC 0 CODE 0
 436 7FD 0 CODE 0
 Laboratorio_03.c
-49 7F3 0 CODE 0
 51 7F3 0 CODE 0
-57 7F8 0 CODE 0
+53 7F3 0 CODE 0
 59 7F8 0 CODE 0
-66 7F2 0 CODE 0
+61 7F8 0 CODE 0
 68 7F2 0 CODE 0
+70 7F2 0 CODE 0

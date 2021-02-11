@@ -16,7 +16,7 @@ cinit CODE 0 7FC 7FC 4 2
 text1 CODE 0 7F2 7F2 1 2
 maintext CODE 0 7F3 7F3 9 2
 config CONFIG 4 2007 2007 2 2
-$C:\Users\erick\AppData\Local\Temp\seus.o
+$C:\Users\erick\AppData\Local\Temp\sbhk.o
 end_init CODE 0 0 0 3 2
 config CONFIG 4 2007 2007 2 2
 # %UNUSED Section
@@ -65,17 +65,17 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\LAB_03.X.production.o
-7FC cinit CODE >424:C:\Users\erick\AppData\Local\Temp\seus.s
-7FC cinit CODE >427:C:\Users\erick\AppData\Local\Temp\seus.s
-7FC cinit CODE >433:C:\Users\erick\AppData\Local\Temp\seus.s
-7FC cinit CODE >435:C:\Users\erick\AppData\Local\Temp\seus.s
-7FD cinit CODE >436:C:\Users\erick\AppData\Local\Temp\seus.s
-7F2 text1 CODE >66:C:\Users\erick\Desktop\LABS_DIGITAL_2\LAB_03.X\Laboratorio_03.c
+7FC cinit CODE >424:C:\Users\erick\AppData\Local\Temp\sbhk.s
+7FC cinit CODE >427:C:\Users\erick\AppData\Local\Temp\sbhk.s
+7FC cinit CODE >433:C:\Users\erick\AppData\Local\Temp\sbhk.s
+7FC cinit CODE >435:C:\Users\erick\AppData\Local\Temp\sbhk.s
+7FD cinit CODE >436:C:\Users\erick\AppData\Local\Temp\sbhk.s
 7F2 text1 CODE >68:C:\Users\erick\Desktop\LABS_DIGITAL_2\LAB_03.X\Laboratorio_03.c
-7F3 maintext CODE >49:C:\Users\erick\Desktop\LABS_DIGITAL_2\LAB_03.X\Laboratorio_03.c
+7F2 text1 CODE >70:C:\Users\erick\Desktop\LABS_DIGITAL_2\LAB_03.X\Laboratorio_03.c
 7F3 maintext CODE >51:C:\Users\erick\Desktop\LABS_DIGITAL_2\LAB_03.X\Laboratorio_03.c
-7F8 maintext CODE >57:C:\Users\erick\Desktop\LABS_DIGITAL_2\LAB_03.X\Laboratorio_03.c
+7F3 maintext CODE >53:C:\Users\erick\Desktop\LABS_DIGITAL_2\LAB_03.X\Laboratorio_03.c
 7F8 maintext CODE >59:C:\Users\erick\Desktop\LABS_DIGITAL_2\LAB_03.X\Laboratorio_03.c
+7F8 maintext CODE >61:C:\Users\erick\Desktop\LABS_DIGITAL_2\LAB_03.X\Laboratorio_03.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -96,27 +96,27 @@ __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\erick\AppData\Local\Temp\seus.o
+___sp 0 0 STACK 2 stack C:\Users\erick\AppData\Local\Temp\sbhk.o
 _main FE6 0 CODE 0 maintext dist/default/production\LAB_03.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\LAB_03.X.production.o
-start 0 0 CODE 0 init C:\Users\erick\AppData\Local\Temp\seus.o
+start 0 0 CODE 0 init C:\Users\erick\AppData\Local\Temp\sbhk.o
 __size_of_main 0 0 ABS 0 - dist/default/production\LAB_03.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\erick\AppData\Local\Temp\seus.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\erick\AppData\Local\Temp\seus.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\erick\AppData\Local\Temp\seus.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\erick\AppData\Local\Temp\seus.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\erick\AppData\Local\Temp\seus.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\erick\AppData\Local\Temp\seus.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\erick\AppData\Local\Temp\sbhk.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\erick\AppData\Local\Temp\sbhk.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\erick\AppData\Local\Temp\sbhk.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\erick\AppData\Local\Temp\sbhk.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\erick\AppData\Local\Temp\sbhk.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\erick\AppData\Local\Temp\sbhk.o
 wtemp0 7E 0 ABS 0 - dist/default/production\LAB_03.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\erick\AppData\Local\Temp\seus.o
-___stacklo 0 0 ABS 0 - C:\Users\erick\AppData\Local\Temp\seus.o
+___stackhi 0 0 ABS 0 - C:\Users\erick\AppData\Local\Temp\sbhk.o
+___stacklo 0 0 ABS 0 - C:\Users\erick\AppData\Local\Temp\sbhk.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\LAB_03.X.production.o
 start_initialization FF8 0 CODE 0 cinit dist/default/production\LAB_03.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\erick\AppData\Local\Temp\seus.o
+___int_sp 0 0 STACK 2 stack C:\Users\erick\AppData\Local\Temp\sbhk.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -154,7 +154,7 @@ __S1 0 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\erick\AppData\Local\Temp\seus.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\erick\AppData\Local\Temp\sbhk.o
 __pmaintext FE6 0 CODE 0 maintext dist/default/production\LAB_03.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -

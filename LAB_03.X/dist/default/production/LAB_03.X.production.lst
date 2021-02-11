@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Fri Feb 05 14:58:30 2021
+                                                                                               Wed Feb 10 22:17:57 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	16F887
@@ -246,7 +246,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    232 ;;
    233 ;; *************** function _main *****************
    234 ;; Defined at:
-   235 ;;		line 49 in file "Laboratorio_03.c"
+   235 ;;		line 51 in file "Laboratorio_03.c"
    236 ;; Parameters:    Size  Location     Type
    237 ;;		None
    238 ;; Auto vars:     Size  Location     Type
@@ -281,13 +281,13 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    267                           ; Regs used in _main: [status,2+status,0+pclath+cstack]
    268                           
    269                           
-   270                           ;Laboratorio_03.c: 51:     setup();
+   270                           ;Laboratorio_03.c: 53:     setup();
    271  07F3  120A  118A  27F2  120A  118A  	fcall	_setup
    272  07F8                     l7:	
-   273                           ;Laboratorio_03.c: 57:     while (1) {
+   273                           ;Laboratorio_03.c: 59:     while (1) {
    274                           
    275  07F8                     l8:	
-   276                           ;Laboratorio_03.c: 59:     }
+   276                           ;Laboratorio_03.c: 61:     }
    277                           
    278  07F8  2FF8               	goto	l7
    279  07F9  120A  118A  2800   	ljmp	start
@@ -297,7 +297,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    283  07F2                     __ptext1:	
    284 ;; *************** function _setup *****************
    285 ;; Defined at:
-   286 ;;		line 66 in file "Laboratorio_03.c"
+   286 ;;		line 68 in file "Laboratorio_03.c"
    287 ;; Parameters:    Size  Location     Type
    288 ;;		None
    289 ;; Auto vars:     Size  Location     Type
@@ -459,7 +459,7 @@ DATA                 0      0       0      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Fri Feb 05 14:58:30 2021
+Symbol Table                                                                                   Wed Feb 10 22:17:57 2021
 
                       l7 07F8                        l8 07F8                       l13 07F2  
                     l605 07F3                     _main 07F3                     btemp 007E  
