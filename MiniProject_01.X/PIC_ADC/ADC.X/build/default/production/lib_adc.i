@@ -2678,3 +2678,91 @@ void lcd_shift_left(void);
 void lcd_port(uint8_t a);
 # 10 "lib_adc.c" 2
 
+
+
+
+
+
+void lcd_init()
+{
+    lcd_port(0x00);
+    _delay((unsigned long)((20)*(4000000/4000.0)));
+
+    lcd_cmd(0x30);
+    _delay((unsigned long)((5)*(4000000/4000.0)));
+
+    lcd_cmd(0x30);
+    _delay((unsigned long)((11)*(4000000/4000.0)));
+
+    lcd_cmd(0x30);
+
+    lcd_cmd(0x38);
+    lcd_cmd(0x10);
+    lcd_cmd(0x01);
+    lcd_cmd(0x06);
+    lcd_cmd(0x0F);
+}
+
+void lcd_port(uint8_t a)
+{
+
+    PORTD = a;
+# 83 "lib_adc.c"
+}
+
+void lcd_cmd(uint8_t cmd)
+{
+    PORTEbits.RE0 = 0;
+    lcd_port(cmd);
+
+    PORTEbits.RE2 = 1;
+    _delay((unsigned long)((4)*(4000000/4000.0)));
+    PORTEbits.RE2 = 0;
+}
+
+void lcd_clear(void)
+{
+    lcd_cmd(0);
+    lcd_cmd(1);
+}
+
+
+void lcd_move_cursor(uint8_t row, uint8_t col)
+{
+    if(row == 0)
+    {
+        lcd_cmd(0x80 + col);
+    }
+    else if(row == 1)
+    {
+        lcd_cmd(0xC0 + col);
+    }
+}
+
+void lcd_write_char(uint8_t data)
+{
+    PORTEbits.RE0 = 1;
+    lcd_port(data);
+
+    PORTEbits.RE2 = 1;
+    _delay((unsigned long)((4)*(4000000/4000.0)));
+    PORTEbits.RE2 = 0;
+}
+
+void lcd_write_string(uint8_t *a)
+{
+    for(int i=0; a[i] != '\0'; i++)
+    {
+       lcd_write_char(a[i]);
+    }
+}
+
+void lcd_shift_right()
+{
+    lcd_cmd(0x1C);
+}
+
+void lcd_shift_left()
+{
+    lcd_cmd(0x18);
+}

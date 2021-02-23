@@ -234,16 +234,98 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
+"3 ./lcd.h
+[; ;./lcd.h: 3: 
+[p x FOSC  =  INTRC_NOCLKOUT ]
+"4
+[; ;./lcd.h: 4: 
+[p x WDTE  =  OFF        ]
+"5
+[; ;./lcd.h: 5: void setup(void);
+[p x PWRTE  =  OFF       ]
+"6
+[; ;./lcd.h: 6: void main(void);
+[p x MCLRE  =  OFF       ]
+"7
+[p x CP  =  OFF          ]
+"8
+[p x CPD  =  OFF         ]
+"9
+[p x BOREN  =  OFF       ]
+"10
+[p x IESO  =  OFF        ]
+"11
+[p x FCMEN  =  OFF       ]
+"12
+[p x LVP  =  OFF         ]
+"15
+[p x BOR4V  =  BOR40V    ]
+"16
+[p x WRT  =  OFF         ]
+"23 rutina_adc.c
+[; ;rutina_adc.c: 23: uint8_t adc_data1 = 0;
+[v _adc_data1 `uc ~T0 @X0 1 e ]
+[i _adc_data1
+-> -> 0 `i `uc
+]
+"24
+[; ;rutina_adc.c: 24: uint8_t adc_data2 = 0;
+[v _adc_data2 `uc ~T0 @X0 1 e ]
+[i _adc_data2
+-> -> 0 `i `uc
+]
+"25
+[; ;rutina_adc.c: 25: uint8_t uart_data = 0;
+[v _uart_data `uc ~T0 @X0 1 e ]
+[i _uart_data
+-> -> 0 `i `uc
+]
+"26
+[; ;rutina_adc.c: 26: uint8_t uart_cont = 0;
+[v _uart_cont `uc ~T0 @X0 1 e ]
+[i _uart_cont
+-> -> 0 `i `uc
+]
+"27
+[; ;rutina_adc.c: 27: uint8_t str_pos = 0;
+[v _str_pos `uc ~T0 @X0 1 e ]
+[i _str_pos
+-> -> 0 `i `uc
+]
+"29
+[; ;rutina_adc.c: 29: int ban_an1;
+[v _ban_an1 `i ~T0 @X0 1 e ]
+"30
+[; ;rutina_adc.c: 30: int ban_an2;
+[v _ban_an2 `i ~T0 @X0 1 e ]
+"32
+[; ;rutina_adc.c: 32: char* str_pot_a[6];
+[v _str_pot_a `*uc ~T0 @X0 -> 6 `i e ]
+"33
+[; ;rutina_adc.c: 33: char* str_pot_b[5];
+[v _str_pot_b `*uc ~T0 @X0 -> 5 `i e ]
+"35
+[; ;rutina_adc.c: 35: _Bool adc_flag = 0;
+[v _adc_flag `a ~T0 @X0 1 e ]
+[i _adc_flag
+-> -> 0 `i `a
+]
+"36
+[; ;rutina_adc.c: 36: _Bool eusart_flag = 0;
+[v _eusart_flag `a ~T0 @X0 1 e ]
+[i _eusart_flag
+-> -> 0 `i `a
+]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"21 rutina_adc.c
-[; ;rutina_adc.c: 21: void main(void)
+"40
+[; ;rutina_adc.c: 40: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"22
-[; ;rutina_adc.c: 22: {
+"41
+[; ;rutina_adc.c: 41: {
 {
 [e :U _main ]
 [f ]
-"24
-[; ;rutina_adc.c: 24: }
-[e :UE 138 ]
+"43
+[; ;rutina_adc.c: 43: }
+[e :UE 139 ]
 }
