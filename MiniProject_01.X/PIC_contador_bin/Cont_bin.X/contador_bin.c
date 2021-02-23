@@ -15,13 +15,6 @@
 //******************************************************************************
 int cont0 = 0;
 char ciclo = 1;
-char todo = 1;
-int adc;
-float volt;
-const unsigned char display[16] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x67, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71};
-int H;//Multiplexado
-int L;
-int suma; //comparacion entre el contador y los displays
 
 //******************************************************************************
 //CICLO PRINCIPAL

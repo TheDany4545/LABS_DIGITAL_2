@@ -1,4 +1,4 @@
-# 1 "contador_bin.c"
+# 1 "rutina_adc.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "contador_bin.c" 2
-# 11 "contador_bin.c"
+# 1 "rutina_adc.c" 2
+# 11 "rutina_adc.c"
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2488,81 +2488,9 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 11 "contador_bin.c" 2
-
-# 1 "./contador.h" 1
-
-
-
-#pragma config FOSC = INTRC_NOCLKOUT
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
-
-
-
-
-
-
-
-void setup(void);
-void main(void);
-void contadorbinario(void);
-# 12 "contador_bin.c" 2
-
-
-
-
-int cont0 = 0;
-char ciclo = 1;
-
-
-
-
-
+# 11 "rutina_adc.c" 2
+# 21 "rutina_adc.c"
 void main(void)
 {
-    setup();
-    contadorbinario();
-}
 
-
-
-
-void contadorbinario(void) {
-        do {
-        if (IOCBbits.IOCB0 = 1 && PORTBbits.RB0 == 1) {
-
-            cont0++;
-            _delay((unsigned long)((500)*(8000000/4000.0)));
-            IOCBbits.IOCB0 = 0;
-            do {
-
-            } while (PORTBbits.RB0 == 1);
-            PORTA = cont0;
-        }
-        if (IOCBbits.IOCB3 = 1 && PORTBbits.RB3 == 1) {
-            cont0--;
-            _delay((unsigned long)((500)*(8000000/4000.0)));
-            do {
-
-            } while (PORTBbits.RB3 == 1);
-            PORTA = cont0;
-            IOCBbits.IOCB3 = 0;
-        }
-        if (cont0 > 255) {
-            cont0 = 0;
-        }
-
-    } while (ciclo == 1);
 }

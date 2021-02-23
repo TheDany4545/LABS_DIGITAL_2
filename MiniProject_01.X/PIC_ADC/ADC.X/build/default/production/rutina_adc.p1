@@ -1,42 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"25 ./contador.h
-[v _setup `(v ~T0 @X0 0 ef ]
-"27
-[v _contadorbinario `(v ~T0 @X0 0 ef ]
-"2422 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2422:     struct {
-[s S93 :8 `uc 1 ]
-[n S93 . IOCB ]
-"2425
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2425:     struct {
-[s S94 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S94 . IOCB0 IOCB1 IOCB2 IOCB3 IOCB4 IOCB5 IOCB6 IOCB7 ]
-"2421
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2421: typedef union {
-[u S92 `S93 1 `S94 1 ]
-[n S92 . . . ]
-"2436
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2436: extern volatile IOCBbits_t IOCBbits __attribute__((address(0x096)));
-[v _IOCBbits `VS92 ~T0 @X0 0 e@150 ]
-"234
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 234:     struct {
-[s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S8 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-"233
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 233: typedef union {
-[u S7 `S8 1 ]
-[n S7 . . ]
-"245
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 245: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x006)));
-[v _PORTBbits `VS7 ~T0 @X0 0 e@6 ]
-[v F1256 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
-[v __delay `JF1256 ~T0 @X0 0 e ]
-[p i __delay ]
-"166 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
-[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -271,151 +234,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"4 ./contador.h
-[; ;./contador.h: 4: 
-[p x FOSC  =  INTRC_NOCLKOUT ]
-"5
-[; ;./contador.h: 5: 
-[p x WDTE  =  OFF        ]
-"6
-[; ;./contador.h: 6: void setup(void);
-[p x PWRTE  =  OFF       ]
-"7
-[; ;./contador.h: 7: void main(void);
-[p x MCLRE  =  OFF       ]
-"8
-[; ;./contador.h: 8: void contadorbinario(void);
-[p x CP  =  OFF          ]
-"9
-[p x CPD  =  OFF         ]
-"10
-[p x BOREN  =  OFF       ]
-"11
-[p x IESO  =  OFF        ]
-"12
-[p x FCMEN  =  OFF       ]
-"13
-[p x LVP  =  OFF         ]
-"16
-[p x BOR4V  =  BOR40V    ]
-"17
-[p x WRT  =  OFF         ]
-"16 contador_bin.c
-[; ;contador_bin.c: 16: int cont0 = 0;
-[v _cont0 `i ~T0 @X0 1 e ]
-[i _cont0
--> 0 `i
-]
-"17
-[; ;contador_bin.c: 17: char ciclo = 1;
-[v _ciclo `uc ~T0 @X0 1 e ]
-[i _ciclo
--> -> 1 `i `uc
-]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"23
-[; ;contador_bin.c: 23: void main(void)
+"21 rutina_adc.c
+[; ;rutina_adc.c: 21: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"24
-[; ;contador_bin.c: 24: {
+"22
+[; ;rutina_adc.c: 22: {
 {
 [e :U _main ]
 [f ]
-"25
-[; ;contador_bin.c: 25:     setup();
-[e ( _setup ..  ]
-"26
-[; ;contador_bin.c: 26:     contadorbinario();
-[e ( _contadorbinario ..  ]
-"27
-[; ;contador_bin.c: 27: }
+"24
+[; ;rutina_adc.c: 24: }
 [e :UE 138 ]
-}
-"32
-[; ;contador_bin.c: 32: void contadorbinario(void) {
-[v _contadorbinario `(v ~T0 @X0 1 ef ]
-{
-[e :U _contadorbinario ]
-[f ]
-"33
-[; ;contador_bin.c: 33:         do {
-[e :U 142 ]
-{
-"34
-[; ;contador_bin.c: 34:         if (IOCBbits.IOCB0 = 1 && PORTBbits.RB0 == 1) {
-[e $ ! != -> = . . _IOCBbits 1 0 -> -> && != -> 1 `i -> 0 `i == -> . . _PORTBbits 0 0 `i -> 1 `i `i `uc `i -> 0 `i 143  ]
-{
-"36
-[; ;contador_bin.c: 36:             cont0++;
-[e ++ _cont0 -> 1 `i ]
-"37
-[; ;contador_bin.c: 37:             _delay((unsigned long)((500)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"38
-[; ;contador_bin.c: 38:             IOCBbits.IOCB0 = 0;
-[e = . . _IOCBbits 1 0 -> -> 0 `i `uc ]
-"39
-[; ;contador_bin.c: 39:             do {
-[e :U 146 ]
-{
-"41
-[; ;contador_bin.c: 41:             } while (PORTBbits.RB0 == 1);
-}
-[e $ == -> . . _PORTBbits 0 0 `i -> 1 `i 146  ]
-[e :U 145 ]
-"42
-[; ;contador_bin.c: 42:             PORTA = cont0;
-[e = _PORTA -> _cont0 `uc ]
-"43
-[; ;contador_bin.c: 43:         }
-}
-[e :U 143 ]
-"44
-[; ;contador_bin.c: 44:         if (IOCBbits.IOCB3 = 1 && PORTBbits.RB3 == 1) {
-[e $ ! != -> = . . _IOCBbits 1 3 -> -> && != -> 1 `i -> 0 `i == -> . . _PORTBbits 0 3 `i -> 1 `i `i `uc `i -> 0 `i 147  ]
-{
-"45
-[; ;contador_bin.c: 45:             cont0--;
-[e -- _cont0 -> 1 `i ]
-"46
-[; ;contador_bin.c: 46:             _delay((unsigned long)((500)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"47
-[; ;contador_bin.c: 47:             do {
-[e :U 150 ]
-{
-"49
-[; ;contador_bin.c: 49:             } while (PORTBbits.RB3 == 1);
-}
-[e $ == -> . . _PORTBbits 0 3 `i -> 1 `i 150  ]
-[e :U 149 ]
-"50
-[; ;contador_bin.c: 50:             PORTA = cont0;
-[e = _PORTA -> _cont0 `uc ]
-"51
-[; ;contador_bin.c: 51:             IOCBbits.IOCB3 = 0;
-[e = . . _IOCBbits 1 3 -> -> 0 `i `uc ]
-"52
-[; ;contador_bin.c: 52:         }
-}
-[e :U 147 ]
-"53
-[; ;contador_bin.c: 53:         if (cont0 > 255) {
-[e $ ! > _cont0 -> 255 `i 151  ]
-{
-"54
-[; ;contador_bin.c: 54:             cont0 = 0;
-[e = _cont0 -> 0 `i ]
-"55
-[; ;contador_bin.c: 55:         }
-}
-[e :U 151 ]
-"57
-[; ;contador_bin.c: 57:     } while (ciclo == 1);
-}
-[e $ == -> _ciclo `i -> 1 `i 142  ]
-[e :U 141 ]
-"58
-[; ;contador_bin.c: 58: }
-[e :UE 139 ]
 }

@@ -11,9 +11,9 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"30 Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_01.X\PIC_contador_bin\Cont_bin.X\contador_bin.c
+"23 Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_01.X\PIC_contador_bin\Cont_bin.X\contador_bin.c
 [v _main main `(v  1 e 1 0 ]
-"39
+"32
 [v _contadorbinario contadorbinario `(v  1 e 1 0 ]
 "10 Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_01.X\PIC_contador_bin\Cont_bin.X\lib_cont.c
 [v _setup setup `(v  1 e 1 0 ]
@@ -33,7 +33,7 @@
 "245
 [u S65 . 1 `S56 1 . 1 0 ]
 [v _PORTBbits PORTBbits `VES65  1 e 1 @6 ]
-[s S122 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S115 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -43,13 +43,13 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "482
-[s S131 . 1 `uc 1 . 1 0 :2:0 
+[s S124 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
-[u S136 . 1 `S122 1 . 1 0 `S131 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES136  1 e 1 @11 ]
+[u S129 . 1 `S115 1 . 1 0 `S124 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES129  1 e 1 @11 ]
 "1416
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1478
@@ -74,18 +74,18 @@
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
 "16 Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_01.X\PIC_contador_bin\Cont_bin.X\contador_bin.c
 [v _cont0 cont0 `i  1 e 2 0 ]
-"30
+"23
 [v _main main `(v  1 e 1 0 ]
 {
-"34
+"27
 } 0
 "10 Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_01.X\PIC_contador_bin\Cont_bin.X\lib_cont.c
 [v _setup setup `(v  1 e 1 0 ]
 {
 "29
 } 0
-"39 Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_01.X\PIC_contador_bin\Cont_bin.X\contador_bin.c
+"32 Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_01.X\PIC_contador_bin\Cont_bin.X\contador_bin.c
 [v _contadorbinario contadorbinario `(v  1 e 1 0 ]
 {
-"65
+"58
 } 0
