@@ -2490,6 +2490,9 @@ extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
 # 11 "contador_bin.c" 2
 
+# 1 "./contador.h" 1
+# 12 "contador_bin.c" 2
+
 
 
 
@@ -2510,7 +2513,7 @@ extern __bank0 __bit __timeout;
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-# 42 "contador_bin.c"
+# 43 "contador_bin.c"
 void setup(void);
 
 

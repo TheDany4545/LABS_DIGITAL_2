@@ -1,0 +1,16 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[p mainexit ]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"9 lib_cont.c
+[; ;lib_cont.c: 9: void main(void) {
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"10
+[; ;lib_cont.c: 10:     return;
+[e $UE 1  ]
+"11
+[; ;lib_cont.c: 11: }
+[e :UE 1 ]
+}

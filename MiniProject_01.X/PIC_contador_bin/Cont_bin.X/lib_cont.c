@@ -1,12 +1,10 @@
-/*
- * File:   lib_cont.c
- * Author: Daniel
- *
- * Created on February 22, 2021, 8:48 PM
- */
+//Erick Daniel Aquino Paz
+//libreria contador binario
+
+void main(void);
 
 
-#include <xc.h>
+#include "contador.h"
 
 void main(void) {
     return;
