@@ -8,6 +8,11 @@
 
 #include <xc.h>
 #include "lcd.h"
+#include "adc.h"
+#define tmr_preload 6;
+
+int ban_an1;
+int ban_an2;
 
 //******************************************************************************
 // CONFIGURACION DE LA LCD
@@ -143,3 +148,87 @@ void lcd_shift_left()
 //******************************************************************************
 // CONFIGURACION DEL ADC, ENTRADAS Y SALIDAS
 //******************************************************************************
+void setup(void)
+{
+    ANSEL  = 0x03;
+    ANSELH = 0x00;
+    
+    TRISA = 0x03;
+    TRISB = 0x00;
+    TRISC = 0x80;
+    TRISD = 0x00;
+    TRISE = 0x00;
+    
+    PORTA = 0;
+    PORTB = 0;
+    PORTC = 0;
+    PORTD = 0;
+    PORTE = 0;
+
+    // interrupts
+    IOCB = 0x00;
+    INTCONbits.RBIE = 0;
+    INTCONbits.T0IE = 0;
+    INTCONbits.PEIE = 1;
+    INTCONbits.GIE = 1;
+    
+    OSCCON = 0b01100001;
+
+    OPTION_REGbits.T0CS = 0;
+    OPTION_REGbits.PSA = 0;
+    OPTION_REGbits.PS2 = 0;
+    OPTION_REGbits.PS1 = 0;
+    OPTION_REGbits.PS0 = 1;
+
+    TMR0 = tmr_preload;
+
+    INTCONbits.T0IF = 0;
+/*
+    adc_config();
+    adc_isr_enable();
+*/
+    lcd_init();
+    lcd_cmd(0x0c); // turn off cursor
+
+    //eusart_init_tx();
+    //eusart_enable_tx_isr();
+
+    //eusart_init_rx();
+    //eusart_enable_rx_isr();
+
+    ///CONFIGURACION DEL ADC 
+    ANSELHbits.ANS10 = 1;
+    ANSELHbits.ANS12 = 1;
+    
+    //SELECIONAMOS EL CANAL 
+    //an12 1100
+    //an10 1010
+    ADCON0bits.CHS0 = 1;
+    ADCON0bits.CHS1 = 0;
+    ADCON0bits.CHS2 = 1;
+    ADCON0bits.CHS3 = 0;
+
+    //PINES DE REFERENCIA 
+    ADCON1bits.VCFG0 = 0; //VDD
+    ADCON1bits.VCFG1 = 0; //VSS
+    
+    //JUSTIFICACION IZQUIERDA 
+    ADCON1bits.ADFM = 0;
+
+
+    //PARA CONVERSION DEL ADC
+    ADCON0bits.GO_DONE = 1;
+
+    //PARA HABILITAR ADC 
+    ADCON0bits.ADON = 1;
+
+    //ENCENDER BANDERA DEL ADC
+    INTCONbits.GIE = 1;//INTERRUPCIONES GLOBALES
+    PIE1bits.ADIE = 0;
+    PIE1bits.ADIE = 1;// interrupciones del ADC
+    
+    ban_an1 = 0;
+    ban_an2 = 1;
+    canal_10();
+    return;
+}

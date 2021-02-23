@@ -2678,6 +2678,24 @@ void lcd_shift_left(void);
 void lcd_port(uint8_t a);
 # 10 "lib_adc.c" 2
 
+# 1 "./adc.h" 1
+
+
+
+
+
+void adc_logic(void);
+void display(void);
+void canal_10(void);
+void canal_12(void);
+void ADC_1(void);
+void ADC_2(void);
+# 11 "lib_adc.c" 2
+
+
+
+int ban_an1;
+int ban_an2;
 
 
 
@@ -2707,7 +2725,7 @@ void lcd_port(uint8_t a)
 {
 
     PORTD = a;
-# 83 "lib_adc.c"
+# 88 "lib_adc.c"
 }
 
 void lcd_cmd(uint8_t cmd)
@@ -2765,4 +2783,86 @@ void lcd_shift_right()
 void lcd_shift_left()
 {
     lcd_cmd(0x18);
+}
+
+
+
+
+
+void setup(void)
+{
+    ANSEL = 0x03;
+    ANSELH = 0x00;
+
+    TRISA = 0x03;
+    TRISB = 0x00;
+    TRISC = 0x80;
+    TRISD = 0x00;
+    TRISE = 0x00;
+
+    PORTA = 0;
+    PORTB = 0;
+    PORTC = 0;
+    PORTD = 0;
+    PORTE = 0;
+
+
+    IOCB = 0x00;
+    INTCONbits.RBIE = 0;
+    INTCONbits.T0IE = 0;
+    INTCONbits.PEIE = 1;
+    INTCONbits.GIE = 1;
+
+    OSCCON = 0b01100001;
+
+    OPTION_REGbits.T0CS = 0;
+    OPTION_REGbits.PSA = 0;
+    OPTION_REGbits.PS2 = 0;
+    OPTION_REGbits.PS1 = 0;
+    OPTION_REGbits.PS0 = 1;
+
+    TMR0 = 6;;
+
+    INTCONbits.T0IF = 0;
+
+
+
+
+    lcd_init();
+    lcd_cmd(0x0c);
+# 200 "lib_adc.c"
+    ANSELHbits.ANS10 = 1;
+    ANSELHbits.ANS12 = 1;
+
+
+
+
+    ADCON0bits.CHS0 = 1;
+    ADCON0bits.CHS1 = 0;
+    ADCON0bits.CHS2 = 1;
+    ADCON0bits.CHS3 = 0;
+
+
+    ADCON1bits.VCFG0 = 0;
+    ADCON1bits.VCFG1 = 0;
+
+
+    ADCON1bits.ADFM = 0;
+
+
+
+    ADCON0bits.GO_DONE = 1;
+
+
+    ADCON0bits.ADON = 1;
+
+
+    INTCONbits.GIE = 1;
+    PIE1bits.ADIE = 0;
+    PIE1bits.ADIE = 1;
+
+    ban_an1 = 0;
+    ban_an2 = 1;
+    canal_10();
+    return;
 }
