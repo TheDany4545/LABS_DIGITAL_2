@@ -1,8 +1,82 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"43 contador_bin.c
-[; ;contador_bin.c: 43: void setup(void);
+"25 ./contador.h
 [v _setup `(v ~T0 @X0 0 ef ]
+"27
+[v _contadorbinario `(v ~T0 @X0 0 ef ]
+[v F1256 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
+[v __delay `JF1256 ~T0 @X0 0 e ]
+[p i __delay ]
+"2422 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2422:     struct {
+[s S93 :8 `uc 1 ]
+[n S93 . IOCB ]
+"2425
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2425:     struct {
+[s S94 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S94 . IOCB0 IOCB1 IOCB2 IOCB3 IOCB4 IOCB5 IOCB6 IOCB7 ]
+"2421
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2421: typedef union {
+[u S92 `S93 1 `S94 1 ]
+[n S92 . . . ]
+"2436
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2436: extern volatile IOCBbits_t IOCBbits __attribute__((address(0x096)));
+[v _IOCBbits `VS92 ~T0 @X0 0 e@150 ]
+"234
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 234:     struct {
+[s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S8 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"233
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 233: typedef union {
+[u S7 `S8 1 ]
+[n S7 . . ]
+"245
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 245: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x006)));
+[v _PORTBbits `VS7 ~T0 @X0 0 e@6 ]
+"166
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
+[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
+"1251
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1251:     struct {
+[s S45 :1 `uc 1 :1 `uc 1 :4 `uc 1 :2 `uc 1 ]
+[n S45 . ADON GO_nDONE CHS ADCS ]
+"1257
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1257:     struct {
+[s S46 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S46 . . GO CHS0 CHS1 CHS2 CHS3 ADCS0 ADCS1 ]
+"1267
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1267:     struct {
+[s S47 :1 `uc 1 :1 `uc 1 ]
+[n S47 . . nDONE ]
+"1271
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1271:     struct {
+[s S48 :1 `uc 1 :1 `uc 1 ]
+[n S48 . . GO_DONE ]
+"1250
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1250: typedef union {
+[u S44 `S45 1 `S46 1 `S47 1 `S48 1 ]
+[n S44 . . . . . ]
+"1276
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1276: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0x01F)));
+[v _ADCON0bits `VS44 ~T0 @X0 0 e@31 ]
+"1238
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1238: extern volatile unsigned char ADRESH __attribute__((address(0x01E)));
+[v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
+"352
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 352: extern volatile unsigned char PORTD __attribute__((address(0x008)));
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+"296
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 296:     struct {
+[s S10 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S10 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"295
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 295: typedef union {
+[u S9 `S10 1 ]
+[n S9 . . ]
+"307
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 307: extern volatile PORTCbits_t PORTCbits __attribute__((address(0x007)));
+[v _PORTCbits `VS9 ~T0 @X0 0 e@7 ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -237,61 +311,264 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"19 contador_bin.c
-[p x FOSC  =  XT         ]
-"20
+"4 ./contador.h
+[; ;./contador.h: 4: 
+[p x FOSC  =  INTRC_NOCLKOUT ]
+"5
+[; ;./contador.h: 5: 
 [p x WDTE  =  OFF        ]
-"21
+"6
+[; ;./contador.h: 6: void setup(void);
 [p x PWRTE  =  OFF       ]
-"22
+"7
+[; ;./contador.h: 7: void main(void);
 [p x MCLRE  =  OFF       ]
-"23
+"8
+[; ;./contador.h: 8: void contadorbinario(void);
 [p x CP  =  OFF          ]
-"24
+"9
 [p x CPD  =  OFF         ]
-"25
+"10
 [p x BOREN  =  OFF       ]
-"26
+"11
 [p x IESO  =  OFF        ]
-"27
+"12
 [p x FCMEN  =  OFF       ]
-"28
+"13
 [p x LVP  =  OFF         ]
-"31
+"16
 [p x BOR4V  =  BOR40V    ]
-"32
+"17
 [p x WRT  =  OFF         ]
+"16 contador_bin.c
+[; ;contador_bin.c: 16: int cont0 = 0;
+[v _cont0 `i ~T0 @X0 1 e ]
+[i _cont0
+-> 0 `i
+]
+"17
+[; ;contador_bin.c: 17: char ciclo = 1;
+[v _ciclo `uc ~T0 @X0 1 e ]
+[i _ciclo
+-> -> 1 `i `uc
+]
+"18
+[; ;contador_bin.c: 18: char todo = 1;
+[v _todo `uc ~T0 @X0 1 e ]
+[i _todo
+-> -> 1 `i `uc
+]
+"19
+[; ;contador_bin.c: 19: int adc;
+[v _adc `i ~T0 @X0 1 e ]
+"20
+[; ;contador_bin.c: 20: float volt;
+[v _volt `f ~T0 @X0 1 e ]
+"21
+[; ;contador_bin.c: 21: const unsigned char display[16] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x67, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71};
+[v _display `Cuc ~T0 @X0 -> 16 `i e ]
+[i _display
+:U ..
+-> -> 63 `i `uc
+-> -> 6 `i `uc
+-> -> 91 `i `uc
+-> -> 79 `i `uc
+-> -> 102 `i `uc
+-> -> 109 `i `uc
+-> -> 125 `i `uc
+-> -> 7 `i `uc
+-> -> 127 `i `uc
+-> -> 103 `i `uc
+-> -> 119 `i `uc
+-> -> 124 `i `uc
+-> -> 57 `i `uc
+-> -> 94 `i `uc
+-> -> 121 `i `uc
+-> -> 113 `i `uc
+..
+]
+"22
+[; ;contador_bin.c: 22: int H;
+[v _H `i ~T0 @X0 1 e ]
+"23
+[; ;contador_bin.c: 23: int L;
+[v _L `i ~T0 @X0 1 e ]
+"24
+[; ;contador_bin.c: 24: int suma;
+[v _suma `i ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"50
-[; ;contador_bin.c: 50: void main(void) {
+"30
+[; ;contador_bin.c: 30: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
+"31
+[; ;contador_bin.c: 31: {
 {
 [e :U _main ]
 [f ]
-"52
-[; ;contador_bin.c: 52:     setup();
+"32
+[; ;contador_bin.c: 32:     setup();
 [e ( _setup ..  ]
-"58
-[; ;contador_bin.c: 58:     while (1) {
-[e :U 140 ]
-{
-"60
-[; ;contador_bin.c: 60:     }
-}
-[e :U 139 ]
-[e $U 140  ]
-[e :U 141 ]
-"61
-[; ;contador_bin.c: 61: }
+"33
+[; ;contador_bin.c: 33:     contadorbinario();
+[e ( _contadorbinario ..  ]
+"34
+[; ;contador_bin.c: 34: }
 [e :UE 138 ]
 }
-"67
-[; ;contador_bin.c: 67: void setup(void) {
-[v _setup `(v ~T0 @X0 1 ef ]
+"39
+[; ;contador_bin.c: 39: void contadorbinario(void) {
+[v _contadorbinario `(v ~T0 @X0 1 ef ]
 {
-[e :U _setup ]
+[e :U _contadorbinario ]
 [f ]
-"69
-[; ;contador_bin.c: 69: }
-[e :UE 142 ]
+"40
+[; ;contador_bin.c: 40:     _delay((unsigned long)((300)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"41
+[; ;contador_bin.c: 41:     do {
+[e :U 142 ]
+{
+"42
+[; ;contador_bin.c: 42:         if (IOCBbits.IOCB0 = 1 && PORTBbits.RB0 == 1) {
+[e $ ! != -> = . . _IOCBbits 1 0 -> -> && != -> 1 `i -> 0 `i == -> . . _PORTBbits 0 0 `i -> 1 `i `i `uc `i -> 0 `i 143  ]
+{
+"44
+[; ;contador_bin.c: 44:             cont0++;
+[e ++ _cont0 -> 1 `i ]
+"45
+[; ;contador_bin.c: 45:             _delay((unsigned long)((500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"46
+[; ;contador_bin.c: 46:             IOCBbits.IOCB0 = 0;
+[e = . . _IOCBbits 1 0 -> -> 0 `i `uc ]
+"47
+[; ;contador_bin.c: 47:             do {
+[e :U 146 ]
+{
+"49
+[; ;contador_bin.c: 49:             } while (PORTBbits.RB0 == 1);
+}
+[e $ == -> . . _PORTBbits 0 0 `i -> 1 `i 146  ]
+[e :U 145 ]
+"50
+[; ;contador_bin.c: 50:             PORTA = cont0;
+[e = _PORTA -> _cont0 `uc ]
+"51
+[; ;contador_bin.c: 51:         }
+}
+[e :U 143 ]
+"52
+[; ;contador_bin.c: 52:         if (IOCBbits.IOCB3 = 1 && PORTBbits.RB3 == 1) {
+[e $ ! != -> = . . _IOCBbits 1 3 -> -> && != -> 1 `i -> 0 `i == -> . . _PORTBbits 0 3 `i -> 1 `i `i `uc `i -> 0 `i 147  ]
+{
+"53
+[; ;contador_bin.c: 53:             cont0--;
+[e -- _cont0 -> 1 `i ]
+"54
+[; ;contador_bin.c: 54:             _delay((unsigned long)((500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"55
+[; ;contador_bin.c: 55:             do {
+[e :U 150 ]
+{
+"57
+[; ;contador_bin.c: 57:             } while (PORTBbits.RB3 == 1);
+}
+[e $ == -> . . _PORTBbits 0 3 `i -> 1 `i 150  ]
+[e :U 149 ]
+"58
+[; ;contador_bin.c: 58:             PORTA = cont0;
+[e = _PORTA -> _cont0 `uc ]
+"59
+[; ;contador_bin.c: 59:             IOCBbits.IOCB3 = 0;
+[e = . . _IOCBbits 1 3 -> -> 0 `i `uc ]
+"60
+[; ;contador_bin.c: 60:         }
+}
+[e :U 147 ]
+"61
+[; ;contador_bin.c: 61:         if (cont0 > 255) {
+[e $ ! > _cont0 -> 255 `i 151  ]
+{
+"62
+[; ;contador_bin.c: 62:             cont0 = 0;
+[e = _cont0 -> 0 `i ]
+"63
+[; ;contador_bin.c: 63:         }
+}
+[e :U 151 ]
+"65
+[; ;contador_bin.c: 65:         if (ADCON0bits.GO_DONE == 0) {
+[e $ ! == -> . . _ADCON0bits 3 1 `i -> 0 `i 152  ]
+{
+"67
+[; ;contador_bin.c: 67:             H = ADRESH;
+[e = _H -> _ADRESH `i ]
+"68
+[; ;contador_bin.c: 68:             L = ADRESH;
+[e = _L -> _ADRESH `i ]
+"70
+[; ;contador_bin.c: 70:             H = ((H/16)%16);
+[e = _H % / _H -> 16 `i -> 16 `i ]
+"71
+[; ;contador_bin.c: 71:             L = (L%16);
+[e = _L % _L -> 16 `i ]
+"72
+[; ;contador_bin.c: 72:             suma = ADRESH;
+[e = _suma -> _ADRESH `i ]
+"73
+[; ;contador_bin.c: 73:             PORTD = display[H];
+[e = _PORTD *U + &U _display * -> -> _H `ui `ux -> -> # *U &U _display `ui `ux ]
+"74
+[; ;contador_bin.c: 74:             PORTCbits.RC0 = 1;
+[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
+"75
+[; ;contador_bin.c: 75:             PORTCbits.RC0 = 0;
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
+"77
+[; ;contador_bin.c: 77:             PORTD = display[L];
+[e = _PORTD *U + &U _display * -> -> _L `ui `ux -> -> # *U &U _display `ui `ux ]
+"79
+[; ;contador_bin.c: 79:             PORTCbits.RC1 = 1;
+[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
+"80
+[; ;contador_bin.c: 80:             PORTCbits.RC1 = 0;
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+"81
+[; ;contador_bin.c: 81:             ADCON0bits.GO_DONE =1;
+[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
+"87
+[; ;contador_bin.c: 87:         }
+}
+[e :U 152 ]
+"88
+[; ;contador_bin.c: 88:         if (cont0<suma){
+[e $ ! < _cont0 _suma 153  ]
+{
+"89
+[; ;contador_bin.c: 89:             PORTBbits.RB7 = 1;
+[e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
+"90
+[; ;contador_bin.c: 90:         }
+}
+[e $U 154  ]
+"91
+[; ;contador_bin.c: 91:         else{
+[e :U 153 ]
+{
+"92
+[; ;contador_bin.c: 92:             PORTBbits.RB7 = 0;
+[e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
+"93
+[; ;contador_bin.c: 93:         }
+}
+[e :U 154 ]
+"94
+[; ;contador_bin.c: 94:     } while (ciclo == 1);
+}
+[e $ == -> _ciclo `i -> 1 `i 142  ]
+[e :U 141 ]
+"95
+[; ;contador_bin.c: 95: }
+[e :UE 139 ]
 }

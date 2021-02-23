@@ -2491,15 +2491,10 @@ extern __bank0 __bit __timeout;
 # 11 "contador_bin.c" 2
 
 # 1 "./contador.h" 1
-# 12 "contador_bin.c" 2
 
 
 
-
-
-
-
-#pragma config FOSC = XT
+#pragma config FOSC = INTRC_NOCLKOUT
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
 #pragma config MCLRE = OFF
@@ -2513,31 +2508,98 @@ extern __bank0 __bit __timeout;
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-# 43 "contador_bin.c"
+
+
+
+
+
+
+
 void setup(void);
+void main(void);
+void contadorbinario(void);
+# 12 "contador_bin.c" 2
+
+
+
+
+int cont0 = 0;
+char ciclo = 1;
+char todo = 1;
+int adc;
+float volt;
+const unsigned char display[16] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x67, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71};
+int H;
+int L;
+int suma;
 
 
 
 
 
-
-void main(void) {
-
+void main(void)
+{
     setup();
-
-
-
-
-
-    while (1) {
-
-    }
+    contadorbinario();
 }
 
 
 
 
+void contadorbinario(void) {
+    _delay((unsigned long)((300)*(8000000/4000.0)));
+    do {
+        if (IOCBbits.IOCB0 = 1 && PORTBbits.RB0 == 1) {
 
-void setup(void) {
+            cont0++;
+            _delay((unsigned long)((500)*(8000000/4000.0)));
+            IOCBbits.IOCB0 = 0;
+            do {
 
+            } while (PORTBbits.RB0 == 1);
+            PORTA = cont0;
+        }
+        if (IOCBbits.IOCB3 = 1 && PORTBbits.RB3 == 1) {
+            cont0--;
+            _delay((unsigned long)((500)*(8000000/4000.0)));
+            do {
+
+            } while (PORTBbits.RB3 == 1);
+            PORTA = cont0;
+            IOCBbits.IOCB3 = 0;
+        }
+        if (cont0 > 255) {
+            cont0 = 0;
+        }
+
+        if (ADCON0bits.GO_DONE == 0) {
+
+            H = ADRESH;
+            L = ADRESH;
+
+            H = ((H/16)%16);
+            L = (L%16);
+            suma = ADRESH;
+            PORTD = display[H];
+            PORTCbits.RC0 = 1;
+            PORTCbits.RC0 = 0;
+
+            PORTD = display[L];
+
+            PORTCbits.RC1 = 1;
+            PORTCbits.RC1 = 0;
+            ADCON0bits.GO_DONE =1;
+
+
+
+
+
+        }
+        if (cont0<suma){
+            PORTBbits.RB7 = 1;
+        }
+        else{
+            PORTBbits.RB7 = 0;
+        }
+    } while (ciclo == 1);
 }
