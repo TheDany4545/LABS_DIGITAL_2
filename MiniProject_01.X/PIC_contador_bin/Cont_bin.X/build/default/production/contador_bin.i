@@ -2547,8 +2547,7 @@ void main(void)
 
 
 void contadorbinario(void) {
-    _delay((unsigned long)((300)*(8000000/4000.0)));
-    do {
+        do {
         if (IOCBbits.IOCB0 = 1 && PORTBbits.RB0 == 1) {
 
             cont0++;
@@ -2572,34 +2571,5 @@ void contadorbinario(void) {
             cont0 = 0;
         }
 
-        if (ADCON0bits.GO_DONE == 0) {
-
-            H = ADRESH;
-            L = ADRESH;
-
-            H = ((H/16)%16);
-            L = (L%16);
-            suma = ADRESH;
-            PORTD = display[H];
-            PORTCbits.RC0 = 1;
-            PORTCbits.RC0 = 0;
-
-            PORTD = display[L];
-
-            PORTCbits.RC1 = 1;
-            PORTCbits.RC1 = 0;
-            ADCON0bits.GO_DONE =1;
-
-
-
-
-
-        }
-        if (cont0<suma){
-            PORTBbits.RB7 = 1;
-        }
-        else{
-            PORTBbits.RB7 = 0;
-        }
     } while (ciclo == 1);
 }
