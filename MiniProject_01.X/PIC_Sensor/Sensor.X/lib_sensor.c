@@ -155,7 +155,7 @@ void setup(void)
     
     TRISA = 0x03;
     TRISB = 0x00;
-    TRISC = 0x80;
+    TRISC = 0;
     TRISD = 0x00;
     TRISE = 0x00;
     

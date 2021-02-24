@@ -2522,7 +2522,8 @@ extern __bank0 __bit __timeout;
 
 void setup(void);
 void main(void);
-# 39 "./sensor_lcd.h"
+void semaforo(void);
+# 40 "./sensor_lcd.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
 typedef signed char int8_t;
@@ -2656,7 +2657,7 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 39 "./sensor_lcd.h" 2
+# 40 "./sensor_lcd.h" 2
 
 
 void lcd_init(void);
@@ -2796,7 +2797,7 @@ void setup(void)
 
     TRISA = 0x03;
     TRISB = 0x00;
-    TRISC = 0x80;
+    TRISC = 0;
     TRISD = 0x00;
     TRISE = 0x00;
 

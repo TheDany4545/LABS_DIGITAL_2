@@ -1,13 +1,13 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"57 ./sensor_lcd.h
-[; ;./sensor_lcd.h: 57: void lcd_port(uint8_t a);
+"58 ./sensor_lcd.h
+[; ;./sensor_lcd.h: 58: void lcd_port(uint8_t a);
 [v _lcd_port `(v ~T0 @X0 0 ef1`uc ]
 [v F1256 `(v ~T0 @X0 1 tf1`ul ]
 "92 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
 [v __delay `JF1256 ~T0 @X0 0 e ]
 [p i __delay ]
-"43 ./sensor_lcd.h
-[; ;./sensor_lcd.h: 43: void lcd_cmd(uint8_t a);
+"44 ./sensor_lcd.h
+[; ;./sensor_lcd.h: 44: void lcd_cmd(uint8_t a);
 [v _lcd_cmd `(v ~T0 @X0 0 ef1`uc ]
 "352 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 352: extern volatile unsigned char PORTD __attribute__((address(0x008)));
@@ -401,6 +401,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./sensor_lcd.h: 6: void main(void);
 [p x MCLRE  =  OFF       ]
 "7
+[; ;./sensor_lcd.h: 7: void semaforo(void);
 [p x CP  =  OFF          ]
 "8
 [p x CPD  =  OFF         ]
@@ -707,8 +708,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;lib_sensor.c: 157:     TRISB = 0x00;
 [e = _TRISB -> -> 0 `i `uc ]
 "158
-[; ;lib_sensor.c: 158:     TRISC = 0x80;
-[e = _TRISC -> -> 128 `i `uc ]
+[; ;lib_sensor.c: 158:     TRISC = 0;
+[e = _TRISC -> -> 0 `i `uc ]
 "159
 [; ;lib_sensor.c: 159:     TRISD = 0x00;
 [e = _TRISD -> -> 0 `i `uc ]
