@@ -1,72 +1,144 @@
-/* 
- * File:   mainTemplate.c
+/*
+ * File:   rutina_adc.c
  * Author: Erick Daniel Aquino Paz
- * Carnet 17319
- * Plantilla/titulo del proyecto
+ * Carnet: 17319
+ * Created on February 22, 2021, 11:32 PM
  */
 
 //******************************************************************************
 //IMPORTACION DE LIBRERIAS
 //******************************************************************************
 #include <xc.h>
+#include <stdio.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include "sensor_lcd.h"
+#include "sensor_adc.h"
 
-
-//******************************************************************************
-//CONFIGURACION
-//******************************************************************************
-// CONFIG1
-#pragma config FOSC = XT        // Oscillator Selection bits (XT oscillator: Crystal/resonator on RA6/OSC2/CLKOUT and RA7/OSC1/CLKIN)
-#pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled and can be enabled by SWDTEN bit of the WDTCON register)
-#pragma config PWRTE = OFF      // Power-up Timer Enable bit (PWRT disabled)
-#pragma config MCLRE = OFF      // RE3/MCLR pin function select bit (RE3/MCLR pin function is digital input, MCLR internally tied to VDD)
-#pragma config CP = OFF         // Code Protection bit (Program memory code protection is disabled)
-#pragma config CPD = OFF        // Data Code Protection bit (Data memory code protection is disabled)
-#pragma config BOREN = OFF      // Brown Out Reset Selection bits (BOR disabled)
-#pragma config IESO = OFF       // Internal External Switchover bit (Internal/External Switchover mode is disabled)
-#pragma config FCMEN = OFF      // Fail-Safe Clock Monitor Enabled bit (Fail-Safe Clock Monitor is disabled)
-#pragma config LVP = OFF        // Low Voltage Programming Enable bit (RB3 pin has digital I/O, HV on MCLR must be used for programming)
-
-// CONFIG2
-#pragma config BOR4V = BOR40V   // Brown-out Reset Selection bit (Brown-out Reset set to 4.0V)
-#pragma config WRT = OFF        // Flash Program Memory Self Write Enable bits (Write protection off)
-
-//#define _XTAL_FREQ 8000000
 
 //******************************************************************************
 //VARIABLES
 //******************************************************************************
 
-//******************************************************************************
-//PROTOTIPOS DE FUNCIONES
-//******************************************************************************
-void setup(void);
+uint8_t adc_data1 = 0;
+uint8_t adc_data2 = 0;
+uint8_t uart_data = 0;
+uint8_t uart_cont = 0;
+uint8_t str_pos   = 0;
 
+int ban_an1;
+int ban_an2;
 
+char* str_pot_a[6];
+char* str_pot_b[5];
+
+bool    adc_flag     = false;
+bool    eusart_flag  = false;
 //******************************************************************************
 //CICLO PRINCIPAL
 //******************************************************************************
-
-void main(void) {
-
+void main(void)
+{
     setup();
+    while(1) 
+    {
+        if (ADCON0bits.GO_DONE == 0 && ban_an1 == 0) {
+            ADC_1();
+        }
+        if (ADCON0bits.GO_DONE == 0 && ban_an2 == 0) {
+            ADC_2();
+        }
+        sprintf(str_pot_a, "A%.3iC", adc_data1<<1);
+        sprintf(str_pot_b, "B%.3iC", adc_data2<<1);
 
-    //**************************************************************************
-    //LOOP PRINCIPAL
-    //**************************************************************************
-
-    while (1) {
-
-    }
-}
-
-//******************************************************************************
-//CONFIGURACION
-//******************************************************************************
-
-void setup(void) {
-
+        display();
+    }    
 }
 
 //******************************************************************************
 //FUNCIONES
 //******************************************************************************
+void display(void)
+{
+    lcd_move_cursor(0,0);
+    lcd_write_string("  T:  T:  Null: ");
+    lcd_move_cursor(1,0);
+
+    char* str[3];
+
+    sprintf(str, "%.3i", uart_cont);
+
+    lcd_write_char(str_pot_a[1]);
+    lcd_write_char('.');
+    lcd_write_char(str_pot_a[2]);
+    lcd_write_char(str_pot_a[3]);
+    lcd_write_char(str_pot_a[4]);
+    lcd_write_char(' ');
+
+    lcd_write_char(str_pot_b[1]);
+    lcd_write_char('.');
+    lcd_write_char(str_pot_b[2]);
+    lcd_write_char(str_pot_b[3]);
+    lcd_write_char(str_pot_b[4]);
+    lcd_write_char(' ');
+
+    lcd_write_char(str[0]);
+    lcd_write_char(str[1]);
+    lcd_write_char(str[2]);
+    lcd_write_char(str[3]);
+}
+
+void canal_10(void){
+    //SELECIONAMOS EL CANAL AN12
+    //an12 1100
+    ADCON0bits.CHS3 = 1;
+    ADCON0bits.CHS2 = 1;
+    ADCON0bits.CHS1 = 0;
+    ADCON0bits.CHS0 = 0;
+}
+void canal_12(void){
+    //SELECIONAMOS EL CANAL AN10
+    //an10 1010
+    ADCON0bits.CHS3 = 1;
+    ADCON0bits.CHS2 = 0;
+    ADCON0bits.CHS1 = 1;
+    ADCON0bits.CHS0 = 0;
+}
+void ADC_1(void){
+    adc_data1 = ADRESH;
+    ban_an1 = 1;
+    ban_an2 = 0;
+    canal_12();
+    ADCON0bits.GO_DONE =1;
+}
+void ADC_2(void){
+    adc_data2 = ADRESH;
+    ban_an1 = 0;
+    ban_an2 = 1;
+    canal_10();
+    ADCON0bits.GO_DONE =1;
+}
+
+//******************************************************************************
+// INTERRUPCIONES
+//******************************************************************************
+
+void __interrupt() isr(void)
+{
+    if (PIR1bits.ADIF)
+    {
+        PIR1bits.ADIF = 0;
+
+        if (adc_flag)
+        {
+            adc_data1 = ADRESH;
+        }
+        else
+        {
+            adc_data2 = ADRESH;
+        }
+
+        adc_flag = !adc_flag;
+    }
+    
+}

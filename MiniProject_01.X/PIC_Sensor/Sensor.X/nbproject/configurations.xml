@@ -14,6 +14,8 @@
                    projectFiles="true">
       <itemPath>sensor_temp.c</itemPath>
       <itemPath>lib_sensor.c</itemPath>
+      <itemPath>sensor_adc.h</itemPath>
+      <itemPath>sensor_lcd.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -21,6 +23,9 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">
