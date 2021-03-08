@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Mon Mar 08 10:47:56 2021
+                                                                                               Mon Mar 08 11:35:39 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	16F887
@@ -608,7 +608,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    594 ;;
    595 ;; *************** function _main *****************
    596 ;; Defined at:
-   597 ;;		line 238 in file "Newmain.c"
+   597 ;;		line 244 in file "Newmain.c"
    598 ;; Parameters:    Size  Location     Type
    599 ;;		None
    600 ;; Auto vars:     Size  Location     Type
@@ -656,26 +656,26 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    642                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
    643                           
    644                           
-   645                           ;Newmain.c: 240:  TRISC2 = 0;
+   645                           ;Newmain.c: 246:  TRISC2 = 0;
    646  0735  1683               	bsf	3,5	;RP0=1, select bank1
    647  0736  1303               	bcf	3,6	;RP1=0, select bank1
    648  0737  1107               	bcf	7,2	;volatile
    649                           
-   650                           ;Newmain.c: 241:  RC2 = 0;
+   650                           ;Newmain.c: 247:  RC2 = 0;
    651  0738  1283               	bcf	3,5	;RP0=0, select bank0
    652  0739  1303               	bcf	3,6	;RP1=0, select bank0
    653  073A  1107               	bcf	7,2	;volatile
    654  073B                     l1350:
    655                           
-   656                           ;Newmain.c: 243:  LCD_init();
+   656                           ;Newmain.c: 249:  LCD_init();
    657  073B  120A  118A  240F  120A  118A  	fcall	_LCD_init
    658  0740                     l1352:
    659                           
-   660                           ;Newmain.c: 245:  i2c_init_disp();
+   660                           ;Newmain.c: 251:  i2c_init_disp();
    661  0740  120A  118A  24B8  120A  118A  	fcall	_i2c_init_disp
    662  0745                     l1354:
    663                           
-   664                           ;Newmain.c: 246:  delay(65000);
+   664                           ;Newmain.c: 252:  delay(65000);
    665  0745  30E8               	movlw	232
    666  0746  00F0               	movwf	delay@x
    667  0747  30FD               	movlw	253
@@ -683,14 +683,14 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    669  0749  120A  118A  239A  120A  118A  	fcall	_delay
    670  074E                     l1356:
    671                           
-   672                           ;Newmain.c: 247:  i2c_init();
+   672                           ;Newmain.c: 253:  i2c_init();
    673  074E  120A  118A  23BA  120A  118A  	fcall	_i2c_init
    674  0753                     l1358:
    675                           
-   676                           ;Newmain.c: 249:  check_dev_disp();
+   676                           ;Newmain.c: 255:  check_dev_disp();
    677  0753  120A  118A  26B6  120A  118A  	fcall	_check_dev_disp
    678                           
-   679                           ;Newmain.c: 250:  delay(65000);
+   679                           ;Newmain.c: 256:  delay(65000);
    680  0758  30E8               	movlw	232
    681  0759  00F0               	movwf	delay@x
    682  075A  30FD               	movlw	253
@@ -698,20 +698,20 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    684  075C  120A  118A  239A  120A  118A  	fcall	_delay
    685  0761                     l1360:
    686                           
-   687                           ;Newmain.c: 251:  temp_disp();
+   687                           ;Newmain.c: 257:  temp_disp();
    688  0761  120A  118A  25A1  120A  118A  	fcall	_temp_disp
    689  0766                     l1362:
    690                           
-   691                           ;Newmain.c: 253:  {;Newmain.c: 254:   LCD_cmd(0x86);
+   691                           ;Newmain.c: 259:  {;Newmain.c: 260:   LCD_cmd(0x86);
    692  0766  3086               	movlw	134
    693  0767  120A  118A  23D4  120A  118A  	fcall	_LCD_cmd
    694  076C                     l1364:
    695                           
-   696                           ;Newmain.c: 256:   i2c_rep_start();
+   696                           ;Newmain.c: 262:   i2c_rep_start();
    697  076C  120A  118A  2371  120A  118A  	fcall	_i2c_rep_start
    698  0771                     l1366:
    699                           
-   700                           ;Newmain.c: 257:   delay(4);
+   700                           ;Newmain.c: 263:   delay(4);
    701  0771  3004               	movlw	4
    702  0772  00F0               	movwf	delay@x
    703  0773  3000               	movlw	0
@@ -719,21 +719,21 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    705  0775  120A  118A  239A  120A  118A  	fcall	_delay
    706  077A                     l1368:
    707                           
-   708                           ;Newmain.c: 259:   i2c_send(0x9A);
+   708                           ;Newmain.c: 265:   i2c_send(0x9A);
    709  077A  309A               	movlw	154
    710  077B  120A  118A  23A9  120A  118A  	fcall	_i2c_send
    711  0780                     l1370:
    712                           
-   713                           ;Newmain.c: 260:   i2c_send(0x00);
+   713                           ;Newmain.c: 266:   i2c_send(0x00);
    714  0780  3000               	movlw	0
    715  0781  120A  118A  23A9  120A  118A  	fcall	_i2c_send
    716  0786                     l1372:
    717                           
-   718                           ;Newmain.c: 262:   i2c_rep_start();
+   718                           ;Newmain.c: 268:   i2c_rep_start();
    719  0786  120A  118A  2371  120A  118A  	fcall	_i2c_rep_start
    720  078B                     l1374:
    721                           
-   722                           ;Newmain.c: 263:   delay(4);
+   722                           ;Newmain.c: 269:   delay(4);
    723  078B  3004               	movlw	4
    724  078C  00F0               	movwf	delay@x
    725  078D  3000               	movlw	0
@@ -741,18 +741,18 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    727  078F  120A  118A  239A  120A  118A  	fcall	_delay
    728  0794                     l1376:
    729                           
-   730                           ;Newmain.c: 265:   SSPBUF = 0x9B;
+   730                           ;Newmain.c: 271:   SSPBUF = 0x9B;
    731  0794  309B               	movlw	155
    732  0795  1283               	bcf	3,5	;RP0=0, select bank0
    733  0796  1303               	bcf	3,6	;RP1=0, select bank0
    734  0797  0093               	movwf	19	;volatile
    735  0798                     l1378:
    736                           
-   737                           ;Newmain.c: 266:   i2c_wait();
+   737                           ;Newmain.c: 272:   i2c_wait();
    738  0798  120A  118A  2369  120A  118A  	fcall	_i2c_wait
    739  079D                     l1380:
    740                           
-   741                           ;Newmain.c: 267:   delay(4);
+   741                           ;Newmain.c: 273:   delay(4);
    742  079D  3004               	movlw	4
    743  079E  00F0               	movwf	delay@x
    744  079F  3000               	movlw	0
@@ -760,7 +760,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    746  07A1  120A  118A  239A  120A  118A  	fcall	_delay
    747  07A6                     l1382:
    748                           
-   749                           ;Newmain.c: 269:   r = i2c_rx();
+   749                           ;Newmain.c: 275:   r = i2c_rx();
    750  07A6  120A  118A  2382  120A  118A  	fcall	_i2c_rx
    751  07AB  1283               	bcf	3,5	;RP0=0, select bank0
    752  07AC  1303               	bcf	3,6	;RP1=0, select bank0
@@ -769,15 +769,15 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    755  07AF  00A5               	movwf	_r
    756  07B0                     l1384:
    757                           
-   758                           ;Newmain.c: 270:   i2c_wait();
+   758                           ;Newmain.c: 276:   i2c_wait();
    759  07B0  120A  118A  2369  120A  118A  	fcall	_i2c_wait
    760  07B5                     l1386:
    761                           
-   762                           ;Newmain.c: 272:   i2c_NACK();
+   762                           ;Newmain.c: 278:   i2c_NACK();
    763  07B5  120A  118A  2379  120A  118A  	fcall	_i2c_NACK
    764  07BA                     l1388:
    765                           
-   766                           ;Newmain.c: 273:   delay(4);
+   766                           ;Newmain.c: 279:   delay(4);
    767  07BA  3004               	movlw	4
    768  07BB  00F0               	movwf	delay@x
    769  07BC  3000               	movlw	0
@@ -785,11 +785,11 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    771  07BE  120A  118A  239A  120A  118A  	fcall	_delay
    772  07C3                     l1390:
    773                           
-   774                           ;Newmain.c: 275:   i2c_stop();
+   774                           ;Newmain.c: 281:   i2c_stop();
    775  07C3  120A  118A  238D  120A  118A  	fcall	_i2c_stop
    776  07C8                     l1392:
    777                           
-   778                           ;Newmain.c: 276:   delay(4);
+   778                           ;Newmain.c: 282:   delay(4);
    779  07C8  3004               	movlw	4
    780  07C9  00F0               	movwf	delay@x
    781  07CA  3000               	movlw	0
@@ -797,7 +797,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    783  07CC  120A  118A  239A  120A  118A  	fcall	_delay
    784  07D1                     l1394:
    785                           
-   786                           ;Newmain.c: 278:   LCD_disp(r);
+   786                           ;Newmain.c: 284:   LCD_disp(r);
    787  07D1  1283               	bcf	3,5	;RP0=0, select bank0
    788  07D2  1303               	bcf	3,6	;RP1=0, select bank0
    789  07D3  0825               	movf	_r,w
@@ -943,7 +943,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    929  038D                     __ptext2:	
    930 ;; *************** function _i2c_stop *****************
    931 ;; Defined at:
-   932 ;;		line 123 in file "Newmain.c"
+   932 ;;		line 129 in file "Newmain.c"
    933 ;; Parameters:    Size  Location     Type
    934 ;;		None
    935 ;; Auto vars:     Size  Location     Type
@@ -979,16 +979,16 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    965                           ; Regs used in _i2c_stop: [status,2+status,0+pclath+cstack]
    966                           
    967                           
-   968                           ;Newmain.c: 125:  i2c_wait();
+   968                           ;Newmain.c: 131:  i2c_wait();
    969  038D  120A  118A  2369  120A  118A  	fcall	_i2c_wait
    970  0392                     l1270:
    971                           
-   972                           ;Newmain.c: 126:  PEN = 1;
+   972                           ;Newmain.c: 132:  PEN = 1;
    973  0392  1683               	bsf	3,5	;RP0=1, select bank1
    974  0393  1303               	bcf	3,6	;RP1=0, select bank1
    975  0394  1511               	bsf	17,2	;volatile
    976  0395                     l120:	
-   977                           ;Newmain.c: 127:  while(PEN);
+   977                           ;Newmain.c: 133:  while(PEN);
    978                           
    979  0395  1911               	btfsc	17,2	;volatile
    980  0396  2B98               	goto	u671
@@ -1004,7 +1004,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    990  0382                     __ptext3:	
    991 ;; *************** function _i2c_rx *****************
    992 ;; Defined at:
-   993 ;;		line 130 in file "Newmain.c"
+   993 ;;		line 136 in file "Newmain.c"
    994 ;; Parameters:    Size  Location     Type
    995 ;;		None
    996 ;; Auto vars:     Size  Location     Type
@@ -1039,12 +1039,12 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1025                           ; Regs used in _i2c_rx: [wreg]
   1026                           
   1027                           
-  1028                           ;Newmain.c: 132:  RCEN = 1;
+  1028                           ;Newmain.c: 138:  RCEN = 1;
   1029  0382  1683               	bsf	3,5	;RP0=1, select bank1
   1030  0383  1303               	bcf	3,6	;RP1=0, select bank1
   1031  0384  1591               	bsf	17,3	;volatile
   1032  0385                     l126:	
-  1033                           ;Newmain.c: 133:  while(!BF);
+  1033                           ;Newmain.c: 139:  while(!BF);
   1034                           
   1035  0385  1C14               	btfss	20,0	;volatile
   1036  0386  2B88               	goto	u681
@@ -1054,7 +1054,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1040  0389                     u680:
   1041  0389                     l1274:
   1042                           
-  1043                           ;Newmain.c: 134:  return SSPBUF;
+  1043                           ;Newmain.c: 140:  return SSPBUF;
   1044  0389  1283               	bcf	3,5	;RP0=0, select bank0
   1045  038A  1303               	bcf	3,6	;RP1=0, select bank0
   1046  038B  0813               	movf	19,w	;volatile
@@ -1066,7 +1066,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1052  0371                     __ptext4:	
   1053 ;; *************** function _i2c_rep_start *****************
   1054 ;; Defined at:
-  1055 ;;		line 110 in file "Newmain.c"
+  1055 ;;		line 116 in file "Newmain.c"
   1056 ;; Parameters:    Size  Location     Type
   1057 ;;		None
   1058 ;; Auto vars:     Size  Location     Type
@@ -1101,12 +1101,12 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1087                           ; Regs used in _i2c_rep_start: []
   1088                           
   1089                           
-  1090                           ;Newmain.c: 112:  RSEN = 1;
+  1090                           ;Newmain.c: 118:  RSEN = 1;
   1091  0371  1683               	bsf	3,5	;RP0=1, select bank1
   1092  0372  1303               	bcf	3,6	;RP1=0, select bank1
   1093  0373  1491               	bsf	17,1	;volatile
   1094  0374                     l108:	
-  1095                           ;Newmain.c: 113:  while(RSEN);
+  1095                           ;Newmain.c: 119:  while(RSEN);
   1096                           
   1097  0374  1891               	btfsc	17,1	;volatile
   1098  0375  2B77               	goto	u651
@@ -1122,7 +1122,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1108  04B8                     __ptext5:	
   1109 ;; *************** function _i2c_init_disp *****************
   1110 ;; Defined at:
-  1111 ;;		line 182 in file "Newmain.c"
+  1111 ;;		line 188 in file "Newmain.c"
   1112 ;; Parameters:    Size  Location     Type
   1113 ;;		None
   1114 ;; Auto vars:     Size  Location     Type
@@ -1159,26 +1159,26 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1145                           ; Regs used in _i2c_init_disp: [wreg-fsr0h+status,2+status,0+pclath+cstack]
   1146                           
   1147                           
-  1148                           ;Newmain.c: 184:  LCD_cmd(0x01);
+  1148                           ;Newmain.c: 190:  LCD_cmd(0x01);
   1149  04B8  3001               	movlw	1
   1150  04B9  120A  118A  23D4  120A  118A  	fcall	_LCD_cmd
   1151                           
-  1152                           ;Newmain.c: 185:  LCD_cmd(0x80);
+  1152                           ;Newmain.c: 191:  LCD_cmd(0x80);
   1153  04BE  3080               	movlw	128
   1154  04BF  120A  118A  23D4  120A  118A  	fcall	_LCD_cmd
   1155                           
-  1156                           ;Newmain.c: 186:  while( *d3 != '\0')
+  1156                           ;Newmain.c: 192:  while( *d3 != '\0')
   1157  04C4  2CF3               	goto	l1322
   1158  04C5                     l148:
   1159                           
-  1160                           ;Newmain.c: 187:  {;Newmain.c: 188:   RC0 = 1;
+  1160                           ;Newmain.c: 193:  {;Newmain.c: 194:   RC0 = 1;
   1161  04C5  1407               	bsf	7,0	;volatile
   1162                           
-  1163                           ;Newmain.c: 189:   RC1 = 1;
+  1163                           ;Newmain.c: 195:   RC1 = 1;
   1164  04C6  1487               	bsf	7,1	;volatile
   1165  04C7                     l1310:
   1166                           
-  1167                           ;Newmain.c: 190:   delay(100);
+  1167                           ;Newmain.c: 196:   delay(100);
   1168  04C7  3064               	movlw	100
   1169  04C8  00F0               	movwf	delay@x
   1170  04C9  3000               	movlw	0
@@ -1186,7 +1186,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1172  04CB  120A  118A  239A  120A  118A  	fcall	_delay
   1173  04D0                     l1312:
   1174                           
-  1175                           ;Newmain.c: 191:   PORTB = *d3;
+  1175                           ;Newmain.c: 197:   PORTB = *d3;
   1176  04D0  1283               	bcf	3,5	;RP0=0, select bank0
   1177  04D1  1303               	bcf	3,6	;RP1=0, select bank0
   1178  04D2  0821               	movf	_d3,w
@@ -1195,7 +1195,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1181  04D9  0086               	movwf	6	;volatile
   1182  04DA                     l1314:
   1183                           
-  1184                           ;Newmain.c: 192:   delay(200);
+  1184                           ;Newmain.c: 198:   delay(200);
   1185  04DA  30C8               	movlw	200
   1186  04DB  00F0               	movwf	delay@x
   1187  04DC  3000               	movlw	0
@@ -1203,20 +1203,20 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1189  04DE  120A  118A  239A  120A  118A  	fcall	_delay
   1190  04E3                     l1316:
   1191                           
-  1192                           ;Newmain.c: 193:   RC1 = 0;
+  1192                           ;Newmain.c: 199:   RC1 = 0;
   1193  04E3  1283               	bcf	3,5	;RP0=0, select bank0
   1194  04E4  1303               	bcf	3,6	;RP1=0, select bank0
   1195  04E5  1087               	bcf	7,1	;volatile
   1196  04E6                     l1318:
   1197                           
-  1198                           ;Newmain.c: 194:   d3++;
+  1198                           ;Newmain.c: 200:   d3++;
   1199  04E6  3001               	movlw	1
   1200  04E7  00F3               	movwf	??_i2c_init_disp
   1201  04E8  0873               	movf	??_i2c_init_disp,w
   1202  04E9  07A1               	addwf	_d3,f
   1203  04EA                     l1320:
   1204                           
-  1205                           ;Newmain.c: 195:   delay(100);
+  1205                           ;Newmain.c: 201:   delay(100);
   1206  04EA  3064               	movlw	100
   1207  04EB  00F0               	movwf	delay@x
   1208  04EC  3000               	movlw	0
@@ -1224,7 +1224,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1210  04EE  120A  118A  239A  120A  118A  	fcall	_delay
   1211  04F3                     l1322:
   1212                           
-  1213                           ;Newmain.c: 186:  while( *d3 != '\0')
+  1213                           ;Newmain.c: 192:  while( *d3 != '\0')
   1214  04F3  1283               	bcf	3,5	;RP0=0, select bank0
   1215  04F4  1303               	bcf	3,6	;RP1=0, select bank0
   1216  04F5  0821               	movf	_d3,w
@@ -1245,7 +1245,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1231  03BA                     __ptext6:	
   1232 ;; *************** function _i2c_init *****************
   1233 ;; Defined at:
-  1234 ;;		line 145 in file "Newmain.c"
+  1234 ;;		line 151 in file "Newmain.c"
   1235 ;; Parameters:    Size  Location     Type
   1236 ;;		None
   1237 ;; Auto vars:     Size  Location     Type
@@ -1280,47 +1280,47 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1266                           ; Regs used in _i2c_init: [wreg+status,2]
   1267                           
   1268                           
-  1269                           ;Newmain.c: 147:  TRISC3 = 1;
+  1269                           ;Newmain.c: 153:  TRISC3 = 1;
   1270  03BA  1683               	bsf	3,5	;RP0=1, select bank1
   1271  03BB  1303               	bcf	3,6	;RP1=0, select bank1
   1272  03BC  1587               	bsf	7,3	;volatile
   1273                           
-  1274                           ;Newmain.c: 148:  TRISC4 = 1;
+  1274                           ;Newmain.c: 154:  TRISC4 = 1;
   1275  03BD  1607               	bsf	7,4	;volatile
   1276  03BE                     l1280:
   1277                           
-  1278                           ;Newmain.c: 149:  SSPBUF = 0x00;
+  1278                           ;Newmain.c: 155:  SSPBUF = 0x00;
   1279  03BE  1283               	bcf	3,5	;RP0=0, select bank0
   1280  03BF  1303               	bcf	3,6	;RP1=0, select bank0
   1281  03C0  0193               	clrf	19	;volatile
   1282  03C1                     l1282:
   1283                           
-  1284                           ;Newmain.c: 150:  SSPSTAT = 0xc0;
+  1284                           ;Newmain.c: 156:  SSPSTAT = 0xc0;
   1285  03C1  30C0               	movlw	192
   1286  03C2  1683               	bsf	3,5	;RP0=1, select bank1
   1287  03C3  1303               	bcf	3,6	;RP1=0, select bank1
   1288  03C4  0094               	movwf	20	;volatile
   1289  03C5                     l1284:
   1290                           
-  1291                           ;Newmain.c: 151:  SSPCON = 0x28;
+  1291                           ;Newmain.c: 157:  SSPCON = 0x28;
   1292  03C5  3028               	movlw	40
   1293  03C6  1283               	bcf	3,5	;RP0=0, select bank0
   1294  03C7  1303               	bcf	3,6	;RP1=0, select bank0
   1295  03C8  0094               	movwf	20	;volatile
   1296                           
-  1297                           ;Newmain.c: 152:  SSPCON2 = 0x00;
+  1297                           ;Newmain.c: 158:  SSPCON2 = 0x00;
   1298  03C9  1683               	bsf	3,5	;RP0=1, select bank1
   1299  03CA  1303               	bcf	3,6	;RP1=0, select bank1
   1300  03CB  0191               	clrf	17	;volatile
   1301  03CC                     l1286:
   1302                           
-  1303                           ;Newmain.c: 153:  SSPIF = 0;
+  1303                           ;Newmain.c: 159:  SSPIF = 0;
   1304  03CC  1283               	bcf	3,5	;RP0=0, select bank0
   1305  03CD  1303               	bcf	3,6	;RP1=0, select bank0
   1306  03CE  118C               	bcf	12,3	;volatile
   1307  03CF                     l1288:
   1308                           
-  1309                           ;Newmain.c: 154:  SSPADD = 9;
+  1309                           ;Newmain.c: 160:  SSPADD = 9;
   1310  03CF  3009               	movlw	9
   1311  03D0  1683               	bsf	3,5	;RP0=1, select bank1
   1312  03D1  1303               	bcf	3,6	;RP1=0, select bank1
@@ -1333,7 +1333,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1319  0379                     __ptext7:	
   1320 ;; *************** function _i2c_NACK *****************
   1321 ;; Defined at:
-  1322 ;;		line 116 in file "Newmain.c"
+  1322 ;;		line 122 in file "Newmain.c"
   1323 ;; Parameters:    Size  Location     Type
   1324 ;;		None
   1325 ;; Auto vars:     Size  Location     Type
@@ -1368,15 +1368,15 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1354                           ; Regs used in _i2c_NACK: []
   1355                           
   1356                           
-  1357                           ;Newmain.c: 118:  ACKDT = 1;
+  1357                           ;Newmain.c: 124:  ACKDT = 1;
   1358  0379  1683               	bsf	3,5	;RP0=1, select bank1
   1359  037A  1303               	bcf	3,6	;RP1=0, select bank1
   1360  037B  1691               	bsf	17,5	;volatile
   1361                           
-  1362                           ;Newmain.c: 119:  ACKEN = 1;
+  1362                           ;Newmain.c: 125:  ACKEN = 1;
   1363  037C  1611               	bsf	17,4	;volatile
   1364  037D                     l114:	
-  1365                           ;Newmain.c: 120:  while(ACKEN);
+  1365                           ;Newmain.c: 126:  while(ACKEN);
   1366                           
   1367  037D  1A11               	btfsc	17,4	;volatile
   1368  037E  2B80               	goto	u661
@@ -1392,7 +1392,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1378  06B6                     __ptext8:	
   1379 ;; *************** function _check_dev_disp *****************
   1380 ;; Defined at:
-  1381 ;;		line 216 in file "Newmain.c"
+  1381 ;;		line 222 in file "Newmain.c"
   1382 ;; Parameters:    Size  Location     Type
   1383 ;;		None
   1384 ;; Auto vars:     Size  Location     Type
@@ -1432,15 +1432,15 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1418                           ; Regs used in _check_dev_disp: [wreg-fsr0h+status,2+status,0+pclath+cstack]
   1419                           
   1420                           
-  1421                           ;Newmain.c: 218:  LCD_cmd(0x01);
+  1421                           ;Newmain.c: 224:  LCD_cmd(0x01);
   1422  06B6  3001               	movlw	1
   1423  06B7  120A  118A  23D4  120A  118A  	fcall	_LCD_cmd
   1424                           
-  1425                           ;Newmain.c: 219:  LCD_cmd(0x80);
+  1425                           ;Newmain.c: 225:  LCD_cmd(0x80);
   1426  06BC  3080               	movlw	128
   1427  06BD  120A  118A  23D4  120A  118A  	fcall	_LCD_cmd
   1428                           
-  1429                           ;Newmain.c: 220:  delay(100);
+  1429                           ;Newmain.c: 226:  delay(100);
   1430  06C2  3064               	movlw	100
   1431  06C3  00F0               	movwf	delay@x
   1432  06C4  3000               	movlw	0
@@ -1448,27 +1448,27 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1434  06C6  120A  118A  239A  120A  118A  	fcall	_delay
   1435  06CB                     l1326:
   1436                           
-  1437                           ;Newmain.c: 221:  RC0 = 1;
+  1437                           ;Newmain.c: 227:  RC0 = 1;
   1438  06CB  1283               	bcf	3,5	;RP0=0, select bank0
   1439  06CC  1303               	bcf	3,6	;RP1=0, select bank0
   1440  06CD  1407               	bsf	7,0	;volatile
   1441                           
-  1442                           ;Newmain.c: 222:  delay(100);
+  1442                           ;Newmain.c: 228:  delay(100);
   1443  06CE  3064               	movlw	100
   1444  06CF  00F0               	movwf	delay@x
   1445  06D0  3000               	movlw	0
   1446  06D1  00F1               	movwf	delay@x+1
   1447  06D2  120A  118A  239A  120A  118A  	fcall	_delay
   1448                           
-  1449                           ;Newmain.c: 223:  while( *d != '\0')
+  1449                           ;Newmain.c: 229:  while( *d != '\0')
   1450  06D7  2F07               	goto	l1340
   1451  06D8                     l164:
   1452                           
-  1453                           ;Newmain.c: 224:  {;Newmain.c: 225:   RC1 = 1;
+  1453                           ;Newmain.c: 230:  {;Newmain.c: 231:   RC1 = 1;
   1454  06D8  1487               	bsf	7,1	;volatile
   1455  06D9                     l1328:
   1456                           
-  1457                           ;Newmain.c: 226:   delay(100);
+  1457                           ;Newmain.c: 232:   delay(100);
   1458  06D9  3064               	movlw	100
   1459  06DA  00F0               	movwf	delay@x
   1460  06DB  3000               	movlw	0
@@ -1476,7 +1476,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1462  06DD  120A  118A  239A  120A  118A  	fcall	_delay
   1463  06E2                     l1330:
   1464                           
-  1465                           ;Newmain.c: 227:   PORTB = *d;
+  1465                           ;Newmain.c: 233:   PORTB = *d;
   1466  06E2  1283               	bcf	3,5	;RP0=0, select bank0
   1467  06E3  1303               	bcf	3,6	;RP1=0, select bank0
   1468  06E4  0824               	movf	_d,w
@@ -1485,7 +1485,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1471  06EB  0086               	movwf	6	;volatile
   1472  06EC                     l1332:
   1473                           
-  1474                           ;Newmain.c: 228:   delay(100);
+  1474                           ;Newmain.c: 234:   delay(100);
   1475  06EC  3064               	movlw	100
   1476  06ED  00F0               	movwf	delay@x
   1477  06EE  3000               	movlw	0
@@ -1493,13 +1493,13 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1479  06F0  120A  118A  239A  120A  118A  	fcall	_delay
   1480  06F5                     l1334:
   1481                           
-  1482                           ;Newmain.c: 229:   RC1 = 0;
+  1482                           ;Newmain.c: 235:   RC1 = 0;
   1483  06F5  1283               	bcf	3,5	;RP0=0, select bank0
   1484  06F6  1303               	bcf	3,6	;RP1=0, select bank0
   1485  06F7  1087               	bcf	7,1	;volatile
   1486  06F8                     l1336:
   1487                           
-  1488                           ;Newmain.c: 230:   delay(100);
+  1488                           ;Newmain.c: 236:   delay(100);
   1489  06F8  3064               	movlw	100
   1490  06F9  00F0               	movwf	delay@x
   1491  06FA  3000               	movlw	0
@@ -1507,7 +1507,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1493  06FC  120A  118A  239A  120A  118A  	fcall	_delay
   1494  0701                     l1338:
   1495                           
-  1496                           ;Newmain.c: 231:   d++;
+  1496                           ;Newmain.c: 237:   d++;
   1497  0701  3001               	movlw	1
   1498  0702  00F6               	movwf	??_check_dev_disp
   1499  0703  0876               	movf	??_check_dev_disp,w
@@ -1516,7 +1516,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1502  0706  07A4               	addwf	_d,f
   1503  0707                     l1340:
   1504                           
-  1505                           ;Newmain.c: 223:  while( *d != '\0')
+  1505                           ;Newmain.c: 229:  while( *d != '\0')
   1506  0707  1283               	bcf	3,5	;RP0=0, select bank0
   1507  0708  1303               	bcf	3,6	;RP1=0, select bank0
   1508  0709  0824               	movf	_d,w
@@ -1531,14 +1531,14 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1517  0715                     u700:
   1518  0715                     l1342:
   1519                           
-  1520                           ;Newmain.c: 233:  delay(65000);
+  1520                           ;Newmain.c: 239:  delay(65000);
   1521  0715  30E8               	movlw	232
   1522  0716  00F0               	movwf	delay@x
   1523  0717  30FD               	movlw	253
   1524  0718  00F1               	movwf	delay@x+1
   1525  0719  120A  118A  239A  120A  118A  	fcall	_delay
   1526                           
-  1527                           ;Newmain.c: 234:  (check_dev() ? no_dev_disp() : dev_found_disp());
+  1527                           ;Newmain.c: 240:  (check_dev() ? no_dev_disp() : dev_found_disp());
   1528  071E  120A  118A  243B  120A  118A  	fcall	_check_dev
   1529  0723  0872               	movf	?_check_dev,w
   1530  0724  0473               	iorwf	?_check_dev+1,w
@@ -1822,7 +1822,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1808  043B                     __ptext11:	
   1809 ;; *************** function _check_dev *****************
   1810 ;; Defined at:
-  1811 ;;		line 200 in file "Newmain.c"
+  1811 ;;		line 206 in file "Newmain.c"
   1812 ;; Parameters:    Size  Location     Type
   1813 ;;		None
   1814 ;; Auto vars:     Size  Location     Type
@@ -1859,12 +1859,12 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1845                           ; Regs used in _check_dev: [wreg+status,2+status,0+pclath+cstack]
   1846                           
   1847                           
-  1848                           ;Newmain.c: 202:  SEN = 1;
+  1848                           ;Newmain.c: 208:  SEN = 1;
   1849  043B  1683               	bsf	3,5	;RP0=1, select bank1
   1850  043C  1303               	bcf	3,6	;RP1=0, select bank1
   1851  043D  1411               	bsf	17,0	;volatile
   1852  043E                     l153:	
-  1853                           ;Newmain.c: 203:  while(SEN);
+  1853                           ;Newmain.c: 209:  while(SEN);
   1854                           
   1855  043E  1811               	btfsc	17,0	;volatile
   1856  043F  2C41               	goto	u421
@@ -1874,12 +1874,12 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1860  0442                     u420:
   1861  0442                     l1152:
   1862                           
-  1863                           ;Newmain.c: 204:  i2c_send(0x9A);
+  1863                           ;Newmain.c: 210:  i2c_send(0x9A);
   1864  0442  309A               	movlw	154
   1865  0443  120A  118A  23A9  120A  118A  	fcall	_i2c_send
   1866  0448                     l1154:
   1867                           
-  1868                           ;Newmain.c: 205:  if(ACKSTAT)
+  1868                           ;Newmain.c: 211:  if(ACKSTAT)
   1869  0448  1683               	bsf	3,5	;RP0=1, select bank1
   1870  0449  1303               	bcf	3,6	;RP1=0, select bank1
   1871  044A  1F11               	btfss	17,6	;volatile
@@ -1890,20 +1890,20 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1876  044E                     u430:
   1877  044E                     l1156:
   1878                           
-  1879                           ;Newmain.c: 206:  {;Newmain.c: 207:   RC2 = 1;
+  1879                           ;Newmain.c: 212:  {;Newmain.c: 213:   RC2 = 1;
   1880  044E  1283               	bcf	3,5	;RP0=0, select bank0
   1881  044F  1303               	bcf	3,6	;RP1=0, select bank0
   1882  0450  1507               	bsf	7,2	;volatile
   1883  0451                     l156:	
-  1884                           ;Newmain.c: 208:  }
+  1884                           ;Newmain.c: 214:  }
   1885                           
   1886                           
-  1887                           ;Newmain.c: 209:  PEN = 1;
+  1887                           ;Newmain.c: 215:  PEN = 1;
   1888  0451  1683               	bsf	3,5	;RP0=1, select bank1
   1889  0452  1303               	bcf	3,6	;RP1=0, select bank1
   1890  0453  1511               	bsf	17,2	;volatile
   1891  0454                     l157:	
-  1892                           ;Newmain.c: 210:  while(PEN);
+  1892                           ;Newmain.c: 216:  while(PEN);
   1893                           
   1894  0454  1911               	btfsc	17,2	;volatile
   1895  0455  2C57               	goto	u441
@@ -1913,7 +1913,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1899  0458                     u440:
   1900  0458                     l1158:
   1901                           
-  1902                           ;Newmain.c: 211:  delay(65000);
+  1902                           ;Newmain.c: 217:  delay(65000);
   1903  0458  30E8               	movlw	232
   1904  0459  00F0               	movwf	delay@x
   1905  045A  30FD               	movlw	253
@@ -1921,7 +1921,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1907  045C  120A  118A  239A  120A  118A  	fcall	_delay
   1908  0461                     l1160:
   1909                           
-  1910                           ;Newmain.c: 212:  return RC2;
+  1910                           ;Newmain.c: 218:  return RC2;
   1911  0461  1003               	clrc
   1912  0462  1283               	bcf	3,5	;RP0=0, select bank0
   1913  0463  1303               	bcf	3,6	;RP1=0, select bank0
@@ -1944,7 +1944,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1930  03A9                     __ptext12:	
   1931 ;; *************** function _i2c_send *****************
   1932 ;; Defined at:
-  1933 ;;		line 137 in file "Newmain.c"
+  1933 ;;		line 143 in file "Newmain.c"
   1934 ;; Parameters:    Size  Location     Type
   1935 ;;  c               1    wreg     unsigned char 
   1936 ;; Auto vars:     Size  Location     Type
@@ -1983,14 +1983,14 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1969  03A9  00F0               	movwf	i2c_send@c
   1970  03AA                     l1100:
   1971                           
-  1972                           ;Newmain.c: 137: unsigned char i2c_send(unsigned char c);Newmain.c: 138: {;Newmain.c: 13
-      +                          9:  SSPBUF = c;
+  1972                           ;Newmain.c: 143: unsigned char i2c_send(unsigned char c);Newmain.c: 144: {;Newmain.c: 14
+      +                          5:  SSPBUF = c;
   1973  03AA  0870               	movf	i2c_send@c,w
   1974  03AB  1283               	bcf	3,5	;RP0=0, select bank0
   1975  03AC  1303               	bcf	3,6	;RP1=0, select bank0
   1976  03AD  0093               	movwf	19	;volatile
   1977  03AE                     l132:	
-  1978                           ;Newmain.c: 140:  while(BF);
+  1978                           ;Newmain.c: 146:  while(BF);
   1979                           
   1980  03AE  1683               	bsf	3,5	;RP0=1, select bank1
   1981  03AF  1303               	bcf	3,6	;RP1=0, select bank1
@@ -2002,7 +2002,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1987  03B4                     u390:
   1988  03B4                     l1102:
   1989                           
-  1990                           ;Newmain.c: 141:  i2c_wait();
+  1990                           ;Newmain.c: 147:  i2c_wait();
   1991  03B4  120A  118A  2369  120A  118A  	fcall	_i2c_wait
   1992  03B9                     l135:
   1993  03B9  0008               	return
@@ -2012,7 +2012,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1997  0369                     __ptext13:	
   1998 ;; *************** function _i2c_wait *****************
   1999 ;; Defined at:
-  2000 ;;		line 104 in file "Newmain.c"
+  2000 ;;		line 110 in file "Newmain.c"
   2001 ;; Parameters:    Size  Location     Type
   2002 ;;		None
   2003 ;; Auto vars:     Size  Location     Type
@@ -2049,7 +2049,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2034                           ; Regs used in _i2c_wait: []
   2035                           
   2036  0369                     l102:	
-  2037                           ;Newmain.c: 106:  while(SSPIF==0);
+  2037                           ;Newmain.c: 112:  while(SSPIF==0);
   2038                           
   2039  0369  1283               	bcf	3,5	;RP0=0, select bank0
   2040  036A  1303               	bcf	3,6	;RP1=0, select bank0
@@ -2061,7 +2061,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2046  036F                     u380:
   2047  036F                     l104:
   2048                           
-  2049                           ;Newmain.c: 107:  SSPIF = 0;
+  2049                           ;Newmain.c: 113:  SSPIF = 0;
   2050  036F  118C               	bcf	12,3	;volatile
   2051  0370                     l105:
   2052  0370  0008               	return
@@ -2071,7 +2071,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2056  040F                     __ptext14:	
   2057 ;; *************** function _LCD_init *****************
   2058 ;; Defined at:
-  2059 ;;		line 157 in file "Newmain.c"
+  2059 ;;		line 163 in file "Newmain.c"
   2060 ;; Parameters:    Size  Location     Type
   2061 ;;		None
   2062 ;; Auto vars:     Size  Location     Type
@@ -2108,28 +2108,28 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2093                           ; Regs used in _LCD_init: [wreg+status,2+status,0+pclath+cstack]
   2094                           
   2095                           
-  2096                           ;Newmain.c: 159:  TRISB = 0x00;
+  2096                           ;Newmain.c: 165:  TRISB = 0x00;
   2097  040F  1683               	bsf	3,5	;RP0=1, select bank1
   2098  0410  1303               	bcf	3,6	;RP1=0, select bank1
   2099  0411  0186               	clrf	6	;volatile
   2100                           
-  2101                           ;Newmain.c: 160:  PORTB = 0x00;
+  2101                           ;Newmain.c: 166:  PORTB = 0x00;
   2102  0412  1283               	bcf	3,5	;RP0=0, select bank0
   2103  0413  1303               	bcf	3,6	;RP1=0, select bank0
   2104  0414  0186               	clrf	6	;volatile
   2105  0415                     l1292:
   2106                           
-  2107                           ;Newmain.c: 161:  TRISC0 = 0;
+  2107                           ;Newmain.c: 167:  TRISC0 = 0;
   2108  0415  1683               	bsf	3,5	;RP0=1, select bank1
   2109  0416  1303               	bcf	3,6	;RP1=0, select bank1
   2110  0417  1007               	bcf	7,0	;volatile
   2111  0418                     l1294:
   2112                           
-  2113                           ;Newmain.c: 162:  TRISC1 = 0;
+  2113                           ;Newmain.c: 168:  TRISC1 = 0;
   2114  0418  1087               	bcf	7,1	;volatile
   2115  0419                     l1296:
   2116                           
-  2117                           ;Newmain.c: 163:  delay(200);
+  2117                           ;Newmain.c: 169:  delay(200);
   2118  0419  30C8               	movlw	200
   2119  041A  00F0               	movwf	delay@x
   2120  041B  3000               	movlw	0
@@ -2137,22 +2137,22 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2122  041D  120A  118A  239A  120A  118A  	fcall	_delay
   2123  0422                     l1298:
   2124                           
-  2125                           ;Newmain.c: 164:  LCD_cmd(0x0c);
+  2125                           ;Newmain.c: 170:  LCD_cmd(0x0c);
   2126  0422  300C               	movlw	12
   2127  0423  120A  118A  23D4  120A  118A  	fcall	_LCD_cmd
   2128  0428                     l1300:
   2129                           
-  2130                           ;Newmain.c: 165:  LCD_cmd(0x06);
+  2130                           ;Newmain.c: 171:  LCD_cmd(0x06);
   2131  0428  3006               	movlw	6
   2132  0429  120A  118A  23D4  120A  118A  	fcall	_LCD_cmd
   2133  042E                     l1302:
   2134                           
-  2135                           ;Newmain.c: 166:  LCD_cmd(0x38);
+  2135                           ;Newmain.c: 172:  LCD_cmd(0x38);
   2136  042E  3038               	movlw	56
   2137  042F  120A  118A  23D4  120A  118A  	fcall	_LCD_cmd
   2138  0434                     l1304:
   2139                           
-  2140                           ;Newmain.c: 167:  LCD_cmd(0x80);
+  2140                           ;Newmain.c: 173:  LCD_cmd(0x80);
   2141  0434  3080               	movlw	128
   2142  0435  120A  118A  23D4  120A  118A  	fcall	_LCD_cmd
   2143  043A                     l141:
@@ -2249,7 +2249,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2234  0470                     __ptext16:	
   2235 ;; *************** function _LCD_disp *****************
   2236 ;; Defined at:
-  2237 ;;		line 171 in file "Newmain.c"
+  2237 ;;		line 177 in file "Newmain.c"
   2238 ;; Parameters:    Size  Location     Type
   2239 ;;  y               1    wreg     unsigned char 
   2240 ;; Auto vars:     Size  Location     Type
@@ -2291,7 +2291,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2276  0470  00FB               	movwf	LCD_disp@y
   2277  0471                     l1306:
   2278                           
-  2279                           ;Newmain.c: 171: void LCD_disp(unsigned char y);Newmain.c: 172: {;Newmain.c: 173:  int t
+  2279                           ;Newmain.c: 177: void LCD_disp(unsigned char y);Newmain.c: 178: {;Newmain.c: 179:  int t
       +                          emp = y/10;
   2280  0471  300A               	movlw	10
   2281  0472  00F0               	movwf	___awdiv@divisor
@@ -2310,18 +2310,18 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2294  0483  0870               	movf	?___awdiv,w
   2295  0484  00FC               	movwf	LCD_disp@temp
   2296                           
-  2297                           ;Newmain.c: 174:  LCD_data(temp);
+  2297                           ;Newmain.c: 180:  LCD_data(temp);
   2298  0485  087C               	movf	LCD_disp@temp,w
   2299  0486  120A  118A  23F1  120A  118A  	fcall	_LCD_data
   2300                           
-  2301                           ;Newmain.c: 175:  delay(100);
+  2301                           ;Newmain.c: 181:  delay(100);
   2302  048B  3064               	movlw	100
   2303  048C  00F0               	movwf	delay@x
   2304  048D  3000               	movlw	0
   2305  048E  00F1               	movwf	delay@x+1
   2306  048F  120A  118A  239A  120A  118A  	fcall	_delay
   2307                           
-  2308                           ;Newmain.c: 176:  temp = y%10;
+  2308                           ;Newmain.c: 182:  temp = y%10;
   2309  0494  300A               	movlw	10
   2310  0495  00F0               	movwf	___awmod@divisor
   2311  0496  3000               	movlw	0
@@ -2339,11 +2339,11 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2323  04A6  0870               	movf	?___awmod,w
   2324  04A7  00FC               	movwf	LCD_disp@temp
   2325                           
-  2326                           ;Newmain.c: 177:  LCD_data(temp);
+  2326                           ;Newmain.c: 183:  LCD_data(temp);
   2327  04A8  087C               	movf	LCD_disp@temp,w
   2328  04A9  120A  118A  23F1  120A  118A  	fcall	_LCD_data
   2329                           
-  2330                           ;Newmain.c: 178:  delay(100);
+  2330                           ;Newmain.c: 184:  delay(100);
   2331  04AE  3064               	movlw	100
   2332  04AF  00F0               	movwf	delay@x
   2333  04B0  3000               	movlw	0
@@ -3104,7 +3104,7 @@ EEDATA             100      0       0       0        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Mon Mar 08 10:47:56 2021
+Symbol Table                                                                                   Mon Mar 08 11:35:39 2021
 
                       _d 0024                        _r 0025                        pc 0002  
                      _BF 04A0                       l72 040E                       l66 03A8  

@@ -27,31 +27,31 @@
 [v _dev_found_disp dev_found_disp `(v  1 e 1 0 ]
 "79
 [v _temp_disp temp_disp `(v  1 e 1 0 ]
-"104
-[v _i2c_wait i2c_wait `(v  1 e 1 0 ]
 "110
-[v _i2c_rep_start i2c_rep_start `(v  1 e 1 0 ]
+[v _i2c_wait i2c_wait `(v  1 e 1 0 ]
 "116
+[v _i2c_rep_start i2c_rep_start `(v  1 e 1 0 ]
+"122
 [v _i2c_NACK i2c_NACK `(v  1 e 1 0 ]
-"123
+"129
 [v _i2c_stop i2c_stop `(v  1 e 1 0 ]
-"130
+"136
 [v _i2c_rx i2c_rx `(uc  1 e 1 0 ]
-"137
+"143
 [v _i2c_send i2c_send `(uc  1 e 1 0 ]
-"145
+"151
 [v _i2c_init i2c_init `(v  1 e 1 0 ]
-"157
+"163
 [v _LCD_init LCD_init `(v  1 e 1 0 ]
-"171
+"177
 [v _LCD_disp LCD_disp `(v  1 e 1 0 ]
-"182
+"188
 [v _i2c_init_disp i2c_init_disp `(v  1 e 1 0 ]
-"200
+"206
 [v _check_dev check_dev `(i  1 e 2 0 ]
-"216
+"222
 [v _check_dev_disp check_dev_disp `(v  1 e 1 0 ]
-"238
+"244
 [v _main main `(v  1 e 1 0 ]
 "228 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
@@ -113,50 +113,50 @@
 [v _d3 d3 `*.24uc  1 e 1 0 ]
 "15
 [v _tmp tmp `*.24uc  1 e 1 0 ]
-"238
+"244
 [v _main main `(v  1 e 1 0 ]
 {
-"280
+"286
 } 0
 "79
 [v _temp_disp temp_disp `(v  1 e 1 0 ]
 {
 "95
 } 0
-"123
+"129
 [v _i2c_stop i2c_stop `(v  1 e 1 0 ]
 {
-"128
+"134
 } 0
-"130
+"136
 [v _i2c_rx i2c_rx `(uc  1 e 1 0 ]
 {
-"135
-} 0
-"110
-[v _i2c_rep_start i2c_rep_start `(v  1 e 1 0 ]
-{
-"114
-} 0
-"182
-[v _i2c_init_disp i2c_init_disp `(v  1 e 1 0 ]
-{
-"197
-} 0
-"145
-[v _i2c_init i2c_init `(v  1 e 1 0 ]
-{
-"155
+"141
 } 0
 "116
+[v _i2c_rep_start i2c_rep_start `(v  1 e 1 0 ]
+{
+"120
+} 0
+"188
+[v _i2c_init_disp i2c_init_disp `(v  1 e 1 0 ]
+{
+"203
+} 0
+"151
+[v _i2c_init i2c_init `(v  1 e 1 0 ]
+{
+"161
+} 0
+"122
 [v _i2c_NACK i2c_NACK `(v  1 e 1 0 ]
 {
-"121
+"127
 } 0
-"216
+"222
 [v _check_dev_disp check_dev_disp `(v  1 e 1 0 ]
 {
-"235
+"241
 } 0
 "44
 [v _no_dev_disp no_dev_disp `(v  1 e 1 0 ]
@@ -168,29 +168,29 @@
 {
 "77
 } 0
-"200
+"206
 [v _check_dev check_dev `(i  1 e 2 0 ]
 {
-"213
+"219
 } 0
-"137
+"143
 [v _i2c_send i2c_send `(uc  1 e 1 0 ]
 {
 [v i2c_send@c c `uc  1 a 1 wreg ]
 [v i2c_send@c c `uc  1 a 1 wreg ]
-"139
+"145
 [v i2c_send@c c `uc  1 a 1 0 ]
-"142
+"148
 } 0
-"104
+"110
 [v _i2c_wait i2c_wait `(v  1 e 1 0 ]
 {
-"108
+"114
 } 0
-"157
+"163
 [v _LCD_init LCD_init `(v  1 e 1 0 ]
 {
-"168
+"174
 } 0
 "23
 [v _LCD_cmd LCD_cmd `(v  1 e 1 0 ]
@@ -201,17 +201,17 @@
 [v LCD_cmd@y y `uc  1 a 1 2 ]
 "31
 } 0
-"171
+"177
 [v _LCD_disp LCD_disp `(v  1 e 1 0 ]
 {
 [v LCD_disp@y y `uc  1 a 1 wreg ]
-"173
-[v LCD_disp@temp temp `i  1 a 2 12 ]
-"171
-[v LCD_disp@y y `uc  1 a 1 wreg ]
-"173
-[v LCD_disp@y y `uc  1 a 1 11 ]
 "179
+[v LCD_disp@temp temp `i  1 a 2 12 ]
+"177
+[v LCD_disp@y y `uc  1 a 1 wreg ]
+"179
+[v LCD_disp@y y `uc  1 a 1 11 ]
+"185
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]

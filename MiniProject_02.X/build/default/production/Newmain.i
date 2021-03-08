@@ -2585,11 +2585,17 @@ void temp_disp()
 }
 
 
+
+
+
+
+
 void i2c_start()
 {
  SEN = 1;
  while(SEN);
 }
+
 
 void i2c_wait()
 {

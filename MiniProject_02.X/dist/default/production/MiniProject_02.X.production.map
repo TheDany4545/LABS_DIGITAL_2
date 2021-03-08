@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\MiniProject_02.X.production.sym \
   --cmf=dist/default/production\MiniProject_02.X.production.cmf -z -Q16F887 \
-  -oC:\Users\Daniel\AppData\Local\Temp\sj24.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\Daniel\AppData\Local\Temp\sf14.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/MiniProject_02.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK \
   -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\Daniel\AppData\Local\Temp\sj24.o \
+  -pfunctab=ENTRY -k C:\Users\Daniel\AppData\Local\Temp\sf14.o \
   dist/default/production\MiniProject_02.X.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Daniel\AppData\Local\Temp\sj24.o
+C:\Users\Daniel\AppData\Local\Temp\sf14.o
                 end_init                              0        0        3        0       0
 dist/default/production\MiniProject_02.X.production.o
                 cinit                               7DD      7DD       23      FBA       0
@@ -434,7 +434,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 238 in file "Newmain.c"
+		line 244 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -507,7 +507,7 @@ Total ram usage:        1 bytes
 
  *************** function _i2c_stop *****************
  Defined at:
-		line 123 in file "Newmain.c"
+		line 129 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -537,7 +537,7 @@ Total ram usage:        0 bytes
 
  *************** function _i2c_rx *****************
  Defined at:
-		line 130 in file "Newmain.c"
+		line 136 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -566,7 +566,7 @@ Total ram usage:        0 bytes
 
  *************** function _i2c_rep_start *****************
  Defined at:
-		line 110 in file "Newmain.c"
+		line 116 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -595,7 +595,7 @@ Total ram usage:        0 bytes
 
  *************** function _i2c_init_disp *****************
  Defined at:
-		line 182 in file "Newmain.c"
+		line 188 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -626,7 +626,7 @@ Total ram usage:        1 bytes
 
  *************** function _i2c_init *****************
  Defined at:
-		line 145 in file "Newmain.c"
+		line 151 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -655,7 +655,7 @@ Total ram usage:        0 bytes
 
  *************** function _i2c_NACK *****************
  Defined at:
-		line 116 in file "Newmain.c"
+		line 122 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -684,7 +684,7 @@ Total ram usage:        0 bytes
 
  *************** function _check_dev_disp *****************
  Defined at:
-		line 216 in file "Newmain.c"
+		line 222 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -780,7 +780,7 @@ Total ram usage:        1 bytes
 
  *************** function _check_dev *****************
  Defined at:
-		line 200 in file "Newmain.c"
+		line 206 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -811,7 +811,7 @@ Total ram usage:        4 bytes
 
  *************** function _i2c_send *****************
  Defined at:
-		line 137 in file "Newmain.c"
+		line 143 in file "Newmain.c"
  Parameters:    Size  Location     Type
   c               1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -842,7 +842,7 @@ Total ram usage:        1 bytes
 
  *************** function _i2c_wait *****************
  Defined at:
-		line 104 in file "Newmain.c"
+		line 110 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -873,7 +873,7 @@ Total ram usage:        0 bytes
 
  *************** function _LCD_init *****************
  Defined at:
-		line 157 in file "Newmain.c"
+		line 163 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -940,7 +940,7 @@ Total ram usage:        1 bytes
 
  *************** function _LCD_disp *****************
  Defined at:
-		line 171 in file "Newmain.c"
+		line 177 in file "Newmain.c"
  Parameters:    Size  Location     Type
   y               1    wreg     unsigned char 
  Auto vars:     Size  Location     Type

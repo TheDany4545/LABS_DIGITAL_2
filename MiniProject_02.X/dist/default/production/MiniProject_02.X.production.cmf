@@ -40,7 +40,7 @@ bssBANK0 BANK0 1 25 25 1 1
 idataBANK0 CODE 0 364 364 5 2
 strings STRING 0 3 3 4A 2
 dataBANK0 BANK0 1 20 20 5 1
-$C:\Users\Daniel\AppData\Local\Temp\sj24.o
+$C:\Users\Daniel\AppData\Local\Temp\sf14.o
 end_init CODE 0 0 0 3 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -88,22 +88,22 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\MiniProject_02.X.production.o
-7DD cinit CODE >630:C:\Users\Daniel\AppData\Local\Temp\sj24.s
-7DD cinit CODE >633:C:\Users\Daniel\AppData\Local\Temp\sj24.s
-7DD cinit CODE >677:C:\Users\Daniel\AppData\Local\Temp\sj24.s
-7E2 cinit CODE >678:C:\Users\Daniel\AppData\Local\Temp\sj24.s
-7E3 cinit CODE >679:C:\Users\Daniel\AppData\Local\Temp\sj24.s
-7E8 cinit CODE >680:C:\Users\Daniel\AppData\Local\Temp\sj24.s
-7E9 cinit CODE >681:C:\Users\Daniel\AppData\Local\Temp\sj24.s
-7EE cinit CODE >682:C:\Users\Daniel\AppData\Local\Temp\sj24.s
-7EF cinit CODE >683:C:\Users\Daniel\AppData\Local\Temp\sj24.s
-7F4 cinit CODE >684:C:\Users\Daniel\AppData\Local\Temp\sj24.s
-7F5 cinit CODE >685:C:\Users\Daniel\AppData\Local\Temp\sj24.s
-7FA cinit CODE >686:C:\Users\Daniel\AppData\Local\Temp\sj24.s
-7FB cinit CODE >690:C:\Users\Daniel\AppData\Local\Temp\sj24.s
-7FC cinit CODE >696:C:\Users\Daniel\AppData\Local\Temp\sj24.s
-7FC cinit CODE >698:C:\Users\Daniel\AppData\Local\Temp\sj24.s
-7FD cinit CODE >699:C:\Users\Daniel\AppData\Local\Temp\sj24.s
+7DD cinit CODE >630:C:\Users\Daniel\AppData\Local\Temp\sf14.s
+7DD cinit CODE >633:C:\Users\Daniel\AppData\Local\Temp\sf14.s
+7DD cinit CODE >677:C:\Users\Daniel\AppData\Local\Temp\sf14.s
+7E2 cinit CODE >678:C:\Users\Daniel\AppData\Local\Temp\sf14.s
+7E3 cinit CODE >679:C:\Users\Daniel\AppData\Local\Temp\sf14.s
+7E8 cinit CODE >680:C:\Users\Daniel\AppData\Local\Temp\sf14.s
+7E9 cinit CODE >681:C:\Users\Daniel\AppData\Local\Temp\sf14.s
+7EE cinit CODE >682:C:\Users\Daniel\AppData\Local\Temp\sf14.s
+7EF cinit CODE >683:C:\Users\Daniel\AppData\Local\Temp\sf14.s
+7F4 cinit CODE >684:C:\Users\Daniel\AppData\Local\Temp\sf14.s
+7F5 cinit CODE >685:C:\Users\Daniel\AppData\Local\Temp\sf14.s
+7FA cinit CODE >686:C:\Users\Daniel\AppData\Local\Temp\sf14.s
+7FB cinit CODE >690:C:\Users\Daniel\AppData\Local\Temp\sf14.s
+7FC cinit CODE >696:C:\Users\Daniel\AppData\Local\Temp\sf14.s
+7FC cinit CODE >698:C:\Users\Daniel\AppData\Local\Temp\sf14.s
+7FD cinit CODE >699:C:\Users\Daniel\AppData\Local\Temp\sf14.s
 39A text20 CODE >18:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 39A text20 CODE >20:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 3A8 text20 CODE >21:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
@@ -161,14 +161,14 @@ $dist/default/production\MiniProject_02.X.production.o
 645 text17 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
 64A text17 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
 64E text17 CODE >34:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-470 text16 CODE >171:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-471 text16 CODE >173:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-485 text16 CODE >174:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-48B text16 CODE >175:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-494 text16 CODE >176:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-4A8 text16 CODE >177:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-4AE text16 CODE >178:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-4B7 text16 CODE >179:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+470 text16 CODE >177:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+471 text16 CODE >179:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+485 text16 CODE >180:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+48B text16 CODE >181:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+494 text16 CODE >182:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+4A8 text16 CODE >183:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+4AE text16 CODE >184:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+4B7 text16 CODE >185:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 3D4 text15 CODE >23:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 3D5 text15 CODE >25:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 3D8 text15 CODE >26:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
@@ -177,38 +177,38 @@ $dist/default/production\MiniProject_02.X.production.o
 3E4 text15 CODE >29:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 3E7 text15 CODE >30:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 3F0 text15 CODE >31:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-40F text14 CODE >157:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-40F text14 CODE >159:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-412 text14 CODE >160:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-415 text14 CODE >161:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-418 text14 CODE >162:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-419 text14 CODE >163:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-422 text14 CODE >164:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-428 text14 CODE >165:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-42E text14 CODE >166:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-434 text14 CODE >167:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-43A text14 CODE >168:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-369 text13 CODE >104:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-369 text13 CODE >106:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-36F text13 CODE >107:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-370 text13 CODE >108:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-3A9 text12 CODE >137:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-3AA text12 CODE >139:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-3AE text12 CODE >140:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-3B4 text12 CODE >141:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-3B9 text12 CODE >142:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-43B text11 CODE >200:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-43B text11 CODE >202:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-43E text11 CODE >203:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-442 text11 CODE >204:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-448 text11 CODE >205:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-44E text11 CODE >207:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-451 text11 CODE >208:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-451 text11 CODE >209:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-454 text11 CODE >210:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-458 text11 CODE >211:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-461 text11 CODE >212:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-46F text11 CODE >213:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+40F text14 CODE >163:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+40F text14 CODE >165:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+412 text14 CODE >166:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+415 text14 CODE >167:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+418 text14 CODE >168:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+419 text14 CODE >169:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+422 text14 CODE >170:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+428 text14 CODE >171:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+42E text14 CODE >172:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+434 text14 CODE >173:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+43A text14 CODE >174:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+369 text13 CODE >110:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+369 text13 CODE >112:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+36F text13 CODE >113:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+370 text13 CODE >114:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+3A9 text12 CODE >143:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+3AA text12 CODE >145:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+3AE text12 CODE >146:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+3B4 text12 CODE >147:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+3B9 text12 CODE >148:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+43B text11 CODE >206:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+43B text11 CODE >208:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+43E text11 CODE >209:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+442 text11 CODE >210:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+448 text11 CODE >211:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+44E text11 CODE >213:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+451 text11 CODE >214:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+451 text11 CODE >215:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+454 text11 CODE >216:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+458 text11 CODE >217:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+461 text11 CODE >218:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+46F text11 CODE >219:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 502 text10 CODE >62:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 502 text10 CODE >64:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 508 text10 CODE >65:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
@@ -237,67 +237,67 @@ $dist/default/production\MiniProject_02.X.production.o
 58D text9 CODE >57:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 593 text9 CODE >49:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 59F text9 CODE >59:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-6B6 text8 CODE >216:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-6B6 text8 CODE >218:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-6BC text8 CODE >219:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-6C2 text8 CODE >220:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-6CB text8 CODE >221:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-6CE text8 CODE >222:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-6D7 text8 CODE >223:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-6D8 text8 CODE >225:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-6D9 text8 CODE >226:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-6E2 text8 CODE >227:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-6EC text8 CODE >228:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-6F5 text8 CODE >229:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-6F8 text8 CODE >230:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-701 text8 CODE >231:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-707 text8 CODE >223:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-715 text8 CODE >233:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-71E text8 CODE >234:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-734 text8 CODE >235:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-379 text7 CODE >116:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-379 text7 CODE >118:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-37C text7 CODE >119:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-37D text7 CODE >120:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-381 text7 CODE >121:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-3BA text6 CODE >145:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-3BA text6 CODE >147:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-3BD text6 CODE >148:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-3BE text6 CODE >149:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-3C1 text6 CODE >150:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-3C5 text6 CODE >151:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-3C9 text6 CODE >152:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-3CC text6 CODE >153:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-3CF text6 CODE >154:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-3D3 text6 CODE >155:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-4B8 text5 CODE >182:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-4B8 text5 CODE >184:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-4BE text5 CODE >185:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-4C4 text5 CODE >186:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-4C5 text5 CODE >188:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-4C6 text5 CODE >189:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-4C7 text5 CODE >190:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-4D0 text5 CODE >191:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-4DA text5 CODE >192:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-4E3 text5 CODE >193:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-4E6 text5 CODE >194:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-4EA text5 CODE >195:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-4F3 text5 CODE >186:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-501 text5 CODE >197:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-371 text4 CODE >110:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-371 text4 CODE >112:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-374 text4 CODE >113:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-378 text4 CODE >114:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-382 text3 CODE >130:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-382 text3 CODE >132:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-385 text3 CODE >133:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-389 text3 CODE >134:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-38C text3 CODE >135:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-38D text2 CODE >123:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-38D text2 CODE >125:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-392 text2 CODE >126:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-395 text2 CODE >127:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-399 text2 CODE >128:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+6B6 text8 CODE >222:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+6B6 text8 CODE >224:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+6BC text8 CODE >225:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+6C2 text8 CODE >226:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+6CB text8 CODE >227:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+6CE text8 CODE >228:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+6D7 text8 CODE >229:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+6D8 text8 CODE >231:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+6D9 text8 CODE >232:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+6E2 text8 CODE >233:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+6EC text8 CODE >234:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+6F5 text8 CODE >235:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+6F8 text8 CODE >236:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+701 text8 CODE >237:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+707 text8 CODE >229:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+715 text8 CODE >239:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+71E text8 CODE >240:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+734 text8 CODE >241:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+379 text7 CODE >122:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+379 text7 CODE >124:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+37C text7 CODE >125:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+37D text7 CODE >126:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+381 text7 CODE >127:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+3BA text6 CODE >151:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+3BA text6 CODE >153:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+3BD text6 CODE >154:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+3BE text6 CODE >155:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+3C1 text6 CODE >156:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+3C5 text6 CODE >157:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+3C9 text6 CODE >158:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+3CC text6 CODE >159:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+3CF text6 CODE >160:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+3D3 text6 CODE >161:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+4B8 text5 CODE >188:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+4B8 text5 CODE >190:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+4BE text5 CODE >191:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+4C4 text5 CODE >192:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+4C5 text5 CODE >194:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+4C6 text5 CODE >195:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+4C7 text5 CODE >196:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+4D0 text5 CODE >197:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+4DA text5 CODE >198:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+4E3 text5 CODE >199:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+4E6 text5 CODE >200:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+4EA text5 CODE >201:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+4F3 text5 CODE >192:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+501 text5 CODE >203:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+371 text4 CODE >116:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+371 text4 CODE >118:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+374 text4 CODE >119:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+378 text4 CODE >120:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+382 text3 CODE >136:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+382 text3 CODE >138:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+385 text3 CODE >139:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+389 text3 CODE >140:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+38C text3 CODE >141:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+38D text2 CODE >129:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+38D text2 CODE >131:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+392 text2 CODE >132:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+395 text2 CODE >133:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+399 text2 CODE >134:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 5A1 text1 CODE >79:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 5A1 text1 CODE >81:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 5A7 text1 CODE >82:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
@@ -313,33 +313,33 @@ $dist/default/production\MiniProject_02.X.production.o
 5E3 text1 CODE >93:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 5E9 text1 CODE >85:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 5F5 text1 CODE >95:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-735 maintext CODE >238:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-735 maintext CODE >240:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-738 maintext CODE >241:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-73B maintext CODE >243:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-740 maintext CODE >245:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-745 maintext CODE >246:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-74E maintext CODE >247:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-753 maintext CODE >249:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-758 maintext CODE >250:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-761 maintext CODE >251:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-766 maintext CODE >254:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-76C maintext CODE >256:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-771 maintext CODE >257:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-77A maintext CODE >259:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-780 maintext CODE >260:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-786 maintext CODE >262:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-78B maintext CODE >263:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-794 maintext CODE >265:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-798 maintext CODE >266:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-79D maintext CODE >267:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-7A6 maintext CODE >269:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-7B0 maintext CODE >270:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-7B5 maintext CODE >272:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-7BA maintext CODE >273:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-7C3 maintext CODE >275:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-7C8 maintext CODE >276:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
-7D1 maintext CODE >278:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+735 maintext CODE >244:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+735 maintext CODE >246:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+738 maintext CODE >247:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+73B maintext CODE >249:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+740 maintext CODE >251:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+745 maintext CODE >252:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+74E maintext CODE >253:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+753 maintext CODE >255:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+758 maintext CODE >256:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+761 maintext CODE >257:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+766 maintext CODE >260:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+76C maintext CODE >262:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+771 maintext CODE >263:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+77A maintext CODE >265:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+780 maintext CODE >266:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+786 maintext CODE >268:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+78B maintext CODE >269:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+794 maintext CODE >271:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+798 maintext CODE >272:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+79D maintext CODE >273:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+7A6 maintext CODE >275:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+7B0 maintext CODE >276:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+7B5 maintext CODE >278:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+7BA maintext CODE >279:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+7C3 maintext CODE >281:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+7C8 maintext CODE >282:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+7D1 maintext CODE >284:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -378,10 +378,10 @@ _d3 21 0 BANK0 1 dataBANK0 dist/default/production\MiniProject_02.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _RCEN 48B 0 ABS 0 - dist/default/production\MiniProject_02.X.production.o
 _RSEN 489 0 ABS 0 - dist/default/production\MiniProject_02.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Daniel\AppData\Local\Temp\sj24.o
+___sp 0 0 STACK 2 stack C:\Users\Daniel\AppData\Local\Temp\sf14.o
 _main E6A 0 CODE 0 maintext dist/default/production\MiniProject_02.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\MiniProject_02.X.production.o
-start 0 0 CODE 0 init C:\Users\Daniel\AppData\Local\Temp\sj24.o
+start 0 0 CODE 0 init C:\Users\Daniel\AppData\Local\Temp\sf14.o
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\MiniProject_02.X.production.o
 __size_of___awmod 0 0 ABS 0 - dist/default/production\MiniProject_02.X.production.o
 __end_of_i2c_NACK 704 0 CODE 0 text7 dist/default/production\MiniProject_02.X.production.o
@@ -398,12 +398,12 @@ _LCD_disp 8E0 0 CODE 0 text16 dist/default/production\MiniProject_02.X.productio
 _LCD_init 81E 0 CODE 0 text14 dist/default/production\MiniProject_02.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 ___awmod@sign 76 0 COMMON 1 cstackCOMMON dist/default/production\MiniProject_02.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sj24.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sj24.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sj24.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sj24.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sj24.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sj24.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sf14.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sf14.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sf14.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sf14.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sf14.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sf14.o
 __end_of_LCD_data 81E 0 CODE 0 text19 dist/default/production\MiniProject_02.X.production.o
 __end_of_LCD_disp 970 0 CODE 0 text16 dist/default/production\MiniProject_02.X.production.o
 __end_of_LCD_init 876 0 CODE 0 text14 dist/default/production\MiniProject_02.X.production.o
@@ -421,8 +421,8 @@ __Lmaintext 0 0 ABS 0 maintext -
 ___awdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\MiniProject_02.X.production.o
 __end_of___awdiv D6C 0 CODE 0 text18 dist/default/production\MiniProject_02.X.production.o
 __end_of___awmod C9E 0 CODE 0 text17 dist/default/production\MiniProject_02.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Daniel\AppData\Local\Temp\sj24.o
-___stacklo 0 0 ABS 0 - C:\Users\Daniel\AppData\Local\Temp\sj24.o
+___stackhi 0 0 ABS 0 - C:\Users\Daniel\AppData\Local\Temp\sf14.o
+___stacklo 0 0 ABS 0 - C:\Users\Daniel\AppData\Local\Temp\sf14.o
 __end_of_LCD_cmd 7E2 0 CODE 0 text15 dist/default/production\MiniProject_02.X.production.o
 __size_of_delay 0 0 ABS 0 - dist/default/production\MiniProject_02.X.production.o
 __end_of_i2c_rx 71A 0 CODE 0 text3 dist/default/production\MiniProject_02.X.production.o
@@ -439,7 +439,7 @@ _TRISC2 43A 0 ABS 0 - dist/default/production\MiniProject_02.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\MiniProject_02.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\MiniProject_02.X.production.o
 __size_of_i2c_init_disp 0 0 ABS 0 - dist/default/production\MiniProject_02.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Daniel\AppData\Local\Temp\sj24.o
+___int_sp 0 0 STACK 2 stack C:\Users\Daniel\AppData\Local\Temp\sf14.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -492,7 +492,7 @@ _i2c_rx 704 0 CODE 0 text3 dist/default/production\MiniProject_02.X.production.o
 _no_dev_disp AA2 0 CODE 0 text9 dist/default/production\MiniProject_02.X.production.o
 __Lintentry 0 0 CODE 0 intentry -
 __stringtab 6 0 STRING 0 strings dist/default/production\MiniProject_02.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Daniel\AppData\Local\Temp\sj24.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Daniel\AppData\Local\Temp\sf14.o
 ?_check_dev 72 0 COMMON 1 cstackCOMMON dist/default/production\MiniProject_02.X.production.o
 __pdataBANK0 20 0 BANK0 1 dataBANK0 dist/default/production\MiniProject_02.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -

@@ -1,8 +1,8 @@
-// ************************ PIC16F877A & TC74 (Sensor) ********************//
-// ************************ Hi-Tech C Compiler | MPLAB IDE ************************//
-// ************************ I2C Communication Source Code *************************//
-// ************************ Er. Prabhu Ram S **************************************//
-// ************************ https://www.projectyard.weebly.com ********************//
+// ******************** PIC16F877 y comunicacion I2C con Sensor) *********//
+// ********************** Miniprojectt 2 *******************//
+// ***************** I2C Communication Source Code ********************//
+// ********************* Erick Daniel Aquino Paz **************************//
+// *************** Basado en: https://www.projectyard.weebly.com *************//
 
 #include<pic.h>
 
@@ -22,8 +22,8 @@ void delay(unsigned int x)
 
 void LCD_cmd(char y)
 {
-	RC0 = 0;
-	RC1 = 1;
+	RC0 = 0; // LCD supply
+	RC1 = 1; //LCD supply
 	PORTB = y;
 	delay(100);
     RC1 = 0;
@@ -54,7 +54,7 @@ void no_dev_disp()
 		delay(100);
 		RC1 = 0;
 		delay(100);
-		*d2++;
+		*d2++; // NO HAY SENSOR 
 	}
 	while(1);
 }
@@ -72,7 +72,7 @@ void dev_found_disp()
 		delay(100);
 		RC1 = 0;
 		delay(100);
-		*d1++;
+		*d1++; // SENSOR LISTO
 	}
 }
 
@@ -90,17 +90,23 @@ void temp_disp()
 		delay(100);
 		RC1 = 0;
 		delay(100);
-		tmp++;
+		tmp++; // MUESTRA TEMP
 	}
 }
 
+
+//******************************************************************************
 //******************* I2C Section *********************//
+//******************************************************************************
+
+//INICO EL I2C
 void i2c_start()
 {
 	SEN = 1;
 	while(SEN);
 }
 
+//mantener esperarando a que una interrupcion del MSSP ocurra
 void i2c_wait()
 {
 	while(SSPIF==0);
