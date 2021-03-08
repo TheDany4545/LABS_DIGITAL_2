@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\MiniProject_02.X.production.sym \
   --cmf=dist/default/production\MiniProject_02.X.production.cmf -z -Q16F887 \
-  -oC:\Users\Daniel\AppData\Local\Temp\s7ik.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\Daniel\AppData\Local\Temp\sj24.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/MiniProject_02.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK \
   -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\Daniel\AppData\Local\Temp\s7ik.o \
+  -pfunctab=ENTRY -k C:\Users\Daniel\AppData\Local\Temp\sj24.o \
   dist/default/production\MiniProject_02.X.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Daniel\AppData\Local\Temp\s7ik.o
+C:\Users\Daniel\AppData\Local\Temp\sj24.o
                 end_init                              0        0        3        0       0
 dist/default/production\MiniProject_02.X.production.o
                 cinit                               7DD      7DD       23      FBA       0
@@ -57,7 +57,7 @@ dist/default/production\MiniProject_02.X.production.o
                 cstackCOMMON                         70       70        E       70       1
                 dataBANK0                            20       20        5       20       1
                 bssBANK0                             25       25        1       20       1
-                strings                               3        3       50        6       0
+                strings                               3        3       4A        6       0
                 idataBANK0                          364      364        5      6C8       0
 
 TOTAL           Name                               Link     Load   Length     Space
@@ -92,7 +92,7 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   STRCODE        
 
         CLASS   STRING         
-                strings                               3        3       50         0
+                strings                               3        3       4A         0
 
         CLASS   CONST          
 
@@ -136,7 +136,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
-                strings                        000003  000050  000053         6       0  STRING      2
+                strings                        000003  00004A  00004D         6       0  STRING      2
                 dataBANK0                      000020  000007  000027        20       1  BANK0       1
                 cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
                 idataBANK0                     000364  000005  000369       6C8       0  CODE        2
@@ -171,13 +171,13 @@ UNUSED ADDRESS RANGES
         BANK1            00A0-00EF             50           1
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
-        CODE             0053-0363            311           2
+        CODE             004D-0363            317           2
                          0800-1FFF            800
         CONFIG           2007-2008              2           2
-        CONST            0053-0363            100           2
+        CONST            004D-0363            100           2
                          0800-1FFF            100
         EEDATA           2100-21FF            100           2
-        ENTRY            0053-0363            100           2
+        ENTRY            004D-0363            100           2
                          0800-1FFF            100
         IDLOC            2000-2003              4           2
         RAM              0027-006F             49           1
@@ -189,9 +189,9 @@ UNUSED ADDRESS RANGES
         SFR2             0100-010F             10           1
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
-        STRCODE          0053-0363            311           2
+        STRCODE          004D-0363            317           2
                          0800-1FFF           1800
-        STRING           0053-0363            100           2
+        STRING           004D-0363            100           2
                          0800-1FFF            100
 
                                   Symbol Table

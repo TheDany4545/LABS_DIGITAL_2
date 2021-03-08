@@ -2498,10 +2498,10 @@ extern __bank0 __bit __timeout;
 
 
 unsigned char r;
-char* d = "Checking Device";
-char* d1 = "TC74 present";
-char* d2 = "No device found";
-char* d3 = "Initializing I2C";
+char* d = "Detectando ...";
+char* d1 = "Sensor listo";
+char* d2 = "No hay sensor";
+char* d3 = "Iniciando I2C";
 char* tmp = "Temp :   *C";
 
 

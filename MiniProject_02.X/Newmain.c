@@ -1,4 +1,4 @@
-// ************************ PIC16F877A & TC74 (Thermal Sensor) ********************//
+// ************************ PIC16F877A & TC74 (Sensor) ********************//
 // ************************ Hi-Tech C Compiler | MPLAB IDE ************************//
 // ************************ I2C Communication Source Code *************************//
 // ************************ Er. Prabhu Ram S **************************************//
@@ -8,10 +8,10 @@
 
 //****************** Supporting Data *****************//
 unsigned char r;
-char* d = "Checking Device";
-char* d1 = "TC74 present";
-char* d2 = "No device found";
-char* d3 = "Initializing I2C";
+char* d = "Detectando ...";
+char* d1 = "Sensor listo";
+char* d2 = "No hay sensor";
+char* d3 = "Iniciando I2C";
 char* tmp = "Temp :   *C";
 
 //***************** LCD Ctrl Functions ******************//

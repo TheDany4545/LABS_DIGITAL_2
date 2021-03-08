@@ -310,25 +310,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Newmain.c: 10: unsigned char r;
 [v _r `uc ~T0 @X0 1 e ]
 "11
-[; ;Newmain.c: 11: char* d = "Checking Device";
+[; ;Newmain.c: 11: char* d = "Detectando ...";
 [v _d `*uc ~T0 @X0 1 e ]
 [i _d
 :s 1C
 ]
 "12
-[; ;Newmain.c: 12: char* d1 = "TC74 present";
+[; ;Newmain.c: 12: char* d1 = "Sensor listo";
 [v _d1 `*uc ~T0 @X0 1 e ]
 [i _d1
 :s 2C
 ]
 "13
-[; ;Newmain.c: 13: char* d2 = "No device found";
+[; ;Newmain.c: 13: char* d2 = "No hay sensor";
 [v _d2 `*uc ~T0 @X0 1 e ]
 [i _d2
 :s 3C
 ]
 "14
-[; ;Newmain.c: 14: char* d3 = "Initializing I2C";
+[; ;Newmain.c: 14: char* d3 = "Iniciando I2C";
 [v _d3 `*uc ~T0 @X0 1 e ]
 [i _d3
 :s 4C
@@ -1180,8 +1180,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Newmain.c: 280: }
 [e :UE 206 ]
 }
-[a 2C 84 67 55 52 32 112 114 101 115 101 110 116 0 ]
-[a 1C 67 104 101 99 107 105 110 103 32 68 101 118 105 99 101 0 ]
-[a 3C 78 111 32 100 101 118 105 99 101 32 102 111 117 110 100 0 ]
-[a 4C 73 110 105 116 105 97 108 105 122 105 110 103 32 73 50 67 0 ]
+[a 3C 78 111 32 104 97 121 32 115 101 110 115 111 114 0 ]
+[a 2C 83 101 110 115 111 114 32 108 105 115 116 111 0 ]
+[a 4C 73 110 105 99 105 97 110 100 111 32 73 50 67 0 ]
 [a 5C 84 101 109 112 32 58 32 32 32 42 67 0 ]
+[a 1C 68 101 116 101 99 116 97 110 100 111 32 46 46 46 0 ]
