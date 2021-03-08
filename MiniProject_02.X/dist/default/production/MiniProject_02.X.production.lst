@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Mon Mar 08 11:35:39 2021
+                                                                                               Mon Mar 08 13:54:36 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	16F887
@@ -719,8 +719,8 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    705  0775  120A  118A  239A  120A  118A  	fcall	_delay
    706  077A                     l1368:
    707                           
-   708                           ;Newmain.c: 265:   i2c_send(0x9A);
-   709  077A  309A               	movlw	154
+   708                           ;Newmain.c: 265:   i2c_send(0b10010000);
+   709  077A  3090               	movlw	144
    710  077B  120A  118A  23A9  120A  118A  	fcall	_i2c_send
    711  0780                     l1370:
    712                           
@@ -741,8 +741,8 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    727  078F  120A  118A  239A  120A  118A  	fcall	_delay
    728  0794                     l1376:
    729                           
-   730                           ;Newmain.c: 271:   SSPBUF = 0x9B;
-   731  0794  309B               	movlw	155
+   730                           ;Newmain.c: 271:   SSPBUF = 0b10010001;
+   731  0794  3091               	movlw	145
    732  0795  1283               	bcf	3,5	;RP0=0, select bank0
    733  0796  1303               	bcf	3,6	;RP1=0, select bank0
    734  0797  0093               	movwf	19	;volatile
@@ -1874,8 +1874,8 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1860  0442                     u420:
   1861  0442                     l1152:
   1862                           
-  1863                           ;Newmain.c: 210:  i2c_send(0x9A);
-  1864  0442  309A               	movlw	154
+  1863                           ;Newmain.c: 210:  i2c_send(0b10010000);
+  1864  0442  3090               	movlw	144
   1865  0443  120A  118A  23A9  120A  118A  	fcall	_i2c_send
   1866  0448                     l1154:
   1867                           
@@ -3104,7 +3104,7 @@ EEDATA             100      0       0       0        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Mon Mar 08 11:35:39 2021
+Symbol Table                                                                                   Mon Mar 08 13:54:36 2021
 
                       _d 0024                        _r 0025                        pc 0002  
                      _BF 04A0                       l72 040E                       l66 03A8  

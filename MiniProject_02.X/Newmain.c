@@ -207,7 +207,7 @@ int check_dev()
 {
 	SEN = 1;
 	while(SEN);
-	i2c_send(0x9A);
+	i2c_send(0b10010000);
 	if(ACKSTAT)
 	{
 		RC2 = 1;
@@ -262,13 +262,13 @@ void main()
 		i2c_rep_start();	// Initiating the communication with the start bit
 		delay(4);
 
-		i2c_send(0x9A);  // SLAVE ADDRESS = 1001 1010 | Last bit is '0' - Write
-		i2c_send(0x00);	 // Sending read command to the slave (0000 0000) | Refer the datasheet
+		i2c_send(0b10010000);  // SLAVE ADDRESS = 1001 1010 | Last bit is '0' - Write
+		i2c_send(0x00);	 // Sending read command to the slave (0000 0000) | Refer the datasheet 
 
 		i2c_rep_start(); // Again initiating the communication due to change in R/W bit
 		delay(4);
 
-		SSPBUF = 0x9B; // Slave ADDRESS = 1001 1011 | Last bit is '1' - Read
+		SSPBUF = 0b10010001; // Slave ADDRESS = 1001 1011 | Last bit is '1' - Read
 		i2c_wait();
 		delay(4);
 

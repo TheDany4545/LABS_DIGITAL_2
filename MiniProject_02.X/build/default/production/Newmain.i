@@ -2697,7 +2697,7 @@ int check_dev()
 {
  SEN = 1;
  while(SEN);
- i2c_send(0x9A);
+ i2c_send(0b10010000);
  if(ACKSTAT)
  {
   RC2 = 1;
@@ -2752,13 +2752,13 @@ void main()
   i2c_rep_start();
   delay(4);
 
-  i2c_send(0x9A);
+  i2c_send(0b10010000);
   i2c_send(0x00);
 
   i2c_rep_start();
   delay(4);
 
-  SSPBUF = 0x9B;
+  SSPBUF = 0b10010001;
   i2c_wait();
   delay(4);
 

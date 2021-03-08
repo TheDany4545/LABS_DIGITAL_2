@@ -40,7 +40,7 @@ bssBANK0 BANK0 1 25 25 1 1
 idataBANK0 CODE 0 364 364 5 2
 strings STRING 0 3 3 4A 2
 dataBANK0 BANK0 1 20 20 5 1
-$C:\Users\Daniel\AppData\Local\Temp\sf14.o
+$C:\Users\Daniel\AppData\Local\Temp\sq5o.o
 end_init CODE 0 0 0 3 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -88,22 +88,22 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\MiniProject_02.X.production.o
-7DD cinit CODE >630:C:\Users\Daniel\AppData\Local\Temp\sf14.s
-7DD cinit CODE >633:C:\Users\Daniel\AppData\Local\Temp\sf14.s
-7DD cinit CODE >677:C:\Users\Daniel\AppData\Local\Temp\sf14.s
-7E2 cinit CODE >678:C:\Users\Daniel\AppData\Local\Temp\sf14.s
-7E3 cinit CODE >679:C:\Users\Daniel\AppData\Local\Temp\sf14.s
-7E8 cinit CODE >680:C:\Users\Daniel\AppData\Local\Temp\sf14.s
-7E9 cinit CODE >681:C:\Users\Daniel\AppData\Local\Temp\sf14.s
-7EE cinit CODE >682:C:\Users\Daniel\AppData\Local\Temp\sf14.s
-7EF cinit CODE >683:C:\Users\Daniel\AppData\Local\Temp\sf14.s
-7F4 cinit CODE >684:C:\Users\Daniel\AppData\Local\Temp\sf14.s
-7F5 cinit CODE >685:C:\Users\Daniel\AppData\Local\Temp\sf14.s
-7FA cinit CODE >686:C:\Users\Daniel\AppData\Local\Temp\sf14.s
-7FB cinit CODE >690:C:\Users\Daniel\AppData\Local\Temp\sf14.s
-7FC cinit CODE >696:C:\Users\Daniel\AppData\Local\Temp\sf14.s
-7FC cinit CODE >698:C:\Users\Daniel\AppData\Local\Temp\sf14.s
-7FD cinit CODE >699:C:\Users\Daniel\AppData\Local\Temp\sf14.s
+7DD cinit CODE >630:C:\Users\Daniel\AppData\Local\Temp\sq5o.s
+7DD cinit CODE >633:C:\Users\Daniel\AppData\Local\Temp\sq5o.s
+7DD cinit CODE >677:C:\Users\Daniel\AppData\Local\Temp\sq5o.s
+7E2 cinit CODE >678:C:\Users\Daniel\AppData\Local\Temp\sq5o.s
+7E3 cinit CODE >679:C:\Users\Daniel\AppData\Local\Temp\sq5o.s
+7E8 cinit CODE >680:C:\Users\Daniel\AppData\Local\Temp\sq5o.s
+7E9 cinit CODE >681:C:\Users\Daniel\AppData\Local\Temp\sq5o.s
+7EE cinit CODE >682:C:\Users\Daniel\AppData\Local\Temp\sq5o.s
+7EF cinit CODE >683:C:\Users\Daniel\AppData\Local\Temp\sq5o.s
+7F4 cinit CODE >684:C:\Users\Daniel\AppData\Local\Temp\sq5o.s
+7F5 cinit CODE >685:C:\Users\Daniel\AppData\Local\Temp\sq5o.s
+7FA cinit CODE >686:C:\Users\Daniel\AppData\Local\Temp\sq5o.s
+7FB cinit CODE >690:C:\Users\Daniel\AppData\Local\Temp\sq5o.s
+7FC cinit CODE >696:C:\Users\Daniel\AppData\Local\Temp\sq5o.s
+7FC cinit CODE >698:C:\Users\Daniel\AppData\Local\Temp\sq5o.s
+7FD cinit CODE >699:C:\Users\Daniel\AppData\Local\Temp\sq5o.s
 39A text20 CODE >18:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 39A text20 CODE >20:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 3A8 text20 CODE >21:Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
@@ -378,10 +378,10 @@ _d3 21 0 BANK0 1 dataBANK0 dist/default/production\MiniProject_02.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _RCEN 48B 0 ABS 0 - dist/default/production\MiniProject_02.X.production.o
 _RSEN 489 0 ABS 0 - dist/default/production\MiniProject_02.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Daniel\AppData\Local\Temp\sf14.o
+___sp 0 0 STACK 2 stack C:\Users\Daniel\AppData\Local\Temp\sq5o.o
 _main E6A 0 CODE 0 maintext dist/default/production\MiniProject_02.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\MiniProject_02.X.production.o
-start 0 0 CODE 0 init C:\Users\Daniel\AppData\Local\Temp\sf14.o
+start 0 0 CODE 0 init C:\Users\Daniel\AppData\Local\Temp\sq5o.o
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\MiniProject_02.X.production.o
 __size_of___awmod 0 0 ABS 0 - dist/default/production\MiniProject_02.X.production.o
 __end_of_i2c_NACK 704 0 CODE 0 text7 dist/default/production\MiniProject_02.X.production.o
@@ -398,12 +398,12 @@ _LCD_disp 8E0 0 CODE 0 text16 dist/default/production\MiniProject_02.X.productio
 _LCD_init 81E 0 CODE 0 text14 dist/default/production\MiniProject_02.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 ___awmod@sign 76 0 COMMON 1 cstackCOMMON dist/default/production\MiniProject_02.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sf14.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sf14.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sf14.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sf14.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sf14.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sf14.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sq5o.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sq5o.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sq5o.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sq5o.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sq5o.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Daniel\AppData\Local\Temp\sq5o.o
 __end_of_LCD_data 81E 0 CODE 0 text19 dist/default/production\MiniProject_02.X.production.o
 __end_of_LCD_disp 970 0 CODE 0 text16 dist/default/production\MiniProject_02.X.production.o
 __end_of_LCD_init 876 0 CODE 0 text14 dist/default/production\MiniProject_02.X.production.o
@@ -421,8 +421,8 @@ __Lmaintext 0 0 ABS 0 maintext -
 ___awdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\MiniProject_02.X.production.o
 __end_of___awdiv D6C 0 CODE 0 text18 dist/default/production\MiniProject_02.X.production.o
 __end_of___awmod C9E 0 CODE 0 text17 dist/default/production\MiniProject_02.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Daniel\AppData\Local\Temp\sf14.o
-___stacklo 0 0 ABS 0 - C:\Users\Daniel\AppData\Local\Temp\sf14.o
+___stackhi 0 0 ABS 0 - C:\Users\Daniel\AppData\Local\Temp\sq5o.o
+___stacklo 0 0 ABS 0 - C:\Users\Daniel\AppData\Local\Temp\sq5o.o
 __end_of_LCD_cmd 7E2 0 CODE 0 text15 dist/default/production\MiniProject_02.X.production.o
 __size_of_delay 0 0 ABS 0 - dist/default/production\MiniProject_02.X.production.o
 __end_of_i2c_rx 71A 0 CODE 0 text3 dist/default/production\MiniProject_02.X.production.o
@@ -439,7 +439,7 @@ _TRISC2 43A 0 ABS 0 - dist/default/production\MiniProject_02.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\MiniProject_02.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\MiniProject_02.X.production.o
 __size_of_i2c_init_disp 0 0 ABS 0 - dist/default/production\MiniProject_02.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Daniel\AppData\Local\Temp\sf14.o
+___int_sp 0 0 STACK 2 stack C:\Users\Daniel\AppData\Local\Temp\sq5o.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -492,7 +492,7 @@ _i2c_rx 704 0 CODE 0 text3 dist/default/production\MiniProject_02.X.production.o
 _no_dev_disp AA2 0 CODE 0 text9 dist/default/production\MiniProject_02.X.production.o
 __Lintentry 0 0 CODE 0 intentry -
 __stringtab 6 0 STRING 0 strings dist/default/production\MiniProject_02.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Daniel\AppData\Local\Temp\sf14.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Daniel\AppData\Local\Temp\sq5o.o
 ?_check_dev 72 0 COMMON 1 cstackCOMMON dist/default/production\MiniProject_02.X.production.o
 __pdataBANK0 20 0 BANK0 1 dataBANK0 dist/default/production\MiniProject_02.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -

@@ -972,8 +972,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ _SEN 196  ]
 [e :U 197 ]
 "210
-[; ;Newmain.c: 210:  i2c_send(0x9A);
-[e ( _i2c_send (1 -> -> 154 `i `uc ]
+[; ;Newmain.c: 210:  i2c_send(0b10010000);
+[e ( _i2c_send (1 -> -> 144 `i `uc ]
 "211
 [; ;Newmain.c: 211:  if(ACKSTAT)
 [e $ ! _ACKSTAT 198  ]
@@ -1129,8 +1129,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Newmain.c: 263:   delay(4);
 [e ( _delay (1 -> -> 4 `i `ui ]
 "265
-[; ;Newmain.c: 265:   i2c_send(0x9A);
-[e ( _i2c_send (1 -> -> 154 `i `uc ]
+[; ;Newmain.c: 265:   i2c_send(0b10010000);
+[e ( _i2c_send (1 -> -> 144 `i `uc ]
 "266
 [; ;Newmain.c: 266:   i2c_send(0x00);
 [e ( _i2c_send (1 -> -> 0 `i `uc ]
@@ -1141,8 +1141,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Newmain.c: 269:   delay(4);
 [e ( _delay (1 -> -> 4 `i `ui ]
 "271
-[; ;Newmain.c: 271:   SSPBUF = 0x9B;
-[e = _SSPBUF -> -> 155 `i `uc ]
+[; ;Newmain.c: 271:   SSPBUF = 0b10010001;
+[e = _SSPBUF -> -> 145 `i `uc ]
 "272
 [; ;Newmain.c: 272:   i2c_wait();
 [e ( _i2c_wait ..  ]
