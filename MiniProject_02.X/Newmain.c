@@ -20,9 +20,34 @@
 #pragma config BOR4V = BOR40V   // Brown-out Reset Selection bit (Brown-out Reset set to 4.0V)
 #pragma config WRT = OFF        // Flash Program Memory Self Write Enable bits (Write protection off)
 
+
+//*****************************************************************************
+//LIBRERIAS
+//*****************************************************************************
+
 #include<pic.h>
 #include<xc.h>
+#include <stdio.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include <pic16f887.h>
+#include "eusart.h"
 
+
+//******************************************************
+//VARIABLES
+//******************************************************
+uint8_t r = 0;
+char* recibo[];
+uint8_t uart_data = 0;
+uint8_t uart_cont = 0;
+uint8_t str_pos   = 0;
+bool    eusart_flag  = false;
+
+//*******************************************************
+//PROTOTIPOS DE FUNCIONES
+void setup(void);
+void funcion(void);
 //****************** Supporting Data *****************//
 unsigned char r;
 char* d = "Detectando ...";
@@ -130,7 +155,7 @@ void i2c_wait()
 	SSPIF = 0;
 }
 
-void i2c_rep_start()
+void i2c_rep_start()// Inicio la comunicacion con el bit de inicio
 {
 	RSEN = 1;
 	while(RSEN);
@@ -157,7 +182,7 @@ unsigned char i2c_rx()
 	return SSPBUF;
 }
 
-unsigned char i2c_send(unsigned char c)
+unsigned char i2c_send(unsigned char c) //envio la direccion del 12c con el disp que me quiero comunicar
 {
 	SSPBUF = c;
 	while(BF);
@@ -165,6 +190,27 @@ unsigned char i2c_send(unsigned char c)
 }
 
 //*************** Initialization Section ****************//
+void setup()
+{
+   ANSEL  = 0x03;
+    ANSELH = 0x00;
+   
+    TRISCbits.TRISC7 = 1;
+    TRISCbits.TRISC6 = 1;
+    TRISE = 0b000;
+     
+    PORTC = 0;
+    PORTE = 0;
+    OSCCON = 0b01100001;
+   
+
+    eusart_init_tx();
+    eusart_enable_tx_isr();
+
+    eusart_init_rx();
+    eusart_enable_rx_isr();
+    return;
+}
 void i2c_init()
 {
 	TRISC3 = 1;
@@ -274,9 +320,10 @@ void main()
 	temp_disp();
 	while(1)
 	{
+        uart_data = 0;
 		LCD_cmd(0x86);		// Setting the cursor position for displaying the temperature value
 
-		i2c_rep_start();	// Initiating the communication with the start bit
+		i2c_rep_start();	// Inicio la comunicacion con el bit de inicio
 		delay(4);
 
 		i2c_send(0b10010000);  // SLAVE ADDRESS = 1001 1010 | Last bit is '0' - Write
@@ -292,12 +339,44 @@ void main()
 		r = i2c_rx(); // Recieving the temp value in 8 bit format
 		i2c_wait();
 
-		i2c_NACK();  // After reception, Master sends the NACK bit
+		i2c_NACK();  // After reception, Master sends the ACKN bit
 		delay(4);
 
-		i2c_stop(); // Stopping the communication
+		i2c_stop(); // Corta la comuniacion
 		delay(4);
 
-		LCD_disp(r); // Sending the values for LCD display
+		LCD_disp(r); // Mando los valores a la lcd
+        
+        funcion(); // mando a la usart con los valores converitdos
 	}
+}
+
+//*********************************************************************
+//INTERRUPCIONES
+//********************************************************************
+
+void __interrupt() isr(void)
+{
+
+    if (PIE1bits.TXIE && PIR1bits.TXIF)
+    {
+        if (eusart_flag)
+        {
+            TXREG = recibo[str_pos];
+        }
+        str_pos++;
+        if (str_pos == 5)
+        {
+            eusart_flag = !eusart_flag;
+            str_pos = 0;
+        }
+    }
+    if (PIR1bits.RCIF)
+    {
+        uart_data = RCREG;
+    }
+}
+void funcion(void)
+{
+    sprintf(recibo, " %2i ", r); // hace la conversion la uart
 }

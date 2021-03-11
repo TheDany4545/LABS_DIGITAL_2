@@ -1,4 +1,4 @@
-# 1 "Newmain.c"
+# 1 "eusart.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,44 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "Newmain.c" 2
-
-
-
-
-
-
-
-#pragma config FOSC = INTRC_NOCLKOUT
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = ON
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
-
-
-
-
-
-
-
-# 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic.h" 1 3
-
-
-
-
-# 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\htc.h" 1 3
-
-
-
+# 1 "eusart.c" 2
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -61,7 +24,15 @@ extern void __builtin_software_breakpoint(void);
 
 
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic.h" 1 3
-# 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
+
+
+
+
+# 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\htc.h" 1 3
+
+
+
+# 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 5 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\htc.h" 2 3
 # 6 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic.h" 2 3
 
@@ -2515,107 +2486,14 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
-# 28 "Newmain.c" 2
+# 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
+# 1 "eusart.c" 2
 
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 1 3
-
-
-
-# 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\__size_t.h" 1 3
-
-
-
-typedef unsigned size_t;
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 2 3
-
-# 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\__null.h" 1 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 2 3
+# 1 "./eusart.h" 1
 
 
 
 
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdarg.h" 1 3
-
-
-
-
-
-
-typedef void * va_list[1];
-
-#pragma intrinsic(__va_start)
-extern void * __va_start(void);
-
-#pragma intrinsic(__va_arg)
-extern void * __va_arg(void *, ...);
-# 11 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 2 3
-# 43 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 3
-struct __prbuf
-{
- char * ptr;
- void (* func)(char);
-};
-# 85 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\conio.h" 1 3
-
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\errno.h" 1 3
-# 29 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\errno.h" 3
-extern int errno;
-# 8 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\conio.h" 2 3
-
-
-
-
-extern void init_uart(void);
-
-extern char getch(void);
-extern char getche(void);
-extern void putch(char);
-extern void ungetch(char);
-
-extern __bit kbhit(void);
-
-
-
-extern char * cgets(char *);
-extern void cputs(const char *);
-# 85 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 2 3
-
-
-
-extern int cprintf(char *, ...);
-#pragma printf_check(cprintf)
-
-
-
-extern int _doprnt(struct __prbuf *, const register char *, register va_list);
-# 180 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 3
-#pragma printf_check(vprintf) const
-#pragma printf_check(vsprintf) const
-
-extern char * gets(char *);
-extern int puts(const char *);
-extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
-extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
-extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
-extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
-extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
-extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
-
-#pragma printf_check(printf) const
-#pragma printf_check(sprintf) const
-extern int sprintf(char *, const char *, ...);
-extern int printf(const char *, ...);
-# 30 "Newmain.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
@@ -2750,19 +2628,6 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 31 "Newmain.c" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdbool.h" 1 3
-# 32 "Newmain.c" 2
-
-
-# 1 "./eusart.h" 1
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
 # 6 "./eusart.h" 2
 
 
@@ -2778,353 +2643,55 @@ void eusart_init_rx(void);
 void eusart_enable_rx_isr(void);
 
 void eusart_disable_rx_isr(void);
-# 34 "Newmain.c" 2
+# 2 "eusart.c" 2
 
 
-
-
-
-
-uint8_t r = 0;
-char* recibo[];
-uint8_t uart_data = 0;
-uint8_t uart_cont = 0;
-uint8_t str_pos = 0;
-_Bool eusart_flag = 0;
-
-
-
-void setup(void);
-void funcion(void);
-
-unsigned char r;
-char* d = "Detectando ...";
-char* d1 = "Sensor listo";
-char* d2 = "No hay sensor";
-char* d3 = "Iniciando I2C";
-char* tmp = "Temp :   *C";
-
-
-void delay(unsigned int x)
+void eusart_init_tx(void)
 {
- while(x--);
+    SPBRGH = 0;
+    SPBRG = 25;
+    TXSTAbits.BRGH = 1;
+
+    TXSTAbits.SYNC = 0;
+    RCSTAbits.SPEN = 1;
+
+    TXSTAbits.TX9 = 0;
+    TXSTAbits.TXEN = 1;
 }
 
-void LCD_cmd(char y)
+void eusart_enable_tx_isr(void)
 {
- RC0 = 0;
- RC1 = 1;
- PORTB = y;
- delay(100);
-    RC1 = 0;
-    delay(100);
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
+    PIE1bits.TXIE = 1;
 }
 
-void LCD_data(char y)
+void eusart_disable_tx_isr(void)
 {
- RC0 = 1;
- RC1 = 1;
- PORTB = y + 48;
- delay(100);
- RC1 = 0;
- delay(200);
+    PIE1bits.TXIE = 0;
 }
 
-
-void no_dev_disp()
+void eusart_init_rx(void)
 {
- LCD_cmd(0xc0);
- delay(100);
- RC0 = 1;
- while( *d2 != '\0')
- {
-  RC1 = 1;
-  delay(100);
-  PORTB = *d2;
-  delay(100);
-  RC1 = 0;
-  delay(100);
-  *d2++;
- }
- while(1);
+    SPBRGH = 0;
+    SPBRG = 25;
+    TXSTAbits.BRGH = 1;
+
+    TXSTAbits.SYNC = 0;
+    RCSTAbits.SPEN = 1;
+
+    TXSTAbits.TX9 = 0;
+    RCSTAbits.CREN = 1;
 }
 
-void dev_found_disp()
+void eusart_enable_rx_isr(void)
 {
- LCD_cmd(0xc0);
- delay(100);
- RC0 = 1;
- while(*d1 != '\0')
- {
-  RC1 = 1;
-  delay(100);
-  PORTB = *d1;
-  delay(100);
-  RC1 = 0;
-  delay(100);
-  *d1++;
- }
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
+    PIE1bits.RCIE = 1;
 }
 
-void temp_disp()
+void eusart_disable_rx_isr(void)
 {
- LCD_cmd(0x01);
- LCD_cmd(0x80);
- delay(100);
- RC0 = 1;
- while( *tmp != '\0')
- {
-  RC1 = 1;
-  delay(100);
-  PORTB = *tmp;
-  delay(100);
-  RC1 = 0;
-  delay(100);
-  tmp++;
- }
-}
-
-
-
-
-
-
-
-void i2c_start()
-{
- SEN = 1;
- while(SEN);
-}
-
-
-void i2c_wait()
-{
- while(SSPIF==0);
- SSPIF = 0;
-}
-
-void i2c_rep_start()
-{
- RSEN = 1;
- while(RSEN);
-}
-
-void i2c_NACK()
-{
- ACKDT = 1;
- ACKEN = 1;
- while(ACKEN);
-}
-
-void i2c_stop()
-{
- i2c_wait();
- PEN = 1;
- while(PEN);
-}
-
-unsigned char i2c_rx()
-{
- RCEN = 1;
- while(!BF);
- return SSPBUF;
-}
-
-unsigned char i2c_send(unsigned char c)
-{
- SSPBUF = c;
- while(BF);
- i2c_wait();
-}
-
-
-void setup()
-{
-   ANSEL = 0x03;
-    ANSELH = 0x00;
-
-    TRISCbits.TRISC7 = 1;
-    TRISCbits.TRISC6 = 1;
-    TRISE = 0b000;
-
-    PORTC = 0;
-    PORTE = 0;
-    OSCCON = 0b01100001;
-
-
-    eusart_init_tx();
-    eusart_enable_tx_isr();
-
-    eusart_init_rx();
-    eusart_enable_rx_isr();
-    return;
-}
-void i2c_init()
-{
- TRISC3 = 1;
- TRISC4 = 1;
- SSPBUF = 0x00;
- SSPSTAT = 0xc0;
- SSPCON = 0x28;
- SSPCON2 = 0x00;
- SSPIF = 0;
- SSPADD = 9;
-}
-
-void LCD_init()
-{
- TRISB = 0x00;
- PORTB = 0x00;
- TRISC0 = 0;
- TRISC1 = 0;
- delay(200);
- LCD_cmd(0x0c);
- LCD_cmd(0x06);
- LCD_cmd(0x38);
- LCD_cmd(0x80);
-}
-
-
-void LCD_disp(unsigned char y)
-{
- int temp = y/10;
- LCD_data(temp);
- delay(100);
- temp = y%10;
- LCD_data(temp);
- delay(100);
-}
-
-
-void i2c_init_disp()
-{
- LCD_cmd(0x01);
- LCD_cmd(0x80);
- while( *d3 != '\0')
- {
-  RC0 = 1;
-  RC1 = 1;
-  delay(100);
-  PORTB = *d3;
-  delay(200);
-  RC1 = 0;
-  d3++;
-  delay(100);
- }
-}
-
-
-int check_dev()
-{
- SEN = 1;
- while(SEN);
- i2c_send(0b10010000);
- if(ACKSTAT)
- {
-  RC2 = 1;
- }
- PEN = 1;
- while(PEN);
- delay(65000);
- return RC2;
-}
-
-
-void check_dev_disp()
-{
- LCD_cmd(0x01);
- LCD_cmd(0x80);
- delay(100);
- RC0 = 1;
- delay(100);
- while( *d != '\0')
- {
-  RC1 = 1;
-  delay(100);
-  PORTB = *d;
-  delay(100);
-  RC1 = 0;
-  delay(100);
-  d++;
- }
- delay(65000);
- (check_dev() ? no_dev_disp() : dev_found_disp());
-}
-
-
-void main()
-{
- TRISC2 = 0;
- RC2 = 0;
-
- LCD_init();
-
- i2c_init_disp();
- delay(65000);
- i2c_init();
-
- check_dev_disp();
- delay(65000);
- temp_disp();
- while(1)
- {
-        uart_data = 0;
-  LCD_cmd(0x86);
-
-  i2c_rep_start();
-  delay(4);
-
-  i2c_send(0b10010000);
-  i2c_send(0x00);
-
-  i2c_rep_start();
-  delay(4);
-
-  SSPBUF = 0b10010001;
-  i2c_wait();
-  delay(4);
-
-  r = i2c_rx();
-  i2c_wait();
-
-  i2c_NACK();
-  delay(4);
-
-  i2c_stop();
-  delay(4);
-
-  LCD_disp(r);
-
-        funcion();
- }
-}
-
-
-
-
-
-void __attribute__((picinterrupt(("")))) isr(void)
-{
-
-    if (PIE1bits.TXIE && PIR1bits.TXIF)
-    {
-        if (eusart_flag)
-        {
-            TXREG = recibo[str_pos];
-        }
-        str_pos++;
-        if (str_pos == 5)
-        {
-            eusart_flag = !eusart_flag;
-            str_pos = 0;
-        }
-    }
-    if (PIR1bits.RCIF)
-    {
-        uart_data = RCREG;
-    }
-}
-void funcion(void)
-{
-    sprintf(recibo, " %2i ", r);
+    PIE1bits.RCIE = 0;
 }

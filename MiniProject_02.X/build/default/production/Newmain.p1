@@ -35,7 +35,48 @@ Version 4.0 HI-TECH Software Intermediate Code
 "843
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 843: extern volatile unsigned char SSPBUF __attribute__((address(0x013)));
 [v _SSPBUF `Vuc ~T0 @X0 0 e@19 ]
-"4457
+"3387
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3387: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
+[v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
+"3449
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3449: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
+[v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
+"1546
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1546:     struct {
+[s S57 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S57 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"1545
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1545: typedef union {
+[u S56 `S57 1 ]
+[n S56 . . ]
+"1557
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1557: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x087)));
+[v _TRISCbits `VS56 ~T0 @X0 0 e@135 ]
+"1664
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1664: extern volatile unsigned char TRISE __attribute__((address(0x089)));
+[v _TRISE `Vuc ~T0 @X0 0 e@137 ]
+"290
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 290: extern volatile unsigned char PORTC __attribute__((address(0x007)));
+[v _PORTC `Vuc ~T0 @X0 0 e@7 ]
+"414
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 414: extern volatile unsigned char PORTE __attribute__((address(0x009)));
+[v _PORTE `Vuc ~T0 @X0 0 e@9 ]
+"1862
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1862: extern volatile unsigned char OSCCON __attribute__((address(0x08F)));
+[v _OSCCON `Vuc ~T0 @X0 0 e@143 ]
+"9 ./eusart.h
+[; ;./eusart.h: 9: void eusart_init_tx(void);
+[v _eusart_init_tx `(v ~T0 @X0 0 ef ]
+"11
+[; ;./eusart.h: 11: void eusart_enable_tx_isr(void);
+[v _eusart_enable_tx_isr `(v ~T0 @X0 0 ef ]
+"15
+[; ;./eusart.h: 15: void eusart_init_rx(void);
+[v _eusart_init_rx `(v ~T0 @X0 0 ef ]
+"17
+[; ;./eusart.h: 17: void eusart_enable_rx_isr(void);
+[v _eusart_enable_rx_isr `(v ~T0 @X0 0 ef ]
+"4457 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 4457: extern volatile __bit TRISC3 __attribute__((address(0x43B)));
 [v _TRISC3 `Vb ~T0 @X0 0 e@1083 ]
 "4460
@@ -72,6 +113,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4454
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 4454: extern volatile __bit TRISC2 __attribute__((address(0x43A)));
 [v _TRISC2 `Vb ~T0 @X0 0 e@1082 ]
+"50 Newmain.c
+[; ;Newmain.c: 50: void funcion(void);
+[v _funcion `(v ~T0 @X0 0 ef ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+"1708 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1708:     struct {
+[s S63 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S63 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE ]
+"1707
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1707: typedef union {
+[u S62 `S63 1 ]
+[n S62 . . ]
+"1718
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1718: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x08C)));
+[v _PIE1bits `VS62 ~T0 @X0 0 e@140 ]
+"543
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 543:     struct {
+[s S19 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S19 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF ]
+"542
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 542: typedef union {
+[u S18 `S19 1 ]
+[n S18 . . ]
+"553
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 553: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x00C)));
+[v _PIR1bits `VS18 ~T0 @X0 0 e@12 ]
+"1133
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1133: extern volatile unsigned char TXREG __attribute__((address(0x019)));
+[v _TXREG `Vuc ~T0 @X0 0 e@25 ]
+"1140
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1140: extern volatile unsigned char RCREG __attribute__((address(0x01A)));
+[v _RCREG `Vuc ~T0 @X0 0 e@26 ]
+"194 C:\Program Files\Microchip\xc8\v2.31\pic\include\c90\stdio.h
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
 "8 Newmain.c
 [p x FOSC  =  INTRC_NOCLKOUT ]
 "9
@@ -330,882 +406,1057 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"27 Newmain.c
-[; ;Newmain.c: 27: unsigned char r;
+"40 Newmain.c
+[; ;Newmain.c: 40: uint8_t r = 0;
 [v _r `uc ~T0 @X0 1 e ]
-"28
-[; ;Newmain.c: 28: char* d = "Detectando ...";
+[i _r
+-> -> 0 `i `uc
+]
+"41
+[; ;Newmain.c: 41: char* recibo[];
+[v _recibo `*uc ~T0 @X0 -> -> 1 `i `ux e ]
+"42
+[; ;Newmain.c: 42: uint8_t uart_data = 0;
+[v _uart_data `uc ~T0 @X0 1 e ]
+[i _uart_data
+-> -> 0 `i `uc
+]
+"43
+[; ;Newmain.c: 43: uint8_t uart_cont = 0;
+[v _uart_cont `uc ~T0 @X0 1 e ]
+[i _uart_cont
+-> -> 0 `i `uc
+]
+"44
+[; ;Newmain.c: 44: uint8_t str_pos = 0;
+[v _str_pos `uc ~T0 @X0 1 e ]
+[i _str_pos
+-> -> 0 `i `uc
+]
+"45
+[; ;Newmain.c: 45: _Bool eusart_flag = 0;
+[v _eusart_flag `a ~T0 @X0 1 e ]
+[i _eusart_flag
+-> -> 0 `i `a
+]
+"52
+[; ;Newmain.c: 52: unsigned char r;
+[v _r `uc ~T0 @X0 1 e ]
+"53
+[; ;Newmain.c: 53: char* d = "Detectando ...";
 [v _d `*uc ~T0 @X0 1 e ]
 [i _d
 :s 1C
 ]
-"29
-[; ;Newmain.c: 29: char* d1 = "Sensor listo";
+"54
+[; ;Newmain.c: 54: char* d1 = "Sensor listo";
 [v _d1 `*uc ~T0 @X0 1 e ]
 [i _d1
 :s 2C
 ]
-"30
-[; ;Newmain.c: 30: char* d2 = "No hay sensor";
+"55
+[; ;Newmain.c: 55: char* d2 = "No hay sensor";
 [v _d2 `*uc ~T0 @X0 1 e ]
 [i _d2
 :s 3C
 ]
-"31
-[; ;Newmain.c: 31: char* d3 = "Iniciando I2C";
+"56
+[; ;Newmain.c: 56: char* d3 = "Iniciando I2C";
 [v _d3 `*uc ~T0 @X0 1 e ]
 [i _d3
 :s 4C
 ]
-"32
-[; ;Newmain.c: 32: char* tmp = "Temp :   *C";
+"57
+[; ;Newmain.c: 57: char* tmp = "Temp :   *C";
 [v _tmp `*uc ~T0 @X0 1 e ]
 [i _tmp
 :s 5C
 ]
-"35
-[; ;Newmain.c: 35: void delay(unsigned int x)
+"60
+[; ;Newmain.c: 60: void delay(unsigned int x)
 [v _delay `(v ~T0 @X0 1 ef1`ui ]
-"36
-[; ;Newmain.c: 36: {
+"61
+[; ;Newmain.c: 61: {
 {
 [e :U _delay ]
-"35
-[; ;Newmain.c: 35: void delay(unsigned int x)
+"60
+[; ;Newmain.c: 60: void delay(unsigned int x)
 [v _x `ui ~T0 @X0 1 r1 ]
-"36
-[; ;Newmain.c: 36: {
+"61
+[; ;Newmain.c: 61: {
 [f ]
-"37
-[; ;Newmain.c: 37:  while(x--);
-[e $U 139  ]
-[e :U 140 ]
-[e :U 139 ]
-[e $ != -- _x -> -> 1 `i `ui -> -> 0 `i `ui 140  ]
+"62
+[; ;Newmain.c: 62:  while(x--);
+[e $U 140  ]
 [e :U 141 ]
-"38
-[; ;Newmain.c: 38: }
-[e :UE 138 ]
+[e :U 140 ]
+[e $ != -- _x -> -> 1 `i `ui -> -> 0 `i `ui 141  ]
+[e :U 142 ]
+"63
+[; ;Newmain.c: 63: }
+[e :UE 139 ]
 }
-"40
-[; ;Newmain.c: 40: void LCD_cmd(char y)
+"65
+[; ;Newmain.c: 65: void LCD_cmd(char y)
 [v _LCD_cmd `(v ~T0 @X0 1 ef1`uc ]
-"41
-[; ;Newmain.c: 41: {
+"66
+[; ;Newmain.c: 66: {
 {
 [e :U _LCD_cmd ]
-"40
-[; ;Newmain.c: 40: void LCD_cmd(char y)
+"65
+[; ;Newmain.c: 65: void LCD_cmd(char y)
 [v _y `uc ~T0 @X0 1 r1 ]
-"41
-[; ;Newmain.c: 41: {
+"66
+[; ;Newmain.c: 66: {
 [f ]
-"42
-[; ;Newmain.c: 42:  RC0 = 0;
+"67
+[; ;Newmain.c: 67:  RC0 = 0;
 [e = _RC0 -> -> 0 `i `b ]
-"43
-[; ;Newmain.c: 43:  RC1 = 1;
+"68
+[; ;Newmain.c: 68:  RC1 = 1;
 [e = _RC1 -> -> 1 `i `b ]
-"44
-[; ;Newmain.c: 44:  PORTB = y;
+"69
+[; ;Newmain.c: 69:  PORTB = y;
 [e = _PORTB -> _y `uc ]
-"45
-[; ;Newmain.c: 45:  delay(100);
+"70
+[; ;Newmain.c: 70:  delay(100);
 [e ( _delay (1 -> -> 100 `i `ui ]
-"46
-[; ;Newmain.c: 46:     RC1 = 0;
+"71
+[; ;Newmain.c: 71:     RC1 = 0;
 [e = _RC1 -> -> 0 `i `b ]
-"47
-[; ;Newmain.c: 47:     delay(100);
+"72
+[; ;Newmain.c: 72:     delay(100);
 [e ( _delay (1 -> -> 100 `i `ui ]
-"48
-[; ;Newmain.c: 48: }
-[e :UE 142 ]
-}
-"50
-[; ;Newmain.c: 50: void LCD_data(char y)
-[v _LCD_data `(v ~T0 @X0 1 ef1`uc ]
-"51
-[; ;Newmain.c: 51: {
-{
-[e :U _LCD_data ]
-"50
-[; ;Newmain.c: 50: void LCD_data(char y)
-[v _y `uc ~T0 @X0 1 r1 ]
-"51
-[; ;Newmain.c: 51: {
-[f ]
-"52
-[; ;Newmain.c: 52:  RC0 = 1;
-[e = _RC0 -> -> 1 `i `b ]
-"53
-[; ;Newmain.c: 53:  RC1 = 1;
-[e = _RC1 -> -> 1 `i `b ]
-"54
-[; ;Newmain.c: 54:  PORTB = y + 48;
-[e = _PORTB -> + -> _y `i -> 48 `i `uc ]
-"55
-[; ;Newmain.c: 55:  delay(100);
-[e ( _delay (1 -> -> 100 `i `ui ]
-"56
-[; ;Newmain.c: 56:  RC1 = 0;
-[e = _RC1 -> -> 0 `i `b ]
-"57
-[; ;Newmain.c: 57:  delay(200);
-[e ( _delay (1 -> -> 200 `i `ui ]
-"58
-[; ;Newmain.c: 58: }
+"73
+[; ;Newmain.c: 73: }
 [e :UE 143 ]
 }
-"61
-[; ;Newmain.c: 61: void no_dev_disp()
+"75
+[; ;Newmain.c: 75: void LCD_data(char y)
+[v _LCD_data `(v ~T0 @X0 1 ef1`uc ]
+"76
+[; ;Newmain.c: 76: {
+{
+[e :U _LCD_data ]
+"75
+[; ;Newmain.c: 75: void LCD_data(char y)
+[v _y `uc ~T0 @X0 1 r1 ]
+"76
+[; ;Newmain.c: 76: {
+[f ]
+"77
+[; ;Newmain.c: 77:  RC0 = 1;
+[e = _RC0 -> -> 1 `i `b ]
+"78
+[; ;Newmain.c: 78:  RC1 = 1;
+[e = _RC1 -> -> 1 `i `b ]
+"79
+[; ;Newmain.c: 79:  PORTB = y + 48;
+[e = _PORTB -> + -> _y `i -> 48 `i `uc ]
+"80
+[; ;Newmain.c: 80:  delay(100);
+[e ( _delay (1 -> -> 100 `i `ui ]
+"81
+[; ;Newmain.c: 81:  RC1 = 0;
+[e = _RC1 -> -> 0 `i `b ]
+"82
+[; ;Newmain.c: 82:  delay(200);
+[e ( _delay (1 -> -> 200 `i `ui ]
+"83
+[; ;Newmain.c: 83: }
+[e :UE 144 ]
+}
+"86
+[; ;Newmain.c: 86: void no_dev_disp()
 [v _no_dev_disp `(v ~T0 @X0 1 ef ]
-"62
-[; ;Newmain.c: 62: {
+"87
+[; ;Newmain.c: 87: {
 {
 [e :U _no_dev_disp ]
 [f ]
-"63
-[; ;Newmain.c: 63:  LCD_cmd(0xc0);
+"88
+[; ;Newmain.c: 88:  LCD_cmd(0xc0);
 [e ( _LCD_cmd (1 -> -> 192 `i `uc ]
-"64
-[; ;Newmain.c: 64:  delay(100);
+"89
+[; ;Newmain.c: 89:  delay(100);
 [e ( _delay (1 -> -> 100 `i `ui ]
-"65
-[; ;Newmain.c: 65:  RC0 = 1;
+"90
+[; ;Newmain.c: 90:  RC0 = 1;
 [e = _RC0 -> -> 1 `i `b ]
-"66
-[; ;Newmain.c: 66:  while( *d2 != '\0')
-[e $U 145  ]
-[e :U 146 ]
-"67
-[; ;Newmain.c: 67:  {
-{
-"68
-[; ;Newmain.c: 68:   RC1 = 1;
-[e = _RC1 -> -> 1 `i `b ]
-"69
-[; ;Newmain.c: 69:   delay(100);
-[e ( _delay (1 -> -> 100 `i `ui ]
-"70
-[; ;Newmain.c: 70:   PORTB = *d2;
-[e = _PORTB -> *U _d2 `uc ]
-"71
-[; ;Newmain.c: 71:   delay(100);
-[e ( _delay (1 -> -> 100 `i `ui ]
-"72
-[; ;Newmain.c: 72:   RC1 = 0;
-[e = _RC1 -> -> 0 `i `b ]
-"73
-[; ;Newmain.c: 73:   delay(100);
-[e ( _delay (1 -> -> 100 `i `ui ]
-"74
-[; ;Newmain.c: 74:   *d2++;
-[e *U ++ _d2 * -> -> 1 `i `x -> -> # *U _d2 `i `x ]
-"75
-[; ;Newmain.c: 75:  }
-}
-[e :U 145 ]
-"66
-[; ;Newmain.c: 66:  while( *d2 != '\0')
-[e $ != -> *U _d2 `ui -> 0 `ui 146  ]
+"91
+[; ;Newmain.c: 91:  while( *d2 != '\0')
+[e $U 146  ]
 [e :U 147 ]
-"76
-[; ;Newmain.c: 76:  while(1);
-[e :U 149 ]
-[e :U 148 ]
-[e $U 149  ]
-[e :U 150 ]
-"77
-[; ;Newmain.c: 77: }
-[e :UE 144 ]
+"92
+[; ;Newmain.c: 92:  {
+{
+"93
+[; ;Newmain.c: 93:   RC1 = 1;
+[e = _RC1 -> -> 1 `i `b ]
+"94
+[; ;Newmain.c: 94:   delay(100);
+[e ( _delay (1 -> -> 100 `i `ui ]
+"95
+[; ;Newmain.c: 95:   PORTB = *d2;
+[e = _PORTB -> *U _d2 `uc ]
+"96
+[; ;Newmain.c: 96:   delay(100);
+[e ( _delay (1 -> -> 100 `i `ui ]
+"97
+[; ;Newmain.c: 97:   RC1 = 0;
+[e = _RC1 -> -> 0 `i `b ]
+"98
+[; ;Newmain.c: 98:   delay(100);
+[e ( _delay (1 -> -> 100 `i `ui ]
+"99
+[; ;Newmain.c: 99:   *d2++;
+[e *U ++ _d2 * -> -> 1 `i `x -> -> # *U _d2 `i `x ]
+"100
+[; ;Newmain.c: 100:  }
 }
-"79
-[; ;Newmain.c: 79: void dev_found_disp()
+[e :U 146 ]
+"91
+[; ;Newmain.c: 91:  while( *d2 != '\0')
+[e $ != -> *U _d2 `ui -> 0 `ui 147  ]
+[e :U 148 ]
+"101
+[; ;Newmain.c: 101:  while(1);
+[e :U 150 ]
+[e :U 149 ]
+[e $U 150  ]
+[e :U 151 ]
+"102
+[; ;Newmain.c: 102: }
+[e :UE 145 ]
+}
+"104
+[; ;Newmain.c: 104: void dev_found_disp()
 [v _dev_found_disp `(v ~T0 @X0 1 ef ]
-"80
-[; ;Newmain.c: 80: {
+"105
+[; ;Newmain.c: 105: {
 {
 [e :U _dev_found_disp ]
 [f ]
-"81
-[; ;Newmain.c: 81:  LCD_cmd(0xc0);
+"106
+[; ;Newmain.c: 106:  LCD_cmd(0xc0);
 [e ( _LCD_cmd (1 -> -> 192 `i `uc ]
-"82
-[; ;Newmain.c: 82:  delay(100);
+"107
+[; ;Newmain.c: 107:  delay(100);
 [e ( _delay (1 -> -> 100 `i `ui ]
-"83
-[; ;Newmain.c: 83:  RC0 = 1;
+"108
+[; ;Newmain.c: 108:  RC0 = 1;
 [e = _RC0 -> -> 1 `i `b ]
-"84
-[; ;Newmain.c: 84:  while(*d1 != '\0')
-[e $U 152  ]
-[e :U 153 ]
-"85
-[; ;Newmain.c: 85:  {
-{
-"86
-[; ;Newmain.c: 86:   RC1 = 1;
-[e = _RC1 -> -> 1 `i `b ]
-"87
-[; ;Newmain.c: 87:   delay(100);
-[e ( _delay (1 -> -> 100 `i `ui ]
-"88
-[; ;Newmain.c: 88:   PORTB = *d1;
-[e = _PORTB -> *U _d1 `uc ]
-"89
-[; ;Newmain.c: 89:   delay(100);
-[e ( _delay (1 -> -> 100 `i `ui ]
-"90
-[; ;Newmain.c: 90:   RC1 = 0;
-[e = _RC1 -> -> 0 `i `b ]
-"91
-[; ;Newmain.c: 91:   delay(100);
-[e ( _delay (1 -> -> 100 `i `ui ]
-"92
-[; ;Newmain.c: 92:   *d1++;
-[e *U ++ _d1 * -> -> 1 `i `x -> -> # *U _d1 `i `x ]
-"93
-[; ;Newmain.c: 93:  }
-}
-[e :U 152 ]
-"84
-[; ;Newmain.c: 84:  while(*d1 != '\0')
-[e $ != -> *U _d1 `ui -> 0 `ui 153  ]
+"109
+[; ;Newmain.c: 109:  while(*d1 != '\0')
+[e $U 153  ]
 [e :U 154 ]
-"94
-[; ;Newmain.c: 94: }
-[e :UE 151 ]
+"110
+[; ;Newmain.c: 110:  {
+{
+"111
+[; ;Newmain.c: 111:   RC1 = 1;
+[e = _RC1 -> -> 1 `i `b ]
+"112
+[; ;Newmain.c: 112:   delay(100);
+[e ( _delay (1 -> -> 100 `i `ui ]
+"113
+[; ;Newmain.c: 113:   PORTB = *d1;
+[e = _PORTB -> *U _d1 `uc ]
+"114
+[; ;Newmain.c: 114:   delay(100);
+[e ( _delay (1 -> -> 100 `i `ui ]
+"115
+[; ;Newmain.c: 115:   RC1 = 0;
+[e = _RC1 -> -> 0 `i `b ]
+"116
+[; ;Newmain.c: 116:   delay(100);
+[e ( _delay (1 -> -> 100 `i `ui ]
+"117
+[; ;Newmain.c: 117:   *d1++;
+[e *U ++ _d1 * -> -> 1 `i `x -> -> # *U _d1 `i `x ]
+"118
+[; ;Newmain.c: 118:  }
 }
-"96
-[; ;Newmain.c: 96: void temp_disp()
+[e :U 153 ]
+"109
+[; ;Newmain.c: 109:  while(*d1 != '\0')
+[e $ != -> *U _d1 `ui -> 0 `ui 154  ]
+[e :U 155 ]
+"119
+[; ;Newmain.c: 119: }
+[e :UE 152 ]
+}
+"121
+[; ;Newmain.c: 121: void temp_disp()
 [v _temp_disp `(v ~T0 @X0 1 ef ]
-"97
-[; ;Newmain.c: 97: {
+"122
+[; ;Newmain.c: 122: {
 {
 [e :U _temp_disp ]
 [f ]
-"98
-[; ;Newmain.c: 98:  LCD_cmd(0x01);
+"123
+[; ;Newmain.c: 123:  LCD_cmd(0x01);
 [e ( _LCD_cmd (1 -> -> 1 `i `uc ]
-"99
-[; ;Newmain.c: 99:  LCD_cmd(0x80);
+"124
+[; ;Newmain.c: 124:  LCD_cmd(0x80);
 [e ( _LCD_cmd (1 -> -> 128 `i `uc ]
-"100
-[; ;Newmain.c: 100:  delay(100);
+"125
+[; ;Newmain.c: 125:  delay(100);
 [e ( _delay (1 -> -> 100 `i `ui ]
-"101
-[; ;Newmain.c: 101:  RC0 = 1;
+"126
+[; ;Newmain.c: 126:  RC0 = 1;
 [e = _RC0 -> -> 1 `i `b ]
-"102
-[; ;Newmain.c: 102:  while( *tmp != '\0')
-[e $U 156  ]
-[e :U 157 ]
-"103
-[; ;Newmain.c: 103:  {
-{
-"104
-[; ;Newmain.c: 104:   RC1 = 1;
-[e = _RC1 -> -> 1 `i `b ]
-"105
-[; ;Newmain.c: 105:   delay(100);
-[e ( _delay (1 -> -> 100 `i `ui ]
-"106
-[; ;Newmain.c: 106:   PORTB = *tmp;
-[e = _PORTB -> *U _tmp `uc ]
-"107
-[; ;Newmain.c: 107:   delay(100);
-[e ( _delay (1 -> -> 100 `i `ui ]
-"108
-[; ;Newmain.c: 108:   RC1 = 0;
-[e = _RC1 -> -> 0 `i `b ]
-"109
-[; ;Newmain.c: 109:   delay(100);
-[e ( _delay (1 -> -> 100 `i `ui ]
-"110
-[; ;Newmain.c: 110:   tmp++;
-[e ++ _tmp * -> -> 1 `i `x -> -> # *U _tmp `i `x ]
-"111
-[; ;Newmain.c: 111:  }
-}
-[e :U 156 ]
-"102
-[; ;Newmain.c: 102:  while( *tmp != '\0')
-[e $ != -> *U _tmp `ui -> 0 `ui 157  ]
+"127
+[; ;Newmain.c: 127:  while( *tmp != '\0')
+[e $U 157  ]
 [e :U 158 ]
-"112
-[; ;Newmain.c: 112: }
-[e :UE 155 ]
+"128
+[; ;Newmain.c: 128:  {
+{
+"129
+[; ;Newmain.c: 129:   RC1 = 1;
+[e = _RC1 -> -> 1 `i `b ]
+"130
+[; ;Newmain.c: 130:   delay(100);
+[e ( _delay (1 -> -> 100 `i `ui ]
+"131
+[; ;Newmain.c: 131:   PORTB = *tmp;
+[e = _PORTB -> *U _tmp `uc ]
+"132
+[; ;Newmain.c: 132:   delay(100);
+[e ( _delay (1 -> -> 100 `i `ui ]
+"133
+[; ;Newmain.c: 133:   RC1 = 0;
+[e = _RC1 -> -> 0 `i `b ]
+"134
+[; ;Newmain.c: 134:   delay(100);
+[e ( _delay (1 -> -> 100 `i `ui ]
+"135
+[; ;Newmain.c: 135:   tmp++;
+[e ++ _tmp * -> -> 1 `i `x -> -> # *U _tmp `i `x ]
+"136
+[; ;Newmain.c: 136:  }
 }
-"120
-[; ;Newmain.c: 120: void i2c_start()
+[e :U 157 ]
+"127
+[; ;Newmain.c: 127:  while( *tmp != '\0')
+[e $ != -> *U _tmp `ui -> 0 `ui 158  ]
+[e :U 159 ]
+"137
+[; ;Newmain.c: 137: }
+[e :UE 156 ]
+}
+"145
+[; ;Newmain.c: 145: void i2c_start()
 [v _i2c_start `(v ~T0 @X0 1 ef ]
-"121
-[; ;Newmain.c: 121: {
+"146
+[; ;Newmain.c: 146: {
 {
 [e :U _i2c_start ]
 [f ]
-"122
-[; ;Newmain.c: 122:  SEN = 1;
+"147
+[; ;Newmain.c: 147:  SEN = 1;
 [e = _SEN -> -> 1 `i `b ]
-"123
-[; ;Newmain.c: 123:  while(SEN);
-[e $U 160  ]
-[e :U 161 ]
-[e :U 160 ]
-[e $ _SEN 161  ]
+"148
+[; ;Newmain.c: 148:  while(SEN);
+[e $U 161  ]
 [e :U 162 ]
-"124
-[; ;Newmain.c: 124: }
-[e :UE 159 ]
+[e :U 161 ]
+[e $ _SEN 162  ]
+[e :U 163 ]
+"149
+[; ;Newmain.c: 149: }
+[e :UE 160 ]
 }
-"127
-[; ;Newmain.c: 127: void i2c_wait()
+"152
+[; ;Newmain.c: 152: void i2c_wait()
 [v _i2c_wait `(v ~T0 @X0 1 ef ]
-"128
-[; ;Newmain.c: 128: {
+"153
+[; ;Newmain.c: 153: {
 {
 [e :U _i2c_wait ]
 [f ]
-"129
-[; ;Newmain.c: 129:  while(SSPIF==0);
-[e $U 164  ]
-[e :U 165 ]
-[e :U 164 ]
-[e $ == -> _SSPIF `i -> 0 `i 165  ]
+"154
+[; ;Newmain.c: 154:  while(SSPIF==0);
+[e $U 165  ]
 [e :U 166 ]
-"130
-[; ;Newmain.c: 130:  SSPIF = 0;
+[e :U 165 ]
+[e $ == -> _SSPIF `i -> 0 `i 166  ]
+[e :U 167 ]
+"155
+[; ;Newmain.c: 155:  SSPIF = 0;
 [e = _SSPIF -> -> 0 `i `b ]
-"131
-[; ;Newmain.c: 131: }
-[e :UE 163 ]
+"156
+[; ;Newmain.c: 156: }
+[e :UE 164 ]
 }
-"133
-[; ;Newmain.c: 133: void i2c_rep_start()
+"158
+[; ;Newmain.c: 158: void i2c_rep_start()
 [v _i2c_rep_start `(v ~T0 @X0 1 ef ]
-"134
-[; ;Newmain.c: 134: {
+"159
+[; ;Newmain.c: 159: {
 {
 [e :U _i2c_rep_start ]
 [f ]
-"135
-[; ;Newmain.c: 135:  RSEN = 1;
+"160
+[; ;Newmain.c: 160:  RSEN = 1;
 [e = _RSEN -> -> 1 `i `b ]
-"136
-[; ;Newmain.c: 136:  while(RSEN);
-[e $U 168  ]
-[e :U 169 ]
-[e :U 168 ]
-[e $ _RSEN 169  ]
+"161
+[; ;Newmain.c: 161:  while(RSEN);
+[e $U 169  ]
 [e :U 170 ]
-"137
-[; ;Newmain.c: 137: }
-[e :UE 167 ]
+[e :U 169 ]
+[e $ _RSEN 170  ]
+[e :U 171 ]
+"162
+[; ;Newmain.c: 162: }
+[e :UE 168 ]
 }
-"139
-[; ;Newmain.c: 139: void i2c_NACK()
+"164
+[; ;Newmain.c: 164: void i2c_NACK()
 [v _i2c_NACK `(v ~T0 @X0 1 ef ]
-"140
-[; ;Newmain.c: 140: {
+"165
+[; ;Newmain.c: 165: {
 {
 [e :U _i2c_NACK ]
 [f ]
-"141
-[; ;Newmain.c: 141:  ACKDT = 1;
+"166
+[; ;Newmain.c: 166:  ACKDT = 1;
 [e = _ACKDT -> -> 1 `i `b ]
-"142
-[; ;Newmain.c: 142:  ACKEN = 1;
+"167
+[; ;Newmain.c: 167:  ACKEN = 1;
 [e = _ACKEN -> -> 1 `i `b ]
-"143
-[; ;Newmain.c: 143:  while(ACKEN);
-[e $U 172  ]
-[e :U 173 ]
-[e :U 172 ]
-[e $ _ACKEN 173  ]
+"168
+[; ;Newmain.c: 168:  while(ACKEN);
+[e $U 173  ]
 [e :U 174 ]
-"144
-[; ;Newmain.c: 144: }
-[e :UE 171 ]
+[e :U 173 ]
+[e $ _ACKEN 174  ]
+[e :U 175 ]
+"169
+[; ;Newmain.c: 169: }
+[e :UE 172 ]
 }
-"146
-[; ;Newmain.c: 146: void i2c_stop()
+"171
+[; ;Newmain.c: 171: void i2c_stop()
 [v _i2c_stop `(v ~T0 @X0 1 ef ]
-"147
-[; ;Newmain.c: 147: {
+"172
+[; ;Newmain.c: 172: {
 {
 [e :U _i2c_stop ]
 [f ]
-"148
-[; ;Newmain.c: 148:  i2c_wait();
+"173
+[; ;Newmain.c: 173:  i2c_wait();
 [e ( _i2c_wait ..  ]
-"149
-[; ;Newmain.c: 149:  PEN = 1;
+"174
+[; ;Newmain.c: 174:  PEN = 1;
 [e = _PEN -> -> 1 `i `b ]
-"150
-[; ;Newmain.c: 150:  while(PEN);
-[e $U 176  ]
-[e :U 177 ]
-[e :U 176 ]
-[e $ _PEN 177  ]
+"175
+[; ;Newmain.c: 175:  while(PEN);
+[e $U 177  ]
 [e :U 178 ]
-"151
-[; ;Newmain.c: 151: }
-[e :UE 175 ]
+[e :U 177 ]
+[e $ _PEN 178  ]
+[e :U 179 ]
+"176
+[; ;Newmain.c: 176: }
+[e :UE 176 ]
 }
-"153
-[; ;Newmain.c: 153: unsigned char i2c_rx()
+"178
+[; ;Newmain.c: 178: unsigned char i2c_rx()
 [v _i2c_rx `(uc ~T0 @X0 1 ef ]
-"154
-[; ;Newmain.c: 154: {
+"179
+[; ;Newmain.c: 179: {
 {
 [e :U _i2c_rx ]
 [f ]
-"155
-[; ;Newmain.c: 155:  RCEN = 1;
+"180
+[; ;Newmain.c: 180:  RCEN = 1;
 [e = _RCEN -> -> 1 `i `b ]
-"156
-[; ;Newmain.c: 156:  while(!BF);
-[e $U 180  ]
-[e :U 181 ]
-[e :U 180 ]
-[e $ ! _BF 181  ]
+"181
+[; ;Newmain.c: 181:  while(!BF);
+[e $U 181  ]
 [e :U 182 ]
-"157
-[; ;Newmain.c: 157:  return SSPBUF;
+[e :U 181 ]
+[e $ ! _BF 182  ]
+[e :U 183 ]
+"182
+[; ;Newmain.c: 182:  return SSPBUF;
 [e ) _SSPBUF ]
-[e $UE 179  ]
-"158
-[; ;Newmain.c: 158: }
-[e :UE 179 ]
+[e $UE 180  ]
+"183
+[; ;Newmain.c: 183: }
+[e :UE 180 ]
 }
-"160
-[; ;Newmain.c: 160: unsigned char i2c_send(unsigned char c)
+"185
+[; ;Newmain.c: 185: unsigned char i2c_send(unsigned char c)
 [v _i2c_send `(uc ~T0 @X0 1 ef1`uc ]
-"161
-[; ;Newmain.c: 161: {
+"186
+[; ;Newmain.c: 186: {
 {
 [e :U _i2c_send ]
-"160
-[; ;Newmain.c: 160: unsigned char i2c_send(unsigned char c)
+"185
+[; ;Newmain.c: 185: unsigned char i2c_send(unsigned char c)
 [v _c `uc ~T0 @X0 1 r1 ]
-"161
-[; ;Newmain.c: 161: {
+"186
+[; ;Newmain.c: 186: {
 [f ]
-"162
-[; ;Newmain.c: 162:  SSPBUF = c;
+"187
+[; ;Newmain.c: 187:  SSPBUF = c;
 [e = _SSPBUF _c ]
-"163
-[; ;Newmain.c: 163:  while(BF);
-[e $U 184  ]
-[e :U 185 ]
-[e :U 184 ]
-[e $ _BF 185  ]
+"188
+[; ;Newmain.c: 188:  while(BF);
+[e $U 185  ]
 [e :U 186 ]
-"164
-[; ;Newmain.c: 164:  i2c_wait();
+[e :U 185 ]
+[e $ _BF 186  ]
+[e :U 187 ]
+"189
+[; ;Newmain.c: 189:  i2c_wait();
 [e ( _i2c_wait ..  ]
-"165
-[; ;Newmain.c: 165: }
-[e :UE 183 ]
+"190
+[; ;Newmain.c: 190: }
+[e :UE 184 ]
 }
-"168
-[; ;Newmain.c: 168: void i2c_init()
+"193
+[; ;Newmain.c: 193: void setup()
+[v _setup `(v ~T0 @X0 1 ef ]
+"194
+[; ;Newmain.c: 194: {
+{
+[e :U _setup ]
+[f ]
+"195
+[; ;Newmain.c: 195:    ANSEL = 0x03;
+[e = _ANSEL -> -> 3 `i `uc ]
+"196
+[; ;Newmain.c: 196:     ANSELH = 0x00;
+[e = _ANSELH -> -> 0 `i `uc ]
+"198
+[; ;Newmain.c: 198:     TRISCbits.TRISC7 = 1;
+[e = . . _TRISCbits 0 7 -> -> 1 `i `uc ]
+"199
+[; ;Newmain.c: 199:     TRISCbits.TRISC6 = 1;
+[e = . . _TRISCbits 0 6 -> -> 1 `i `uc ]
+"200
+[; ;Newmain.c: 200:     TRISE = 0b000;
+[e = _TRISE -> -> 0 `i `uc ]
+"202
+[; ;Newmain.c: 202:     PORTC = 0;
+[e = _PORTC -> -> 0 `i `uc ]
+"203
+[; ;Newmain.c: 203:     PORTE = 0;
+[e = _PORTE -> -> 0 `i `uc ]
+"204
+[; ;Newmain.c: 204:     OSCCON = 0b01100001;
+[e = _OSCCON -> -> 97 `i `uc ]
+"207
+[; ;Newmain.c: 207:     eusart_init_tx();
+[e ( _eusart_init_tx ..  ]
+"208
+[; ;Newmain.c: 208:     eusart_enable_tx_isr();
+[e ( _eusart_enable_tx_isr ..  ]
+"210
+[; ;Newmain.c: 210:     eusart_init_rx();
+[e ( _eusart_init_rx ..  ]
+"211
+[; ;Newmain.c: 211:     eusart_enable_rx_isr();
+[e ( _eusart_enable_rx_isr ..  ]
+"212
+[; ;Newmain.c: 212:     return;
+[e $UE 188  ]
+"213
+[; ;Newmain.c: 213: }
+[e :UE 188 ]
+}
+"214
+[; ;Newmain.c: 214: void i2c_init()
 [v _i2c_init `(v ~T0 @X0 1 ef ]
-"169
-[; ;Newmain.c: 169: {
+"215
+[; ;Newmain.c: 215: {
 {
 [e :U _i2c_init ]
 [f ]
-"170
-[; ;Newmain.c: 170:  TRISC3 = 1;
+"216
+[; ;Newmain.c: 216:  TRISC3 = 1;
 [e = _TRISC3 -> -> 1 `i `b ]
-"171
-[; ;Newmain.c: 171:  TRISC4 = 1;
+"217
+[; ;Newmain.c: 217:  TRISC4 = 1;
 [e = _TRISC4 -> -> 1 `i `b ]
-"172
-[; ;Newmain.c: 172:  SSPBUF = 0x00;
+"218
+[; ;Newmain.c: 218:  SSPBUF = 0x00;
 [e = _SSPBUF -> -> 0 `i `uc ]
-"173
-[; ;Newmain.c: 173:  SSPSTAT = 0xc0;
+"219
+[; ;Newmain.c: 219:  SSPSTAT = 0xc0;
 [e = _SSPSTAT -> -> 192 `i `uc ]
-"174
-[; ;Newmain.c: 174:  SSPCON = 0x28;
+"220
+[; ;Newmain.c: 220:  SSPCON = 0x28;
 [e = _SSPCON -> -> 40 `i `uc ]
-"175
-[; ;Newmain.c: 175:  SSPCON2 = 0x00;
+"221
+[; ;Newmain.c: 221:  SSPCON2 = 0x00;
 [e = _SSPCON2 -> -> 0 `i `uc ]
-"176
-[; ;Newmain.c: 176:  SSPIF = 0;
+"222
+[; ;Newmain.c: 222:  SSPIF = 0;
 [e = _SSPIF -> -> 0 `i `b ]
-"177
-[; ;Newmain.c: 177:  SSPADD = 9;
+"223
+[; ;Newmain.c: 223:  SSPADD = 9;
 [e = _SSPADD -> -> 9 `i `uc ]
-"178
-[; ;Newmain.c: 178: }
-[e :UE 187 ]
+"224
+[; ;Newmain.c: 224: }
+[e :UE 189 ]
 }
-"180
-[; ;Newmain.c: 180: void LCD_init()
+"226
+[; ;Newmain.c: 226: void LCD_init()
 [v _LCD_init `(v ~T0 @X0 1 ef ]
-"181
-[; ;Newmain.c: 181: {
+"227
+[; ;Newmain.c: 227: {
 {
 [e :U _LCD_init ]
 [f ]
-"182
-[; ;Newmain.c: 182:  TRISB = 0x00;
+"228
+[; ;Newmain.c: 228:  TRISB = 0x00;
 [e = _TRISB -> -> 0 `i `uc ]
-"183
-[; ;Newmain.c: 183:  PORTB = 0x00;
+"229
+[; ;Newmain.c: 229:  PORTB = 0x00;
 [e = _PORTB -> -> 0 `i `uc ]
-"184
-[; ;Newmain.c: 184:  TRISC0 = 0;
+"230
+[; ;Newmain.c: 230:  TRISC0 = 0;
 [e = _TRISC0 -> -> 0 `i `b ]
-"185
-[; ;Newmain.c: 185:  TRISC1 = 0;
+"231
+[; ;Newmain.c: 231:  TRISC1 = 0;
 [e = _TRISC1 -> -> 0 `i `b ]
-"186
-[; ;Newmain.c: 186:  delay(200);
+"232
+[; ;Newmain.c: 232:  delay(200);
 [e ( _delay (1 -> -> 200 `i `ui ]
-"187
-[; ;Newmain.c: 187:  LCD_cmd(0x0c);
+"233
+[; ;Newmain.c: 233:  LCD_cmd(0x0c);
 [e ( _LCD_cmd (1 -> -> 12 `i `uc ]
-"188
-[; ;Newmain.c: 188:  LCD_cmd(0x06);
+"234
+[; ;Newmain.c: 234:  LCD_cmd(0x06);
 [e ( _LCD_cmd (1 -> -> 6 `i `uc ]
-"189
-[; ;Newmain.c: 189:  LCD_cmd(0x38);
+"235
+[; ;Newmain.c: 235:  LCD_cmd(0x38);
 [e ( _LCD_cmd (1 -> -> 56 `i `uc ]
-"190
-[; ;Newmain.c: 190:  LCD_cmd(0x80);
+"236
+[; ;Newmain.c: 236:  LCD_cmd(0x80);
 [e ( _LCD_cmd (1 -> -> 128 `i `uc ]
-"191
-[; ;Newmain.c: 191: }
-[e :UE 188 ]
+"237
+[; ;Newmain.c: 237: }
+[e :UE 190 ]
 }
-"194
-[; ;Newmain.c: 194: void LCD_disp(unsigned char y)
+"240
+[; ;Newmain.c: 240: void LCD_disp(unsigned char y)
 [v _LCD_disp `(v ~T0 @X0 1 ef1`uc ]
-"195
-[; ;Newmain.c: 195: {
+"241
+[; ;Newmain.c: 241: {
 {
 [e :U _LCD_disp ]
-"194
-[; ;Newmain.c: 194: void LCD_disp(unsigned char y)
+"240
+[; ;Newmain.c: 240: void LCD_disp(unsigned char y)
 [v _y `uc ~T0 @X0 1 r1 ]
-"195
-[; ;Newmain.c: 195: {
+"241
+[; ;Newmain.c: 241: {
 [f ]
-"196
-[; ;Newmain.c: 196:  int temp = y/10;
+"242
+[; ;Newmain.c: 242:  int temp = y/10;
 [v _temp `i ~T0 @X0 1 a ]
 [e = _temp / -> _y `i -> 10 `i ]
-"197
-[; ;Newmain.c: 197:  LCD_data(temp);
+"243
+[; ;Newmain.c: 243:  LCD_data(temp);
 [e ( _LCD_data (1 -> _temp `uc ]
-"198
-[; ;Newmain.c: 198:  delay(100);
+"244
+[; ;Newmain.c: 244:  delay(100);
 [e ( _delay (1 -> -> 100 `i `ui ]
-"199
-[; ;Newmain.c: 199:  temp = y%10;
+"245
+[; ;Newmain.c: 245:  temp = y%10;
 [e = _temp % -> _y `i -> 10 `i ]
-"200
-[; ;Newmain.c: 200:  LCD_data(temp);
+"246
+[; ;Newmain.c: 246:  LCD_data(temp);
 [e ( _LCD_data (1 -> _temp `uc ]
-"201
-[; ;Newmain.c: 201:  delay(100);
+"247
+[; ;Newmain.c: 247:  delay(100);
 [e ( _delay (1 -> -> 100 `i `ui ]
-"202
-[; ;Newmain.c: 202: }
-[e :UE 189 ]
+"248
+[; ;Newmain.c: 248: }
+[e :UE 191 ]
 }
-"205
-[; ;Newmain.c: 205: void i2c_init_disp()
+"251
+[; ;Newmain.c: 251: void i2c_init_disp()
 [v _i2c_init_disp `(v ~T0 @X0 1 ef ]
-"206
-[; ;Newmain.c: 206: {
+"252
+[; ;Newmain.c: 252: {
 {
 [e :U _i2c_init_disp ]
 [f ]
-"207
-[; ;Newmain.c: 207:  LCD_cmd(0x01);
+"253
+[; ;Newmain.c: 253:  LCD_cmd(0x01);
 [e ( _LCD_cmd (1 -> -> 1 `i `uc ]
-"208
-[; ;Newmain.c: 208:  LCD_cmd(0x80);
+"254
+[; ;Newmain.c: 254:  LCD_cmd(0x80);
 [e ( _LCD_cmd (1 -> -> 128 `i `uc ]
-"209
-[; ;Newmain.c: 209:  while( *d3 != '\0')
-[e $U 191  ]
-[e :U 192 ]
-"210
-[; ;Newmain.c: 210:  {
+"255
+[; ;Newmain.c: 255:  while( *d3 != '\0')
+[e $U 193  ]
+[e :U 194 ]
+"256
+[; ;Newmain.c: 256:  {
 {
-"211
-[; ;Newmain.c: 211:   RC0 = 1;
+"257
+[; ;Newmain.c: 257:   RC0 = 1;
 [e = _RC0 -> -> 1 `i `b ]
-"212
-[; ;Newmain.c: 212:   RC1 = 1;
+"258
+[; ;Newmain.c: 258:   RC1 = 1;
 [e = _RC1 -> -> 1 `i `b ]
-"213
-[; ;Newmain.c: 213:   delay(100);
+"259
+[; ;Newmain.c: 259:   delay(100);
 [e ( _delay (1 -> -> 100 `i `ui ]
-"214
-[; ;Newmain.c: 214:   PORTB = *d3;
+"260
+[; ;Newmain.c: 260:   PORTB = *d3;
 [e = _PORTB -> *U _d3 `uc ]
-"215
-[; ;Newmain.c: 215:   delay(200);
+"261
+[; ;Newmain.c: 261:   delay(200);
 [e ( _delay (1 -> -> 200 `i `ui ]
-"216
-[; ;Newmain.c: 216:   RC1 = 0;
+"262
+[; ;Newmain.c: 262:   RC1 = 0;
 [e = _RC1 -> -> 0 `i `b ]
-"217
-[; ;Newmain.c: 217:   d3++;
+"263
+[; ;Newmain.c: 263:   d3++;
 [e ++ _d3 * -> -> 1 `i `x -> -> # *U _d3 `i `x ]
-"218
-[; ;Newmain.c: 218:   delay(100);
+"264
+[; ;Newmain.c: 264:   delay(100);
 [e ( _delay (1 -> -> 100 `i `ui ]
-"219
-[; ;Newmain.c: 219:  }
+"265
+[; ;Newmain.c: 265:  }
 }
-[e :U 191 ]
-"209
-[; ;Newmain.c: 209:  while( *d3 != '\0')
-[e $ != -> *U _d3 `ui -> 0 `ui 192  ]
 [e :U 193 ]
-"220
-[; ;Newmain.c: 220: }
-[e :UE 190 ]
+"255
+[; ;Newmain.c: 255:  while( *d3 != '\0')
+[e $ != -> *U _d3 `ui -> 0 `ui 194  ]
+[e :U 195 ]
+"266
+[; ;Newmain.c: 266: }
+[e :UE 192 ]
 }
-"223
-[; ;Newmain.c: 223: int check_dev()
+"269
+[; ;Newmain.c: 269: int check_dev()
 [v _check_dev `(i ~T0 @X0 1 ef ]
-"224
-[; ;Newmain.c: 224: {
+"270
+[; ;Newmain.c: 270: {
 {
 [e :U _check_dev ]
 [f ]
-"225
-[; ;Newmain.c: 225:  SEN = 1;
+"271
+[; ;Newmain.c: 271:  SEN = 1;
 [e = _SEN -> -> 1 `i `b ]
-"226
-[; ;Newmain.c: 226:  while(SEN);
-[e $U 195  ]
-[e :U 196 ]
-[e :U 195 ]
-[e $ _SEN 196  ]
-[e :U 197 ]
-"227
-[; ;Newmain.c: 227:  i2c_send(0b10010000);
-[e ( _i2c_send (1 -> -> 144 `i `uc ]
-"228
-[; ;Newmain.c: 228:  if(ACKSTAT)
-[e $ ! _ACKSTAT 198  ]
-"229
-[; ;Newmain.c: 229:  {
-{
-"230
-[; ;Newmain.c: 230:   RC2 = 1;
-[e = _RC2 -> -> 1 `i `b ]
-"231
-[; ;Newmain.c: 231:  }
-}
+"272
+[; ;Newmain.c: 272:  while(SEN);
+[e $U 197  ]
 [e :U 198 ]
-"232
-[; ;Newmain.c: 232:  PEN = 1;
-[e = _PEN -> -> 1 `i `b ]
-"233
-[; ;Newmain.c: 233:  while(PEN);
-[e $U 199  ]
-[e :U 200 ]
+[e :U 197 ]
+[e $ _SEN 198  ]
 [e :U 199 ]
-[e $ _PEN 200  ]
-[e :U 201 ]
-"234
-[; ;Newmain.c: 234:  delay(65000);
-[e ( _delay (1 -> -> 65000 `l `ui ]
-"235
-[; ;Newmain.c: 235:  return RC2;
-[e ) -> _RC2 `i ]
-[e $UE 194  ]
-"236
-[; ;Newmain.c: 236: }
-[e :UE 194 ]
+"273
+[; ;Newmain.c: 273:  i2c_send(0b10010000);
+[e ( _i2c_send (1 -> -> 144 `i `uc ]
+"274
+[; ;Newmain.c: 274:  if(ACKSTAT)
+[e $ ! _ACKSTAT 200  ]
+"275
+[; ;Newmain.c: 275:  {
+{
+"276
+[; ;Newmain.c: 276:   RC2 = 1;
+[e = _RC2 -> -> 1 `i `b ]
+"277
+[; ;Newmain.c: 277:  }
 }
-"239
-[; ;Newmain.c: 239: void check_dev_disp()
+[e :U 200 ]
+"278
+[; ;Newmain.c: 278:  PEN = 1;
+[e = _PEN -> -> 1 `i `b ]
+"279
+[; ;Newmain.c: 279:  while(PEN);
+[e $U 201  ]
+[e :U 202 ]
+[e :U 201 ]
+[e $ _PEN 202  ]
+[e :U 203 ]
+"280
+[; ;Newmain.c: 280:  delay(65000);
+[e ( _delay (1 -> -> 65000 `l `ui ]
+"281
+[; ;Newmain.c: 281:  return RC2;
+[e ) -> _RC2 `i ]
+[e $UE 196  ]
+"282
+[; ;Newmain.c: 282: }
+[e :UE 196 ]
+}
+"285
+[; ;Newmain.c: 285: void check_dev_disp()
 [v _check_dev_disp `(v ~T0 @X0 1 ef ]
-"240
-[; ;Newmain.c: 240: {
+"286
+[; ;Newmain.c: 286: {
 {
 [e :U _check_dev_disp ]
 [f ]
-"241
-[; ;Newmain.c: 241:  LCD_cmd(0x01);
+"287
+[; ;Newmain.c: 287:  LCD_cmd(0x01);
 [e ( _LCD_cmd (1 -> -> 1 `i `uc ]
-"242
-[; ;Newmain.c: 242:  LCD_cmd(0x80);
+"288
+[; ;Newmain.c: 288:  LCD_cmd(0x80);
 [e ( _LCD_cmd (1 -> -> 128 `i `uc ]
-"243
-[; ;Newmain.c: 243:  delay(100);
+"289
+[; ;Newmain.c: 289:  delay(100);
 [e ( _delay (1 -> -> 100 `i `ui ]
-"244
-[; ;Newmain.c: 244:  RC0 = 1;
+"290
+[; ;Newmain.c: 290:  RC0 = 1;
 [e = _RC0 -> -> 1 `i `b ]
-"245
-[; ;Newmain.c: 245:  delay(100);
+"291
+[; ;Newmain.c: 291:  delay(100);
 [e ( _delay (1 -> -> 100 `i `ui ]
-"246
-[; ;Newmain.c: 246:  while( *d != '\0')
-[e $U 203  ]
-[e :U 204 ]
-"247
-[; ;Newmain.c: 247:  {
+"292
+[; ;Newmain.c: 292:  while( *d != '\0')
+[e $U 205  ]
+[e :U 206 ]
+"293
+[; ;Newmain.c: 293:  {
 {
-"248
-[; ;Newmain.c: 248:   RC1 = 1;
+"294
+[; ;Newmain.c: 294:   RC1 = 1;
 [e = _RC1 -> -> 1 `i `b ]
-"249
-[; ;Newmain.c: 249:   delay(100);
+"295
+[; ;Newmain.c: 295:   delay(100);
 [e ( _delay (1 -> -> 100 `i `ui ]
-"250
-[; ;Newmain.c: 250:   PORTB = *d;
+"296
+[; ;Newmain.c: 296:   PORTB = *d;
 [e = _PORTB -> *U _d `uc ]
-"251
-[; ;Newmain.c: 251:   delay(100);
+"297
+[; ;Newmain.c: 297:   delay(100);
 [e ( _delay (1 -> -> 100 `i `ui ]
-"252
-[; ;Newmain.c: 252:   RC1 = 0;
+"298
+[; ;Newmain.c: 298:   RC1 = 0;
 [e = _RC1 -> -> 0 `i `b ]
-"253
-[; ;Newmain.c: 253:   delay(100);
+"299
+[; ;Newmain.c: 299:   delay(100);
 [e ( _delay (1 -> -> 100 `i `ui ]
-"254
-[; ;Newmain.c: 254:   d++;
+"300
+[; ;Newmain.c: 300:   d++;
 [e ++ _d * -> -> 1 `i `x -> -> # *U _d `i `x ]
-"255
-[; ;Newmain.c: 255:  }
+"301
+[; ;Newmain.c: 301:  }
 }
-[e :U 203 ]
-"246
-[; ;Newmain.c: 246:  while( *d != '\0')
-[e $ != -> *U _d `ui -> 0 `ui 204  ]
 [e :U 205 ]
-"256
-[; ;Newmain.c: 256:  delay(65000);
+"292
+[; ;Newmain.c: 292:  while( *d != '\0')
+[e $ != -> *U _d `ui -> 0 `ui 206  ]
+[e :U 207 ]
+"302
+[; ;Newmain.c: 302:  delay(65000);
 [e ( _delay (1 -> -> 65000 `l `ui ]
-"257
-[; ;Newmain.c: 257:  (check_dev() ? no_dev_disp() : dev_found_disp());
+"303
+[; ;Newmain.c: 303:  (check_dev() ? no_dev_disp() : dev_found_disp());
 [e ? != ( _check_dev ..  -> 0 `i : ( _no_dev_disp ..  ( _dev_found_disp ..  ]
-"258
-[; ;Newmain.c: 258: }
-[e :UE 202 ]
+"304
+[; ;Newmain.c: 304: }
+[e :UE 204 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"261
-[; ;Newmain.c: 261: void main()
+"307
+[; ;Newmain.c: 307: void main()
 [v _main `(v ~T0 @X0 1 ef ]
-"262
-[; ;Newmain.c: 262: {
+"308
+[; ;Newmain.c: 308: {
 {
 [e :U _main ]
 [f ]
-"263
-[; ;Newmain.c: 263:  TRISC2 = 0;
+"309
+[; ;Newmain.c: 309:  TRISC2 = 0;
 [e = _TRISC2 -> -> 0 `i `b ]
-"264
-[; ;Newmain.c: 264:  RC2 = 0;
+"310
+[; ;Newmain.c: 310:  RC2 = 0;
 [e = _RC2 -> -> 0 `i `b ]
-"266
-[; ;Newmain.c: 266:  LCD_init();
+"312
+[; ;Newmain.c: 312:  LCD_init();
 [e ( _LCD_init ..  ]
-"268
-[; ;Newmain.c: 268:  i2c_init_disp();
+"314
+[; ;Newmain.c: 314:  i2c_init_disp();
 [e ( _i2c_init_disp ..  ]
-"269
-[; ;Newmain.c: 269:  delay(65000);
+"315
+[; ;Newmain.c: 315:  delay(65000);
 [e ( _delay (1 -> -> 65000 `l `ui ]
-"270
-[; ;Newmain.c: 270:  i2c_init();
+"316
+[; ;Newmain.c: 316:  i2c_init();
 [e ( _i2c_init ..  ]
-"272
-[; ;Newmain.c: 272:  check_dev_disp();
+"318
+[; ;Newmain.c: 318:  check_dev_disp();
 [e ( _check_dev_disp ..  ]
-"273
-[; ;Newmain.c: 273:  delay(65000);
+"319
+[; ;Newmain.c: 319:  delay(65000);
 [e ( _delay (1 -> -> 65000 `l `ui ]
-"274
-[; ;Newmain.c: 274:  temp_disp();
+"320
+[; ;Newmain.c: 320:  temp_disp();
 [e ( _temp_disp ..  ]
-"275
-[; ;Newmain.c: 275:  while(1)
-[e :U 208 ]
-"276
-[; ;Newmain.c: 276:  {
+"321
+[; ;Newmain.c: 321:  while(1)
+[e :U 210 ]
+"322
+[; ;Newmain.c: 322:  {
 {
-"277
-[; ;Newmain.c: 277:   LCD_cmd(0x86);
+"323
+[; ;Newmain.c: 323:         uart_data = 0;
+[e = _uart_data -> -> 0 `i `uc ]
+"324
+[; ;Newmain.c: 324:   LCD_cmd(0x86);
 [e ( _LCD_cmd (1 -> -> 134 `i `uc ]
-"279
-[; ;Newmain.c: 279:   i2c_rep_start();
+"326
+[; ;Newmain.c: 326:   i2c_rep_start();
 [e ( _i2c_rep_start ..  ]
-"280
-[; ;Newmain.c: 280:   delay(4);
+"327
+[; ;Newmain.c: 327:   delay(4);
 [e ( _delay (1 -> -> 4 `i `ui ]
-"282
-[; ;Newmain.c: 282:   i2c_send(0b10010000);
+"329
+[; ;Newmain.c: 329:   i2c_send(0b10010000);
 [e ( _i2c_send (1 -> -> 144 `i `uc ]
-"283
-[; ;Newmain.c: 283:   i2c_send(0x00);
+"330
+[; ;Newmain.c: 330:   i2c_send(0x00);
 [e ( _i2c_send (1 -> -> 0 `i `uc ]
-"285
-[; ;Newmain.c: 285:   i2c_rep_start();
+"332
+[; ;Newmain.c: 332:   i2c_rep_start();
 [e ( _i2c_rep_start ..  ]
-"286
-[; ;Newmain.c: 286:   delay(4);
+"333
+[; ;Newmain.c: 333:   delay(4);
 [e ( _delay (1 -> -> 4 `i `ui ]
-"288
-[; ;Newmain.c: 288:   SSPBUF = 0b10010001;
+"335
+[; ;Newmain.c: 335:   SSPBUF = 0b10010001;
 [e = _SSPBUF -> -> 145 `i `uc ]
-"289
-[; ;Newmain.c: 289:   i2c_wait();
+"336
+[; ;Newmain.c: 336:   i2c_wait();
 [e ( _i2c_wait ..  ]
-"290
-[; ;Newmain.c: 290:   delay(4);
+"337
+[; ;Newmain.c: 337:   delay(4);
 [e ( _delay (1 -> -> 4 `i `ui ]
-"292
-[; ;Newmain.c: 292:   r = i2c_rx();
+"339
+[; ;Newmain.c: 339:   r = i2c_rx();
 [e = _r ( _i2c_rx ..  ]
-"293
-[; ;Newmain.c: 293:   i2c_wait();
+"340
+[; ;Newmain.c: 340:   i2c_wait();
 [e ( _i2c_wait ..  ]
-"295
-[; ;Newmain.c: 295:   i2c_NACK();
+"342
+[; ;Newmain.c: 342:   i2c_NACK();
 [e ( _i2c_NACK ..  ]
-"296
-[; ;Newmain.c: 296:   delay(4);
+"343
+[; ;Newmain.c: 343:   delay(4);
 [e ( _delay (1 -> -> 4 `i `ui ]
-"298
-[; ;Newmain.c: 298:   i2c_stop();
+"345
+[; ;Newmain.c: 345:   i2c_stop();
 [e ( _i2c_stop ..  ]
-"299
-[; ;Newmain.c: 299:   delay(4);
+"346
+[; ;Newmain.c: 346:   delay(4);
 [e ( _delay (1 -> -> 4 `i `ui ]
-"301
-[; ;Newmain.c: 301:   LCD_disp(r);
+"348
+[; ;Newmain.c: 348:   LCD_disp(r);
 [e ( _LCD_disp (1 _r ]
-"302
-[; ;Newmain.c: 302:  }
+"350
+[; ;Newmain.c: 350:         funcion();
+[e ( _funcion ..  ]
+"351
+[; ;Newmain.c: 351:  }
 }
-[e :U 207 ]
-[e $U 208  ]
 [e :U 209 ]
-"303
-[; ;Newmain.c: 303: }
-[e :UE 206 ]
+[e $U 210  ]
+[e :U 211 ]
+"352
+[; ;Newmain.c: 352: }
+[e :UE 208 ]
 }
+[v $root$_isr `(v ~T0 @X0 0 e ]
+"358
+[; ;Newmain.c: 358: void __attribute__((picinterrupt(("")))) isr(void)
+[v _isr `(v ~T1 @X0 1 ef ]
+"359
+[; ;Newmain.c: 359: {
+{
+[e :U _isr ]
+[f ]
+"361
+[; ;Newmain.c: 361:     if (PIE1bits.TXIE && PIR1bits.TXIF)
+[e $ ! && != -> . . _PIE1bits 0 4 `i -> 0 `i != -> . . _PIR1bits 0 4 `i -> 0 `i 213  ]
+"362
+[; ;Newmain.c: 362:     {
+{
+"363
+[; ;Newmain.c: 363:         if (eusart_flag)
+[e $ ! != -> _eusart_flag `i -> 0 `i 214  ]
+"364
+[; ;Newmain.c: 364:         {
+{
+"365
+[; ;Newmain.c: 365:             TXREG = recibo[str_pos];
+[e = _TXREG -> *U + &U _recibo * -> _str_pos `ux -> -> # *U &U _recibo `ui `ux `uc ]
+"366
+[; ;Newmain.c: 366:         }
+}
+[e :U 214 ]
+"367
+[; ;Newmain.c: 367:         str_pos++;
+[e ++ _str_pos -> -> 1 `i `uc ]
+"368
+[; ;Newmain.c: 368:         if (str_pos == 5)
+[e $ ! == -> _str_pos `i -> 5 `i 215  ]
+"369
+[; ;Newmain.c: 369:         {
+{
+"370
+[; ;Newmain.c: 370:             eusart_flag = !eusart_flag;
+[e = _eusart_flag -> -> ! != -> _eusart_flag `i -> 0 `i `i `a ]
+"371
+[; ;Newmain.c: 371:             str_pos = 0;
+[e = _str_pos -> -> 0 `i `uc ]
+"372
+[; ;Newmain.c: 372:         }
+}
+[e :U 215 ]
+"373
+[; ;Newmain.c: 373:     }
+}
+[e :U 213 ]
+"374
+[; ;Newmain.c: 374:     if (PIR1bits.RCIF)
+[e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 216  ]
+"375
+[; ;Newmain.c: 375:     {
+{
+"376
+[; ;Newmain.c: 376:         uart_data = RCREG;
+[e = _uart_data _RCREG ]
+"377
+[; ;Newmain.c: 377:     }
+}
+[e :U 216 ]
+"378
+[; ;Newmain.c: 378: }
+[e :UE 212 ]
+}
+"379
+[; ;Newmain.c: 379: void funcion(void)
+[v _funcion `(v ~T0 @X0 1 ef ]
+"380
+[; ;Newmain.c: 380: {
+{
+[e :U _funcion ]
+[f ]
+"381
+[; ;Newmain.c: 381:     sprintf(recibo, " %2i ", r);
+[e ( _sprintf (1 , (. , -> &U _recibo `*uc :s 6C -> _r `i ]
+"382
+[; ;Newmain.c: 382: }
+[e :UE 217 ]
+}
+[p f _sprintf 8421504 ]
 [a 3C 78 111 32 104 97 121 32 115 101 110 115 111 114 0 ]
 [a 2C 83 101 110 115 111 114 32 108 105 115 116 111 0 ]
 [a 4C 73 110 105 99 105 97 110 100 111 32 73 50 67 0 ]
 [a 5C 84 101 109 112 32 58 32 32 32 42 67 0 ]
 [a 1C 68 101 116 101 99 116 97 110 100 111 32 46 46 46 0 ]
+[a 6C 32 37 50 105 32 0 ]

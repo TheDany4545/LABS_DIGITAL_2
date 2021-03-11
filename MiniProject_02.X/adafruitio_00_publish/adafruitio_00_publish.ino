@@ -54,18 +54,17 @@ void loop() {
   //temperatura = random(0,50);
   
   // save count to the 'counter' feed on Adafruit IO
-  /*
- if(Serial2.available()){
-    entrada = char(Serial2.read());
-    Serial.print("sending -> ");
-    Serial.println(entrada);
-    //Serial.print(entrada);
-  }
-  */
-    
-  Serial.print("Recibo");
-  Serial.println(Serial.read());
+
+ 
   entrada = char(Serial.read());
+  Serial.print("sending -> ");
+  Serial.println(entrada);
+    //Serial.print(entrada);
+ 
+    
+  //Serial.print("Recibo");
+  //Serial.println(Serial2.read());
+  //entrada = char(Serial2.read());
 
     
   //entrada = char(Serial2.read());
