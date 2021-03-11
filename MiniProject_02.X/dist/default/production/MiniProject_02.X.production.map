@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\MiniProject_02.X.production.sym \
   --cmf=dist/default/production\MiniProject_02.X.production.cmf -z -Q16F887 \
-  -oC:\Users\Daniel\AppData\Local\Temp\sq5o.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\Daniel\AppData\Local\Temp\slpk.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/MiniProject_02.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK \
   -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\Daniel\AppData\Local\Temp\sq5o.o \
+  -pfunctab=ENTRY -k C:\Users\Daniel\AppData\Local\Temp\slpk.o \
   dist/default/production\MiniProject_02.X.production.o 
 
 Object code version is 3.11
@@ -28,10 +28,12 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Daniel\AppData\Local\Temp\sq5o.o
+C:\Users\Daniel\AppData\Local\Temp\slpk.o
                 end_init                              0        0        3        0       0
+                config                             2007     2007        2        0       4
 dist/default/production\MiniProject_02.X.production.o
                 cinit                               7DD      7DD       23      FBA       0
+                config                             2007     2007        2        0       4
                 text20                              39A      39A        F      734       0
                 text19                              3F1      3F1       1E      7E2       0
                 text18                              64F      64F       67      C9E       0
@@ -126,6 +128,7 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   SFR3           
 
         CLASS   CONFIG         
+                config                             2007     2007        2         4
 
         CLASS   IDLOC          
 
@@ -173,7 +176,6 @@ UNUSED ADDRESS RANGES
         BANK3            0190-01EF             60           1
         CODE             004D-0363            317           2
                          0800-1FFF            800
-        CONFIG           2007-2008              2           2
         CONST            004D-0363            100           2
                          0800-1FFF            100
         EEDATA           2100-21FF            100           2
@@ -241,6 +243,7 @@ __Hcinit                 cinit        0800
 __Hclrtext               clrtext      0000
 __Hcode                  code         0000
 __Hcommon                common       0000
+__Hconfig                config       2009
 __HcstackBANK0           cstackBANK0  0000
 __HcstackCOMMON          cstackCOMMON 0000
 __HdataBANK0             dataBANK0    0000
@@ -262,6 +265,7 @@ __Hspace_0               (abs)        0800
 __Hspace_1               (abs)        007E
 __Hspace_2               (abs)        0000
 __Hspace_3               (abs)        0000
+__Hspace_4               (abs)        4010
 __Hstack                 stack        0000
 __Hstrings               strings      0000
 __Htext                  text         0000
@@ -275,6 +279,7 @@ __Lcinit                 cinit        07DD
 __Lclrtext               clrtext      0000
 __Lcode                  code         0000
 __Lcommon                common       0000
+__Lconfig                config       0000
 __LcstackBANK0           cstackBANK0  0000
 __LcstackCOMMON          cstackCOMMON 0000
 __LdataBANK0             dataBANK0    0000
@@ -296,6 +301,7 @@ __Lspace_0               (abs)        0000
 __Lspace_1               (abs)        0000
 __Lspace_2               (abs)        0000
 __Lspace_3               (abs)        0000
+__Lspace_4               (abs)        0000
 __Lstack                 stack        0000
 __Lstrings               strings      0000
 __Ltext                  text         0000
@@ -434,7 +440,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 244 in file "Newmain.c"
+		line 261 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -476,7 +482,7 @@ Total ram usage:        1 bytes
 
  *************** function _temp_disp *****************
  Defined at:
-		line 79 in file "Newmain.c"
+		line 96 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -507,7 +513,7 @@ Total ram usage:        1 bytes
 
  *************** function _i2c_stop *****************
  Defined at:
-		line 129 in file "Newmain.c"
+		line 146 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -537,7 +543,7 @@ Total ram usage:        0 bytes
 
  *************** function _i2c_rx *****************
  Defined at:
-		line 136 in file "Newmain.c"
+		line 153 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -566,7 +572,7 @@ Total ram usage:        0 bytes
 
  *************** function _i2c_rep_start *****************
  Defined at:
-		line 116 in file "Newmain.c"
+		line 133 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -595,7 +601,7 @@ Total ram usage:        0 bytes
 
  *************** function _i2c_init_disp *****************
  Defined at:
-		line 188 in file "Newmain.c"
+		line 205 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -626,7 +632,7 @@ Total ram usage:        1 bytes
 
  *************** function _i2c_init *****************
  Defined at:
-		line 151 in file "Newmain.c"
+		line 168 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -655,7 +661,7 @@ Total ram usage:        0 bytes
 
  *************** function _i2c_NACK *****************
  Defined at:
-		line 122 in file "Newmain.c"
+		line 139 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -684,7 +690,7 @@ Total ram usage:        0 bytes
 
  *************** function _check_dev_disp *****************
  Defined at:
-		line 222 in file "Newmain.c"
+		line 239 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -718,7 +724,7 @@ Total ram usage:        1 bytes
 
  *************** function _no_dev_disp *****************
  Defined at:
-		line 44 in file "Newmain.c"
+		line 61 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -749,7 +755,7 @@ Total ram usage:        1 bytes
 
  *************** function _dev_found_disp *****************
  Defined at:
-		line 62 in file "Newmain.c"
+		line 79 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -780,7 +786,7 @@ Total ram usage:        1 bytes
 
  *************** function _check_dev *****************
  Defined at:
-		line 206 in file "Newmain.c"
+		line 223 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -811,7 +817,7 @@ Total ram usage:        4 bytes
 
  *************** function _i2c_send *****************
  Defined at:
-		line 143 in file "Newmain.c"
+		line 160 in file "Newmain.c"
  Parameters:    Size  Location     Type
   c               1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -842,7 +848,7 @@ Total ram usage:        1 bytes
 
  *************** function _i2c_wait *****************
  Defined at:
-		line 110 in file "Newmain.c"
+		line 127 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -873,7 +879,7 @@ Total ram usage:        0 bytes
 
  *************** function _LCD_init *****************
  Defined at:
-		line 163 in file "Newmain.c"
+		line 180 in file "Newmain.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -904,7 +910,7 @@ Total ram usage:        0 bytes
 
  *************** function _LCD_cmd *****************
  Defined at:
-		line 23 in file "Newmain.c"
+		line 40 in file "Newmain.c"
  Parameters:    Size  Location     Type
   y               1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -940,7 +946,7 @@ Total ram usage:        1 bytes
 
  *************** function _LCD_disp *****************
  Defined at:
-		line 177 in file "Newmain.c"
+		line 194 in file "Newmain.c"
  Parameters:    Size  Location     Type
   y               1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -1037,7 +1043,7 @@ Total ram usage:        9 bytes
 
  *************** function _LCD_data *****************
  Defined at:
-		line 33 in file "Newmain.c"
+		line 50 in file "Newmain.c"
  Parameters:    Size  Location     Type
   y               1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -1067,7 +1073,7 @@ Total ram usage:        1 bytes
 
  *************** function _delay *****************
  Defined at:
-		line 18 in file "Newmain.c"
+		line 35 in file "Newmain.c"
  Parameters:    Size  Location     Type
   x               2    0[COMMON] unsigned int 
  Auto vars:     Size  Location     Type

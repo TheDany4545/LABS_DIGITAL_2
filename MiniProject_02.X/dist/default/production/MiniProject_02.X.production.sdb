@@ -15,43 +15,43 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"18 Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+"35 Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 [v _delay delay `(v  1 e 1 0 ]
-"23
+"40
 [v _LCD_cmd LCD_cmd `(v  1 e 1 0 ]
-"33
+"50
 [v _LCD_data LCD_data `(v  1 e 1 0 ]
-"44
+"61
 [v _no_dev_disp no_dev_disp `(v  1 e 1 0 ]
-"62
-[v _dev_found_disp dev_found_disp `(v  1 e 1 0 ]
 "79
+[v _dev_found_disp dev_found_disp `(v  1 e 1 0 ]
+"96
 [v _temp_disp temp_disp `(v  1 e 1 0 ]
-"110
+"127
 [v _i2c_wait i2c_wait `(v  1 e 1 0 ]
-"116
+"133
 [v _i2c_rep_start i2c_rep_start `(v  1 e 1 0 ]
-"122
+"139
 [v _i2c_NACK i2c_NACK `(v  1 e 1 0 ]
-"129
+"146
 [v _i2c_stop i2c_stop `(v  1 e 1 0 ]
-"136
+"153
 [v _i2c_rx i2c_rx `(uc  1 e 1 0 ]
-"143
+"160
 [v _i2c_send i2c_send `(uc  1 e 1 0 ]
-"151
+"168
 [v _i2c_init i2c_init `(v  1 e 1 0 ]
-"163
+"180
 [v _LCD_init LCD_init `(v  1 e 1 0 ]
-"177
+"194
 [v _LCD_disp LCD_disp `(v  1 e 1 0 ]
-"188
+"205
 [v _i2c_init_disp i2c_init_disp `(v  1 e 1 0 ]
-"206
+"223
 [v _check_dev check_dev `(i  1 e 2 0 ]
-"222
+"239
 [v _check_dev_disp check_dev_disp `(v  1 e 1 0 ]
-"244
+"261
 [v _main main `(v  1 e 1 0 ]
 "228 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
@@ -101,117 +101,117 @@
 [v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
 "4460
 [v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
-"10 Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+"27 Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 [v _r r `uc  1 e 1 0 ]
-"11
+"28
 [v _d d `*.24uc  1 e 1 0 ]
-"12
+"29
 [v _d1 d1 `*.24uc  1 e 1 0 ]
-"13
+"30
 [v _d2 d2 `*.24uc  1 e 1 0 ]
-"14
+"31
 [v _d3 d3 `*.24uc  1 e 1 0 ]
-"15
+"32
 [v _tmp tmp `*.24uc  1 e 1 0 ]
-"244
+"261
 [v _main main `(v  1 e 1 0 ]
 {
-"286
+"303
 } 0
-"79
+"96
 [v _temp_disp temp_disp `(v  1 e 1 0 ]
 {
-"95
+"112
 } 0
-"129
+"146
 [v _i2c_stop i2c_stop `(v  1 e 1 0 ]
 {
-"134
+"151
 } 0
-"136
+"153
 [v _i2c_rx i2c_rx `(uc  1 e 1 0 ]
 {
-"141
+"158
 } 0
-"116
+"133
 [v _i2c_rep_start i2c_rep_start `(v  1 e 1 0 ]
 {
-"120
+"137
 } 0
-"188
+"205
 [v _i2c_init_disp i2c_init_disp `(v  1 e 1 0 ]
 {
-"203
+"220
 } 0
-"151
+"168
 [v _i2c_init i2c_init `(v  1 e 1 0 ]
 {
-"161
+"178
 } 0
-"122
+"139
 [v _i2c_NACK i2c_NACK `(v  1 e 1 0 ]
 {
-"127
+"144
 } 0
-"222
+"239
 [v _check_dev_disp check_dev_disp `(v  1 e 1 0 ]
 {
-"241
+"258
 } 0
-"44
+"61
 [v _no_dev_disp no_dev_disp `(v  1 e 1 0 ]
-{
-"60
-} 0
-"62
-[v _dev_found_disp dev_found_disp `(v  1 e 1 0 ]
 {
 "77
 } 0
-"206
+"79
+[v _dev_found_disp dev_found_disp `(v  1 e 1 0 ]
+{
+"94
+} 0
+"223
 [v _check_dev check_dev `(i  1 e 2 0 ]
 {
-"219
+"236
 } 0
-"143
+"160
 [v _i2c_send i2c_send `(uc  1 e 1 0 ]
 {
 [v i2c_send@c c `uc  1 a 1 wreg ]
 [v i2c_send@c c `uc  1 a 1 wreg ]
-"145
+"162
 [v i2c_send@c c `uc  1 a 1 0 ]
-"148
+"165
 } 0
-"110
+"127
 [v _i2c_wait i2c_wait `(v  1 e 1 0 ]
 {
-"114
+"131
 } 0
-"163
+"180
 [v _LCD_init LCD_init `(v  1 e 1 0 ]
 {
-"174
+"191
 } 0
-"23
+"40
 [v _LCD_cmd LCD_cmd `(v  1 e 1 0 ]
 {
 [v LCD_cmd@y y `uc  1 a 1 wreg ]
 [v LCD_cmd@y y `uc  1 a 1 wreg ]
-"25
+"42
 [v LCD_cmd@y y `uc  1 a 1 2 ]
-"31
+"48
 } 0
-"177
+"194
 [v _LCD_disp LCD_disp `(v  1 e 1 0 ]
 {
 [v LCD_disp@y y `uc  1 a 1 wreg ]
-"179
+"196
 [v LCD_disp@temp temp `i  1 a 2 12 ]
-"177
+"194
 [v LCD_disp@y y `uc  1 a 1 wreg ]
-"179
+"196
 [v LCD_disp@y y `uc  1 a 1 11 ]
-"185
+"202
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
@@ -237,18 +237,18 @@
 [v ___awdiv@dividend dividend `i  1 p 2 2 ]
 "41
 } 0
-"33 Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
+"50 Z:\Universidad UVG\Quinto Año\Primer ciclo\Digital2\LABS_DIGITAL_2\MiniProject_02.X\Newmain.c
 [v _LCD_data LCD_data `(v  1 e 1 0 ]
 {
 [v LCD_data@y y `uc  1 a 1 wreg ]
 [v LCD_data@y y `uc  1 a 1 wreg ]
-"35
+"52
 [v LCD_data@y y `uc  1 a 1 2 ]
-"41
+"58
 } 0
-"18
+"35
 [v _delay delay `(v  1 e 1 0 ]
 {
 [v delay@x x `ui  1 p 2 0 ]
-"21
+"38
 } 0
