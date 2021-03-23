@@ -63,7 +63,7 @@ void loop() {
   if(estado2 == 1 && ant2 == 1){
     ant2 = 0;
     cont2++;
-    Serial.print("boton 2 -> ");
+    Serial.print("Jugador 2 -> ");
     Serial.println(cont2);
     byte number = cont2;
     binario2();
@@ -80,7 +80,7 @@ void loop() {
   if(estado1 == 1 && ant1 == 1){
     ant1 = 0;
     cont1++;
-    Serial.print("boton 1 -> ");
+    Serial.print("Jugador 1 -> ");
     Serial.println(cont1);
     byte number = cont1;
     binario();
