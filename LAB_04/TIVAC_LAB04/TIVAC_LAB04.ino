@@ -17,7 +17,7 @@ int cont1 = 0;
 int cont2 = 0;
 int ant1 = 0;
 int ant2 = 0;
-byte PORTD[8] = {23,24,25,26,};
+byte PORTD_E[8] = {36,37,25,26,33,32,34,35};
 byte PORTB[8] = {3,4,19,38,7,2,14,15};
 void setup() {
   // put your setup code here, to run once:
@@ -26,12 +26,18 @@ void setup() {
   pinMode(VERDE,OUTPUT);
   pinMode(PUSH3,INPUT_PULLUP);
   pinMode(PUSH1,INPUT_PULLUP);
+  pinMode(PUSH2,INPUT_PULLUP);
 
   //inicializar  
   for(int i=0;i < (sizeof(PORTB)/sizeof(byte));i++)
   {    
     pinMode(PORTB[i],OUTPUT);
     digitalWrite(PORTB[i],LOW);    
+  }
+    for(int i=0;i < (sizeof(PORTD_E)/sizeof(byte));i++)
+  {    
+    pinMode(PORTD_E[i],OUTPUT);
+    digitalWrite(PORTD_E[i],LOW);    
   }
   
 
@@ -49,7 +55,24 @@ void loop() {
     semaforo_off();
   }
 
-  //antirrebote
+  //antirrebote2
+  estado2 = digitalRead(PUSH2);
+  if(estado2 == 0){
+    ant2 = 1;
+  }
+  if(estado2 == 1 && ant2 == 1){
+    ant2 = 0;
+    cont2++;
+    Serial.print("boton 2 -> ");
+    Serial.println(cont2);
+    byte number = cont2;
+    binario2();
+  }
+  if(cont2==255){
+    cont2=0;
+    ganador2();   
+  }
+    //antirrebote
   estado1 = digitalRead(PUSH1);
   if(estado1 == 0){
     ant1 = 1;
@@ -57,6 +80,7 @@ void loop() {
   if(estado1 == 1 && ant1 == 1){
     ant1 = 0;
     cont1++;
+    Serial.print("boton 1 -> ");
     Serial.println(cont1);
     byte number = cont1;
     binario();
@@ -116,6 +140,28 @@ void binario(void){
   i++;
   */
 }
+void binario2(void){
+  //byte binaryNumbers[8] = {128,64,32,16,8,4,2,1};
+  //cual led encender
+  byte aa=cont2%2;     
+  byte bb=cont2/2 %2;     
+  byte cc=cont2/4 %2;       
+  byte dd=cont2/8 %2;
+  byte ee=cont2/16 %2;
+  byte ff=cont2/32 %2;
+  byte gg=cont2/64 %2;
+  byte hh=cont2/128 %2;
+//byte PORTD_E[8] = {23,24,25,26,33,32,34,35};
+  digitalWrite(36,aa);
+  digitalWrite(37,bb);
+  digitalWrite(25,cc);
+  digitalWrite(26,dd);
+  digitalWrite(33,ee);
+  digitalWrite(32,ff);
+  digitalWrite(34,gg);
+  digitalWrite(35,hh);
+
+}
 void ganador1(){
   //led morado
     digitalWrite(AZUL,HIGH);
@@ -141,4 +187,30 @@ void ganador1(){
     delay(1000);
     digitalWrite(AZUL,LOW);
     digitalWrite(RED,LOW);
+}
+void ganador2(){
+  //led CIAN
+    digitalWrite(AZUL,HIGH);
+    digitalWrite(VERDE,HIGH);
+    delay(1000);
+    digitalWrite(AZUL,LOW);
+    digitalWrite(VERDE,LOW);
+    delay(1000);
+    digitalWrite(AZUL,HIGH);
+    digitalWrite(VERDE,HIGH);
+    delay(1000);
+    digitalWrite(AZUL,LOW);
+    digitalWrite(VERDE,LOW);
+    delay(1000);
+    digitalWrite(AZUL,HIGH);
+    digitalWrite(VERDE,HIGH);
+    delay(1000);
+    digitalWrite(AZUL,LOW);
+    digitalWrite(VERDE,LOW);
+    delay(1000);
+    digitalWrite(AZUL,HIGH);
+    digitalWrite(VERDE,HIGH);
+    delay(1000);
+    digitalWrite(AZUL,LOW);
+    digitalWrite(VERDE,LOW);
 }
