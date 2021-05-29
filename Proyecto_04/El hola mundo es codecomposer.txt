@@ -1,0 +1,2 @@
+Trabaje sobre el hola mundo en code composer
+y trabaje sobre el ejemplo de webserver para el esp32
